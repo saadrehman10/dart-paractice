@@ -1,0 +1,5 @@
+1. rember to visit forEach loop again after arrow function in dart 
+2. rember to visit map() and asMap() function after arrow functons 
+2. rember to check all three types of arrays in every situation related to arrays  (List, Map and Set)
+2. remember to check the list defalult functons and how they work like Iterate , genreate , Itrateable , buffer and etc check the bing - chat dated 04/03/24 time 6:40;
+3. remember to visit the Example 4 and 5: How to create & Hanle Exception via Implements after OOps i dart .
