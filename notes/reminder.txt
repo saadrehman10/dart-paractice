@@ -44,3 +44,53 @@ single return the single element from the list if there
 15. `first` - Returns the first element of the list.
 16. `last` - Returns the last element of the list.
 17. `single` - Returns the single element from the list (throws if there are zero or more than one element).
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var list = List.unmodifiable[];
+const lsit = [];
+List<int> list = List<int>.filled(lenth , vlue);
+
+
+
+first
+last
+remove() object 
+removeat() object
+removeLast(); object
+removeRange(2,3) void
+isEmpty  bool
+isNotEmpty bool
+add() void
+addAll([]); 
+insert(index, value);
+inseertAlll(index, [])
+replaceRange (0,2,[]);
+reverse object
+join object
+sngle object 
+length int
+indexOf int
+map((e)=> e) (modify the elemt and return it seprately ) object
+forEach((e){e})(do something with each element) void
+where((e)=> e) (same as as map) but only keep elements that meet condition) object 
+var newlist = [...oldlist 1, ...oldlist 2,.....nt list ]
+var list = [if (true) {value}else{value/null}]
+asMap() (convert the list into map with index of each elemnt) map 
+list.genrater(lenght , ()=> e)
