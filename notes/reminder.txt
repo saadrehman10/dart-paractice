@@ -1,5 +1,46 @@
-1. rember to visit forEach loop again after arrow function in dart 
-2. rember to visit map() and asMap() function after arrow functons 
+1. rember to visit forEach loop again after arrow function in dart (done)
+2. rember to visit map() and asMap() function after arrow functons (done)
 2. rember to check all three types of arrays in every situation related to arrays  (List, Map and Set)
 2. remember to check the list defalult functons and how they work like Iterate , genreate , Itrateable , buffer and etc check the bing - chat dated 04/03/24 time 6:40;
 3. remember to visit the Example 4 and 5: How to create & Hanle Exception via Implements after OOps i dart .
+
+
+list functions
+indexOf("list element");
+replaceRange(start inext , end index) ;
+add
+addAll
+insert(for a specific index)
+insertAll 
+join(by) default nothing
+reverse 
+lenght
+remove(element) ;
+removeAt(index);
+removeRange(start index, end index);
+isEmpty return bool 
+isNotEmpty return bool
+first returns the first element of the list 
+last  retrns the last elemt of the list 
+single return the single element from the list if there
+
+
+
+
+1. `indexOf(element)` - Finds the index of the first occurrence of the element.
+2. `replaceRange(startIndex, endIndex, replacement)` - Replaces a range of elements with the replacement iterable.
+3. `add(element)` - Adds an element to the end of the list.
+4. `addAll(iterable)` - Adds all elements of the provided iterable to the end of the list.
+5. `insert(index, element)` - Inserts an element at the specified index.
+6. `insertAll(index, iterable)` - Inserts all elements of the iterable at the specified index.
+7. `join(separator)` - Joins the elements into a string, separated by the given separator. If no separator is provided, it defaults to an empty string.
+8. `reversed` - Provides an iterable with the elements in reverse order. (Note: This is a getter and should not be followed by parentheses.)
+9. `length` - Returns the number of elements in the list.
+10. `remove(element)` - Removes the first occurrence of the element from the list.
+11. `removeAt(index)` - Removes the element at the specified index.
+12. `removeRange(startIndex, endIndex)` - Removes a range of elements from the list.
+13. `isEmpty` - Returns true if there are no elements in the list.
+14. `isNotEmpty` - Returns true if there is at least one element in the list.
+15. `first` - Returns the first element of the list.
+16. `last` - Returns the last element of the list.
+17. `single` - Returns the single element from the list (throws if there are zero or more than one element).
