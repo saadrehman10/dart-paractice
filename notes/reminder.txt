@@ -78,7 +78,7 @@ removeRange(2,3) void
 isEmpty  bool
 isNotEmpty bool
 add() void
-addAll([]); 
+addAll([]); void
 insert(index, value);
 inseertAlll(index, [])
 replaceRange (0,2,[]);
@@ -94,3 +94,33 @@ var newlist = [...oldlist 1, ...oldlist 2,.....nt list ]
 var list = [if (true) {value}else{value/null}]
 asMap() (convert the list into map with index of each elemnt) map 
 list.genrater(lenght , ()=> e)
+
+
+
+
+
+set.
+
+
+first
+last
+add
+addAll
+clear
+contains
+remove
+difference();
+length
+elementAt();
+intersection();
+isNotEmpty;
+isEmpty;
+
+
+
+difference between set and list
+in set element of same value cant exist however in  list they can .
+set's elemnts cant be accessed by setName[1] , you can just get the element at certain index with elementAt() function ;
+add, addAll and remove works the same as list 
+length  is also the same as length of list 
+isEmpty or isNotEmpty & first and last works same ;
