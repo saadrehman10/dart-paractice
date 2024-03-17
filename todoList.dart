@@ -7,8 +7,15 @@ void main() {
   while (loop) {
     print(
         "Select an option\n1. Add a task\n2. Delete a task\n3. Show all tasks\n4. Quit");
-    int optSelected = int.parse(stdin.readLineSync()!);
-    switch (optSelected) {
+    int? opt;
+    try {
+      int optSelected = int.parse(stdin.readLineSync()!);
+      opt = optSelected;
+    } catch (e) {
+      print("Invalid input!\nPlease enter a number.");
+    }
+    ;
+    switch (opt) {
       case 1:
         try {
           String task = stdin.readLineSync()!;
@@ -23,16 +30,21 @@ void main() {
           print("$i. ${todolist[i]}");
         }
         print('\n');
-        int opt = int.parse(stdin.readLineSync()!);
-        if (!todolist.containsKey(opt)) throw Exception('Invalid Option');
+        int? opt = int.parse(stdin.readLineSync()!);
+        if (!todolist.containsKey(opt)|| opt != int) throw Exception('Invalid Option');
         todolist.remove(opt);
+        var value = todolist.values.toList();
+        todolist.clear();
+        for (int i = 0; i < value.length; i++) {
+          todolist[i + 1] = value[i];
+        }
       case 3:
         var keys = todolist.keys.toList();
         for (var i in keys) {
           print("$i. ${todolist[i]}");
         }
       default:
-        optSelected != 4 ? print('selected correct option') : loop = false;
+        opt != 4 ? print('selected correct option') : loop = false;
     }
   }
 }
