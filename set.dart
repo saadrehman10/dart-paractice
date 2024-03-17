@@ -37,7 +37,7 @@ void main() {
   print(intersection);
   // List<int> hello = [1, 2, 4, 5, 6];
 
-  var setType = {1, '123', () => 2, true, null, if (true) 3 else 4,'hello'};
+  var setType = {1, '123', () => 2, true, null, if (true) 3,'hello'};
   
   print(setType);
 }
