@@ -21,13 +21,30 @@ void main() {
   // file.writeAsStringSync('This is teh apppended part',mode: FileMode.append);
   // contents = file.readAsStringSync();
   // print(contents);
-  File file = File('student.csv');
-  while (true) {
-    int? opt = int.parse(stdin.readLineSync()!);
-    switch (opt) {
-      case 1 :
-        try{
-          
-    }
-  }
+  // File file = File('student.csv');
+  // bool loop = true;
+  // while (loop) {
+  //   int? opt = int.parse(stdin.readLineSync()!);
+  //   switch (opt) {
+  //     case 1:
+  //       try {
+  //         String input = stdin.readLineSync()!;
+  //         file.writeAsStringSync(input, mode: FileMode.append);
+  //       } catch (e) {
+  //         print(e);
+  //       }
+  //     case 2:
+  //       print(file.readAsStringSync());
+  //     case 3:
+  //       loop = false;
+  //     case 4:
+  //       file.existsSync() ? file.deleteSync() : print('file dont exitst');
+  //   }
+  // }
+  
+
+
+
+
+
 }
