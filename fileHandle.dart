@@ -1,5 +1,14 @@
 import 'dart:io';
 
+dynamic input([String? text]) {
+  text != null ? print(text) : false;
+  try {
+    return stdin.readLineSync()!;
+  } catch (e) {
+    print('Invalid input');
+  }
+}
+
 void main() {
   // File file = File('test.txt');
   // String contents = file.readAsStringSync();
@@ -41,10 +50,20 @@ void main() {
   //       file.existsSync() ? file.deleteSync() : print('file dont exitst');
   //   }
   // }
-  
 
-
-
-
-
+  // var a = "hello";
+  // print(a.replaceAll('l','o'));
+  // print(a);
+  // print(a.codeUnits);
+  File file = File('new.txt');
+  !file.existsSync() ? file.writeAsStringSync(' ') : null;
+  dynamic content = file.readAsStringSync();
+  print("The current file content is : \n \t$content");
+  String userInput =
+      input("Enter the text you wanted to write in the file ").toString();
+  file.writeAsStringSync(userInput, mode: FileMode.append);
+  content = content.split('');
+  content.forEach((e) {
+    print("\t $e");
+  });
 }
