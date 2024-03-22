@@ -124,3 +124,5 @@ set's elemnts cant be accessed by setName[1] , you can just get the element at c
 add, addAll and remove works the same as list 
 length  is also the same as length of list 
 isEmpty or isNotEmpty & first and last works same ;
+
+
