@@ -1,3 +1,4 @@
+import 'dart:ffi';
 import 'dart:io';
 import 'dart:math';
 
@@ -35,7 +36,11 @@ void main() {
   // b = a - b;
   // a = a - b;
   // print("a=$a and b=$b");
-  int noOfSongs = input('i','Enter the no of songs in play list ');
-  
-
+  int noOfSongs = input('i', 'Enter the no of songs in play list ');
+  int randomGenrator = (2 * (pow(10, 5))).toInt();
+  List<int> songList =
+      List.generate(noOfSongs - 1, (index) => Random().nextInt(randomGenrator));
+  for (int i = 0; i <= songList.length + 1; i++) {
+    
+  }
 }
