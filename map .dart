@@ -1,5 +1,7 @@
 // import 'dart:io';
 
+import 'dart:collection';
+
 void main() {
   // Map<String, String> snc = {
   //   'Saad': '1',
@@ -131,20 +133,25 @@ void main() {
   // biodata.forEach((key, value) {
   //   print('$key = $value');
   // });
-  Map<String, int> phoneno = {
-    'ali': 03132274336,
-    'saad': 0338884939,
-    'hassan': 0339509384,
-    'zainab': 03009934849,
-    'ahmad': 03009934232,
-  };
+  // Map<String, int> phoneno = {
+  //   'ali': 03132274336,
+  //   'saad': 0338884939,
+  //   'hassan': 0339509384,
+  //   'zainab': 03009934849,
+  //   'ahmad': 03009934232,
+  // };
 
-  phoneno.forEach((key, value) {
-    key.length <= 4 ? print(key) : false;
-  });
-  var keys = phoneno.keys;
-  print(keys);
-  keys.forEach((element) {
-    element.length >= 4 ? print(element + "4") : false;
-  });
+  // phoneno.forEach((key, value) {
+  //   key.length <= 4 ? print(key) : false;
+  // });
+  // var keys = phoneno.keys;
+  // print(keys);
+  // keys.forEach((element) {
+  //   element.length >= 4 ? print(element + "4") : false;
+  // });
+  HashMap<String, String> a = HashMap();
+  a['1'] = 'one';
+  a['2'] = 'two';
+  print(a);
+   
 }
