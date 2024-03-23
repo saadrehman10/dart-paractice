@@ -87,19 +87,20 @@ void main() {
   // print(combinedList);
   // List<int> array = [1, 2, 5, 6, combinedList.length <= 4 ? 9 : 8];
   // print(array);
-  List<int> list = [1, 2, 3, 4, 5, 6, 7, 7, 7];
-  // var mapList =list.map((n) =>  list.remove(n));
-  // var mapList = list.forEach((element) {
-  //   list.remove(element);
-  // });
-  //  var  newList= list.where((e)=> list.remove(e)) ;
-  //  print(newList);
-  // for (int i = 1; i >= list.length ;i++) {
-  //   list.removeAt(i);
-  // }
-  for (int i = list.length - 1; i >= 0; i--) {
-  list.removeAt(i);
-}
-  // list.remove(7);
-  print(list);
+//   List<int> list = [1, 2, 3, 4, 5, 6, 7, 7, 7];
+//   // var mapList =list.map((n) =>  list.remove(n));
+//   // var mapList = list.forEach((element) {
+//   //   list.remove(element);
+//   // });
+//   //  var  newList= list.where((e)=> list.remove(e)) ;
+//   //  print(newList);
+//   // for (int i = 1; i >= list.length ;i++) {
+//   //   list.removeAt(i);
+//   // }
+//   for (int i = list.length - 1; i >= 0; i--) {
+//   list.removeAt(i);
+// }
+//   // list.remove(7);
+//   print(list);
+  
 }
