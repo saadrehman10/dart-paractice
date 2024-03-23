@@ -50,8 +50,76 @@ void main() {
       }
     }
   }
-        
+
   print(songList);
   print(same);
   print('the number of bobs fav singers ${same.length - songList.length - 1}');
+  void main() {
+    // Sample input
+    int noOfSongs = 5;
+    List<int> singers = [1, 1, 2, 2, 4];
+
+    // Step 1: Initialize a list for singer counts
+    List<int> singerCounts =
+        List.filled(1000, 0); // Assuming a max of 1000 different singers
+
+    // Step 2: Iterate through the input list of singers
+    for (int i = 0; i < noOfSongs; i++) {
+      int singer = singers[i];
+      singerCounts[singer]++;
+    }
+
+    // Step 3: Find the maximum count
+    int maxCount = 0;
+    for (int count in singerCounts) {
+      if (count > maxCount) {
+        maxCount = count;
+      }
+    }
+
+    // Step 4: Count the number of singers with the maximum count
+    int favoriteSingersCount = 0;
+    for (int count in singerCounts) {
+      if (count == maxCount) {
+        favoriteSingersCount++;
+      }
+    }
+
+    // Output the result
+    print('The number of Bob\'s favorite singers is $favoriteSingersCount');
+  }
+
+  int noOfSongs = input('i', 'Enter the number of songs in the playlist');
+  if (noOfSongs >= (2 * pow(10, 5).toInt()))
+    throw Exception("Number too large!");
+
+  Map<int, int> singerOccurrences = {};
+  int maxOccurrence = 0;
+  int favoriteSingersCount = 0;
+
+// Assuming 'singers' is a list of integers representing the singers.
+  for (int i = 0; i < noOfSongs; i++) {
+    int singer = singers[i];
+
+    // Manual map update without using built-in functions
+    if (!singerOccurrences.containsKey(singer)) {
+      singerOccurrences[singer] = 1;
+    } else {
+      singerOccurrences[singer] += 1;
+    }
+
+    // Keep track of the maximum occurrence
+    if (singerOccurrences[singer] > maxOccurrence) {
+      maxOccurrence = singerOccurrences[singer];
+    }
+  }
+
+// Count the number of singers with the maximum occurrence
+  for (int singer in singerOccurrences.keys) {
+    if (singerOccurrences[singer] == maxOccurrence) {
+      favoriteSingersCount += 1;
+    }
+  }
+
+  print('The number of Bob\'s favorite singers is $favoriteSingersCount');
 }
