@@ -86,4 +86,5 @@ void main() {
   // A_100.display();
   Student ali = Student('Ali', 12, 10, 'A');
   ali.studenStatus();
+  
 }
