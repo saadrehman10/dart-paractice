@@ -37,6 +37,31 @@ class Camera {
   }
 }
 
+//classes with constructur
+class Student {
+  String? name;
+  int? age;
+  int? grade;
+  String? section;
+
+  Student(String name, int age, int grade, String section) {
+    print('Constructor is called');
+    this.name = name;
+    this.grade = grade;
+    this.age = age;
+    this.section = section;
+  }
+
+  void studenStatus() {
+    print('The name of the Student is $name');
+    print('The age of the Studen is $age');
+    print('The current assinged class is $grade $section');
+    age! <= 12
+        ? print('The student is eligble for the Board exams')
+        : print('The student is not eligble for the Board exams');
+  }
+}
+
 void main() {
   // Person saad = Person();
   // saad.name = 'Saad ur Rehman';
@@ -55,8 +80,10 @@ void main() {
   // xz50Tmpro.megapixel = '51';
   // xz50Tmpro.display = '3.2';
   // print(xz50Tmpro.printDetail());
-  Home A_100 = Home();
-  A_100.address = 'Pakistan';
-  A_100.noOfRooms = 11;
-  A_100.display();
+  // Home A_100 = Home();
+  // A_100.address = 'Pakistan';
+  // A_100.noOfRooms = 11;
+  // A_100.display();
+  Student ali = Student('Ali', 12, 10, 'A');
+  ali.studenStatus();
 }
