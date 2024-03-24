@@ -36,22 +36,24 @@ void main() {
   // b = a - b;
   // a = a - b;
   // print("a=$a and b=$b");
-  int noOfSongs = input('i', 'Enter the no of songs in play list ');
-  if (noOfSongs >= (2 * pow(10, 5).toInt()))
-    throw Exception("Number too large!");
-  int randomGenrator = (pow(2, 10)).toInt();
-  List<int> songList = List<int>.generate(
-      noOfSongs - 1, (index) => Random().nextInt(randomGenrator));
-  List<int> same = [];
-  for (int i = 0; i <= songList.length - 1; i++) {
-    for (int j = 0; j <= songList.length - 1; j++) {
-      if (songList[j] == songList[i]) {
-        same.insert(same.length, songList[i]);
-      }
-    }
-  }
+  // int noOfSongs = input('i', 'Enter the no of songs in play list ');
+  // if (noOfSongs >= (2 * pow(10, 5).toInt()))
+  //   throw Exception("Number too large!");
+  // int randomGenrator = (pow(2, 10)).toInt();
+  // List<int> songList = List<int>.generate(
+  //     noOfSongs - 1, (index) => Random().nextInt(randomGenrator));
+  // List<int> same = [];
+  // for (int i = 0; i <= songList.length - 1; i++) {
+  //   for (int j = 0; j <= songList.length - 1; j++) {
+  //     if (songList[j] == songList[i]) {
+  //       same.insert(same.length, songList[i]);
+  //     }
+  //   }
+  // }
 
-  print(songList);
-  print(same);
-  print('the number of bobs fav singers ${same.length - songList.length - 1}');
+  // print(songList);
+  // print(same);
+  // print('the number of bobs fav singers ${same.length - songList.length - 1}');
+    
+
 }
