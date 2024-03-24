@@ -16,6 +16,17 @@ class PrintRandon {
   }
 }
 
+class Home {
+  String? ownerName;
+  String? address;
+  var noOfRooms;
+  void display() {
+    print('The owner names is $ownerName');
+    print('The address of the house is $address');
+    print('The no of rooms present in the house are $noOfRooms');
+  }
+}
+
 class Camera {
   String? brandName;
   String? color;
@@ -38,10 +49,14 @@ void main() {
   // Person Ali = Person();
   // Ali.name = 'Ali Khan';
   // Ali.printPersonDetail();
-  Camera xz50Tmpro = Camera();
-  xz50Tmpro.brandName = 'Canon';
-  xz50Tmpro.color = 'Black';
-  xz50Tmpro.megapixel = '51';
-  xz50Tmpro.display = '3.2';
-  print(xz50Tmpro.printDetail());
+  // Camera xz50Tmpro = Camera();
+  // xz50Tmpro.brandName = 'Canon';
+  // xz50Tmpro.color = 'Black';
+  // xz50Tmpro.megapixel = '51';
+  // xz50Tmpro.display = '3.2';
+  // print(xz50Tmpro.printDetail());
+  Home A_100 = Home();
+  A_100.address = 'Pakistan';
+  A_100.noOfRooms = 11;
+  A_100.display();
 }
