@@ -113,4 +113,7 @@ void main() {
   // ali.studenStatus();
   IntrestRate car = IntrestRate(5000.0, 300.0, 4.0);
   car.rateOfInterset();
+
+
+  
 }
