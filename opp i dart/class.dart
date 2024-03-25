@@ -1,5 +1,16 @@
 import 'dart:io';
 
+dynamic input(String type, [String? text]) {
+  print(text ?? "Input something...");
+  try {
+    return type == 'i'
+        ? int.parse(stdin.readLineSync()!)
+        : stdin.readLineSync();
+  } catch (e) {
+    print('Invalid input');
+  }
+}
+
 class Person {
   String? name;
   int? age;

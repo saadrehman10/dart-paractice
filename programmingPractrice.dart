@@ -1,6 +1,6 @@
-import 'dart:ffi';
+// import 'dart:ffi';
 import 'dart:io';
-import 'dart:math';
+// import 'dart:math';
 
 dynamic input(String type, [String? text]) {
   print(text ?? "Input something...");
