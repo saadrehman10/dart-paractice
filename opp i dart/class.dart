@@ -1,3 +1,5 @@
+import 'dart:io';
+
 class Person {
   String? name;
   int? age;
@@ -62,6 +64,18 @@ class Student {
   }
 }
 
+class IntrestRate {
+  double? principalAmount;
+  double? rateOFitrest;
+  double? timePeriod;
+  IntrestRate(this.principalAmount, this.rateOFitrest, this.timePeriod);
+  void rateOfInterset() {
+    var intrest = ((this.rateOFitrest! * 100.0) /
+        (this.principalAmount! * this.timePeriod!));
+    print('The intrest rate is $intrest %');
+  }
+}
+
 void main() {
   // Person saad = Person();
   // saad.name = 'Saad ur Rehman';
@@ -84,7 +98,8 @@ void main() {
   // A_100.address = 'Pakistan';
   // A_100.noOfRooms = 11;
   // A_100.display();
-  Student ali = Student('Ali', 12, 10, 'A');
-  ali.studenStatus();
-  
+  // Student ali = Student('Ali', 12, 10, 'A');
+  // ali.studenStatus();
+  IntrestRate car = IntrestRate(5000.0, 300.0, 4.0);
+  car.rateOfInterset();
 }
