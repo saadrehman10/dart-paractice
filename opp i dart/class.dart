@@ -79,7 +79,9 @@ class IntrestRate {
   double? principalAmount;
   double? rateOFitrest;
   double? timePeriod;
-  IntrestRate(this.principalAmount, this.rateOFitrest, this.timePeriod);
+  /* IntrestRate(this.principalAmount, this.rateOFitrest, this.timePeriod); */
+  IntrestRate.namedConstructor(
+      this.principalAmount, this.rateOFitrest, this.timePeriod);
   void rateOfInterset() {
     var intrest = ((this.rateOFitrest! * 100.0) /
         (this.principalAmount! * this.timePeriod!));
@@ -111,7 +113,7 @@ void main() {
   // A_100.display();
   // Student ali = Student('Ali', 12, 10, 'A');
   // ali.studenStatus();
-  IntrestRate car = IntrestRate(5000.0, 300.0, 4.0);
-  car.rateOfInterset();
-  
+  var car = IntrestRate(55,44,55);
+ 
+ /*  car.rateOfInterset(); */
 }
