@@ -79,13 +79,26 @@ class IntrestRate {
   double? principalAmount;
   double? rateOFitrest;
   double? timePeriod;
-  /* IntrestRate(this.principalAmount, this.rateOFitrest, this.timePeriod); */
-  IntrestRate.namedConstructor(
+  IntrestRate(this.principalAmount, this.rateOFitrest, this.timePeriod);
+  IntrestRate.randomconstri(
       this.principalAmount, this.rateOFitrest, this.timePeriod);
   void rateOfInterset() {
     var intrest = ((this.rateOFitrest! * 100.0) /
         (this.principalAmount! * this.timePeriod!));
     print('The intrest rate is $intrest %');
+  }
+}
+
+class Car {
+  String? name;
+  String? color;
+  int? price;
+  Car(this.name, this.color, this.price);
+  Car.withoutname(this.color, this.price);
+
+  void display() {
+    print(
+        'The name of the car is $name & its color is $color in only Rs.$price');
   }
 }
 
@@ -113,7 +126,12 @@ void main() {
   // A_100.display();
   // Student ali = Student('Ali', 12, 10, 'A');
   // ali.studenStatus();
-  var car = IntrestRate(55,44,55);
- 
- /*  car.rateOfInterset(); */
+  // var car = IntrestRate(55, 44, 55);
+  // IntrestRate house = IntrestRate.randomconstri(1, 22, 22);
+  // car.rateOfInterset();
+  // house.rateOfInterset();
+  Car car1 = Car('Swift', 'red', 200000);
+  car1.display();
+  Car car2 = Car.withoutname('siver', 3400883);
+  car2.display();
 }
