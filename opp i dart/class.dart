@@ -130,8 +130,10 @@ void main() {
   // IntrestRate house = IntrestRate.randomconstri(1, 22, 22);
   // car.rateOfInterset();
   // house.rateOfInterset();
-  Car car1 = Car('Swift', 'red', 200000);
+  /* Car car1 = Car('Swift', 'red', 200000);
   car1.display();
   Car car2 = Car.withoutname('siver', 3400883);
-  car2.display();
+  car2.display(); */
+
+
 }
