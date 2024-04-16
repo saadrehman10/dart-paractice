@@ -1,4 +1,13 @@
 //Encapsulation
+class Car {
+  String? name;
+  int? year;
+  Car(this.name, this.year);
+  void printDetails() {
+    print('$name and the year is $year');
+  }
+}
+
 class Person {
   String? _name;
   int? _age;
@@ -23,6 +32,7 @@ class Person {
   void setCast(String cast) {
     this._cast = cast;
   }
+
   void setAge(int age) {
     this._age = age;
   }
@@ -40,7 +50,11 @@ void main() {
   // person2.display();
 
   // print(person1._age);
-
-
-
+  Person person1 = new Person();
+  person1.setName('Saad');
+  person1.setAge(10);
+  person1.setCast('Developer');
+  person1.display();
+  // print(person1._age);// this is not the wirte way because of the encupulation  in OOPs concept
+  print(person1.getCast());
 }
