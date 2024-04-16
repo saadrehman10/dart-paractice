@@ -19,11 +19,15 @@ class Gari extends SuperCar {
   Gari();
 }
 
+
+
+
 void main() {
-  SuperCar lambo = SuperCar();
-  lambo.dispalyCar();
-  Car cultus = Car('cultus', 2004, 'ATS-1 92', 'suzuki');
-  cultus.dispalyCar();
-  Gari civic = Gari();
-  civic.dispalyCar();
+  // SuperCar lambo = SuperCar();
+  // lambo.dispalyCar();
+  // Car cultus = Car('cultus', 2004, 'ATS-1 92', 'suzuki');
+  // cultus.dispalyCar();
+  // Gari civic = Gari();
+  // civic.dispalyCar();
+
 }
