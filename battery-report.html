@@ -479,6 +479,8 @@
 { x0: "2024-04-15T10:30:50", x1: "2024-04-15T10:30:53", y0: 0.7063432485690156, y1: 0.7033170685934128 }, 
 { x0: "2024-04-15T10:43:49", x1: "2024-04-15T10:44:25", y0: 0.8208410517293815, y1: 0.8145649589427411 }, 
 { x0: "2024-04-15T13:18:00", x1: "2024-04-15T13:58:37", y0: 1, y1: 0.9915035695865795 }, 
+{ x0: "2024-04-16T11:01:38", x1: "2024-04-16T11:01:38", y0: 1, y1: 1 }, 
+{ x0: "2024-04-16T11:01:38", x1: "2024-04-16T11:01:41", y0: 1, y1: 1 }, 
 
     ];
     
@@ -486,8 +488,8 @@
         Timegraph.draw({
             element: "drain-graph",
             data: drainGraphData,
-            startTime: "2024-04-13T10:51:31",
-            endTime: "2024-04-16T10:51:31",
+            startTime: "2024-04-13T12:36:25",
+            endTime: "2024-04-16T12:36:26",
         });
     }
 
@@ -513,14 +515,14 @@
           CONNECTED STANDBY
         </td><td>Not supported</td></tr><tr><td class="label">
           REPORT TIME
-        </td><td class="dateTime"><span class="date">2024-04-16 </span><span class="time">10:51:31</span></td></tr></table><h2>
+        </td><td class="dateTime"><span class="date">2024-04-16 </span><span class="time">12:36:26</span></td></tr></table><h2>
       Installed batteries
     </h2><div class="explanation">
       Information about each currently installed battery
     </div><table><colgroup><col style="width: 15em;"/><col style="width: 14em;"/></colgroup><thead><tr><td> </td><td>
                   BATTERY
-                  1</td></tr></thead><tr><td><span class="label">NAME</span></td><td>Primary</td></tr><tr><td><span class="label">MANUFACTURER</span></td><td>Hewlett-Packard</td></tr><tr><td><span class="label">SERIAL NUMBER</span></td><td>00267 2015/10/14</td></tr><tr><td><span class="label">CHEMISTRY</span></td><td>LIon</td></tr><tr><td><span class="label">DESIGN CAPACITY</span></td><td>36,601 mWh
-      </td></tr><tr style="height:0.4em;"></tr><tr><td><span class="label">FULL CHARGE CAPACITY</span></td><td>36,601 mWh
+                  1</td></tr></thead><tr><td><span class="label">NAME</span></td><td>Primary</td></tr><tr><td><span class="label">MANUFACTURER</span></td><td>Hewlett-Packard</td></tr><tr><td><span class="label">SERIAL NUMBER</span></td><td>00267 2015/10/14</td></tr><tr><td><span class="label">CHEMISTRY</span></td><td>LIon</td></tr><tr><td><span class="label">DESIGN CAPACITY</span></td><td>36,634 mWh
+      </td></tr><tr style="height:0.4em;"></tr><tr><td><span class="label">FULL CHARGE CAPACITY</span></td><td>36,634 mWh
       </td></tr><tr><td><span class="label">CYCLE COUNT</span></td><td>
         -
       </td></tr></table><h2>Recent usage</h2><div class="explanation">
@@ -701,12 +703,28 @@
         AC
       </td><td class="percent">95 %
         </td><td class="mw">34,841 mWh
-        </td></tr><tr class="even  33"><td class="dateTime"><span class="date"> </span><span class="time">10:51:31</span></td><td class="state">
+        </td></tr><tr class="even dc 33"><td class="dateTime"><span class="date"> </span><span class="time">11:01:38</span></td><td class="state">
+        Active
+      </td><td class="acdc">
+        Battery
+      </td><td class="percent">100 %
+        </td><td class="mw">36,634 mWh
+        </td></tr><tr class="odd suspend 34"><td class="dateTime"><span class="date"> </span><span class="time">11:01:41</span></td><td class="state">
+        Suspended
+      </td><td class="acdc"></td><td class="percent">100 %
+        </td><td class="mw">36,634 mWh
+        </td></tr><tr class="even  35"><td class="dateTime"><span class="date"> </span><span class="time">11:38:55</span></td><td class="state">
+        Active
+      </td><td class="acdc">
+        AC
+      </td><td class="percent">97 %
+        </td><td class="mw">35,521 mWh
+        </td></tr><tr class="odd  36"><td class="dateTime"><span class="date"> </span><span class="time">12:36:25</span></td><td class="state">
         Report generated
       </td><td class="acdc">
         AC
-      </td><td class="percent">100 %
-        </td><td class="mw">36,601 mWh
+      </td><td class="percent">97 %
+        </td><td class="mw">35,521 mWh
         </td></tr></table><h2>Battery usage</h2><div class="explanation">
       Battery drains over the last 3 days
     </div><canvas id="drain-graph" width="864" height="400"></canvas><table><colgroup><col/><col class="col2"/><col style="width: 10em;"/><col class="percent"/><col style="width: 11em;"/></colgroup><thead><tr><td>
@@ -749,7 +767,9 @@
         </td></tr><tr class="noncontigbreak"><td colspan="5"> </td></tr><tr class="even dc 11"><td class="dateTime"><span class="date"> </span><span class="time">13:58:37</span></td><td class="state">
         Active
       </td><td class="hms">0:00:03</td><td class="nullValue">-</td><td class="mw">11 mWh
-        </td></tr></table><h2>
+        </td></tr><tr class="noncontigbreak"><td colspan="5"> </td></tr><tr class="odd dc 12"><td class="dateTime"><span class="date"> </span><span class="time">11:01:38</span></td><td class="state">
+        Active
+      </td><td class="hms">0:00:02</td><td class="nullValue">-</td><td class="nullValue">-</td></tr></table><h2>
       Usage history
     </h2><div class="explanation2">
       History of system usage on AC and battery
@@ -788,7 +808,7 @@
       - 2024-01-01</td><td class="hms">0:06:03</td><td class="nullValue">-</td><td class="colBreak"> </td><td class="hms">53:12:49</td><td class="nullValue">-</td></tr><tr class="even  19"><td class="dateTime">2024-01-01
       - 2024-01-08</td><td class="hms">0:00:03</td><td class="nullValue">-</td><td class="colBreak"> </td><td class="hms">53:15:40</td><td class="nullValue">-</td></tr><tr class="odd  20"><td class="dateTime">2024-01-08
       - 2024-01-15</td><td class="hms">0:00:52</td><td class="nullValue">-</td><td class="colBreak"> </td><td class="hms">41:28:16</td><td class="nullValue">-</td></tr><tr class="even  21"><td class="dateTime">2024-02-12
-      - 2024-02-19</td><td class="hms">0:02:54</td><td class="nullValue">-</td><td class="colBreak"> </td><td class="hms">14:58:57</td><td class="nullValue">-</td></tr><tr class="odd  22"><td class="dateTime">2024-02-19
+      - 2024-02-19</td><td class="nullValue">-</td><td class="nullValue">-</td><td class="colBreak"> </td><td class="hms">9:06:49</td><td class="nullValue">-</td></tr><tr class="odd  22"><td class="dateTime">2024-02-19
       - 2024-02-26</td><td class="hms">0:05:34</td><td class="nullValue">-</td><td class="colBreak"> </td><td class="hms">52:30:50</td><td class="nullValue">-</td></tr><tr class="even  23"><td class="dateTime">2024-02-26
       - 2024-03-04</td><td class="hms">0:27:24</td><td class="nullValue">-</td><td class="colBreak"> </td><td class="hms">28:07:36</td><td class="nullValue">-</td></tr><tr class="odd  24"><td class="dateTime">2024-03-04
       - 2024-03-11</td><td class="hms">2:01:00</td><td class="nullValue">-</td><td class="colBreak"> </td><td class="hms">21:32:45</td><td class="nullValue">-</td></tr><tr class="even  25"><td class="dateTime">2024-03-11
@@ -864,8 +884,8 @@
       - 2024-01-15</td><td class="mw">43,638 mWh
         </td><td class="mw">43,638 mWh
         </td></tr><tr class="even  21"><td class="dateTime">2024-02-12
-      - 2024-02-19</td><td class="mw">42,581 mWh
-        </td><td class="mw">42,581 mWh
+      - 2024-02-19</td><td class="mw">42,416 mWh
+        </td><td class="mw">42,416 mWh
         </td></tr><tr class="odd  22"><td class="dateTime">2024-02-19
       - 2024-02-26</td><td class="mw">43,461 mWh
         </td><td class="mw">43,461 mWh
@@ -934,7 +954,7 @@
       - 2024-01-01</td><td class="hms">3:22:34</td><td class="nullValue">-</td><td class="colBreak"> </td><td class="hms">3:22:34</td><td class="nullValue">-</td></tr><tr style="vertical-align:top" class="even  19"><td class="dateTime">2024-01-01
       - 2024-01-08</td><td class="hms">2:55:00</td><td class="nullValue">-</td><td class="colBreak"> </td><td class="hms">2:55:00</td><td class="nullValue">-</td></tr><tr style="vertical-align:top" class="odd  20"><td class="dateTime">2024-01-08
       - 2024-01-15</td><td class="hms">2:26:01</td><td class="nullValue">-</td><td class="colBreak"> </td><td class="hms">2:26:01</td><td class="nullValue">-</td></tr><tr style="vertical-align:top" class="even  21"><td class="dateTime">2024-02-12
-      - 2024-02-19</td><td class="hms">2:36:42</td><td class="nullValue">-</td><td class="colBreak"> </td><td class="hms">2:36:42</td><td class="nullValue">-</td></tr><tr style="vertical-align:top" class="odd  22"><td class="dateTime">2024-02-19
+      - 2024-02-19</td><td class="nullValue">-</td><td class="nullValue">-</td><td class="colBreak"> </td><td class="nullValue">-</td><td class="nullValue">-</td></tr><tr style="vertical-align:top" class="odd  22"><td class="dateTime">2024-02-19
       - 2024-02-26</td><td class="hms">2:04:23</td><td class="nullValue">-</td><td class="colBreak"> </td><td class="hms">2:04:23</td><td class="nullValue">-</td></tr><tr style="vertical-align:top" class="even  23"><td class="dateTime">2024-02-26
       - 2024-03-04</td><td class="hms">0:34:33</td><td class="nullValue">-</td><td class="colBreak"> </td><td class="hms">0:34:33</td><td class="nullValue">-</td></tr><tr style="vertical-align:top" class="odd  24"><td class="dateTime">2024-03-04
       - 2024-03-11</td><td class="hms">1:45:55</td><td class="nullValue">-</td><td class="colBreak"> </td><td class="hms">1:45:55</td><td class="nullValue">-</td></tr><tr style="vertical-align:top" class="even  25"><td class="dateTime">2024-03-11
@@ -945,4 +965,4 @@
       Current estimate of battery life based on all observed drains since OS install
     </div><table><colgroup><col/><col class="col2"/><col style="width: 10em;"/><col style=""/><col style="width: 10em;"/><col style="width: 10em;"/><col style="width: 10em;"/></colgroup><tr class="even" style="vertical-align:top"><td>
           Since OS install
-        </td><td class="hms">1:55:39</td><td class="nullValue">-</td><td class="colBreak"> </td><td class="hms">1:55:39</td><td class="nullValue">-</td></tr></table><br/><br/><br/></body></html>
+        </td><td class="hms">1:55:43</td><td class="nullValue">-</td><td class="colBreak"> </td><td class="hms">1:55:43</td><td class="nullValue">-</td></tr></table><br/><br/><br/></body></html>

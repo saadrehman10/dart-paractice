@@ -43,10 +43,29 @@ class Person {
 }
 
 class Student {
-  final _schoolname = 'Abc school' ;
+  final _schoolname = 'Abc school';
 
   String getSchoolName() {
     return _schoolname;
+  }
+}
+
+class School {
+  String? _name;
+  String? _street;
+  int? _classes;
+
+  set name(String name) => _name = name;
+  set street(String street) => _street = street;
+  set classes(int cls) => _classes = cls;
+
+  String get name => _name!;
+  String get street => _street!;
+  int get classes => _classes!;
+
+  void dispaly() {
+    print(
+        'The School name is $_name on  the Street $_street. It has $_classes classrooms.');
   }
 }
 
@@ -65,7 +84,12 @@ void main() {
   // person1.display();
   // // print(person1._age);// this is not the wirte way because of the encupulation  in OOPs concept
   // print(person1.getCast());
-  Student student1 = new Student();
-  
-  print(student1.getSchoolName());
+  // Student student1 = new Student();
+  // print(student1.getSchoolName());
+  School abcSchool = new School();
+  abcSchool.name = 'ABC School';
+  abcSchool.street = '123 ABC St.';
+  abcSchool.classes = 8;
+  print(abcSchool.classes);
+  abcSchool.dispaly();
 }
