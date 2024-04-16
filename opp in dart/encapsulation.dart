@@ -42,6 +42,14 @@ class Person {
   }
 }
 
+class Student {
+  final _schoolname = 'Abc school' ;
+
+  String getSchoolName() {
+    return _schoolname;
+  }
+}
+
 void main() {
   // Person person1 = new Person("John Doe", 30, "Actor");
   // Person person2 = new Person("Jane Smith", 45, null);
@@ -49,12 +57,15 @@ void main() {
   // person1.display();
   // person2.display();
 
-  // print(person1._age);
-  Person person1 = new Person();
-  person1.setName('Saad');
-  person1.setAge(10);
-  person1.setCast('Developer');
-  person1.display();
-  // print(person1._age);// this is not the wirte way because of the encupulation  in OOPs concept
-  print(person1.getCast());
+  // // print(person1._age);
+  // Person person1 = new Person();
+  // person1.setName('Saad');
+  // person1.setAge(10);
+  // person1.setCast('Developer');
+  // person1.display();
+  // // print(person1._age);// this is not the wirte way because of the encupulation  in OOPs concept
+  // print(person1.getCast());
+  Student student1 = new Student();
+  
+  print(student1.getSchoolName());
 }
