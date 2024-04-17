@@ -1,6 +1,5 @@
 //Encapsulation
 
-
 class Car {
   String? name;
   int? year;
@@ -69,6 +68,14 @@ class School {
     print(
         'The School name is $_name on  the Street $_street. It has $_classes classrooms.');
   }
+}
+
+class World {
+  String? _palanetCode;
+  String? name;
+  int? _planetAge;
+  double? distanceFromSun;
+  World
 }
 
 void main() {
