@@ -82,10 +82,11 @@ class Planet {
   Planet.allAtribute(
       this._palanetCode, this._planetAge, this.distanceFromSun, this.name);
 
-  dynamic get planetAge => _planetAge == null ? 'You are in unknown planet' : _planetAge! ;
-  set planetAge(int age) => _planetAge = age;
-  String get planetCode => _palanetCode!;
   set planetCode(String code) => _palanetCode = code;
+  set planetAge(int age) => _planetAge = age;
+  int get planetAge => _planetAge = _planetAge ?? -1;
+  String get planetCode =>
+      _palanetCode = _palanetCode ?? 'You are in unknown planet';
 
   void checkPlanet() {
     _planetAge != null && _palanetCode != null
@@ -130,5 +131,5 @@ void main() {
   // xyzSchool.dispaly();
   Planet earth = new Planet('Earth', 4.967 * (pow(10, 9)));
   earth.PlanetDetails();
-  earth.
+  print(earth.p;
 }
