@@ -82,8 +82,8 @@ class Planet {
   Planet.allAtribute(
       this._planetCode, this._planetAge, this.distanceFromSun, this.name);
 
-  set planetCode(String code) => _planetCode = code;
-  set planetAge(int age) => _planetAge = age;
+  void setplanetCode(String code) => _planetCode = code;
+  void setplanetAge(int age) => _planetAge = age;
   int get planetAge => _planetAge = _planetAge ?? -1;
   String get planetCode =>
       _planetCode = _planetCode ?? 'You are in unknown planet';
@@ -129,9 +129,9 @@ void main() {
   // xyzSchool.classes = 20;
   // xyzSchool.name = 'xyz Uni';
   // xyzSchool.dispaly();
-  Planet earth = Planet('Earth', 4.967 * (pow(10, 9)));
+  Planet earth = new Planet('Earth', 4.967 * (pow(10, 9)));
   earth.PlanetDetails();
-  earth.planetAge = 1233234;
-  earth.planetCode = 'E';
+  earth.setplanetAge(122445);
+  earth.setplanetCode('e');
   earth.PlanetDetails();
 }
