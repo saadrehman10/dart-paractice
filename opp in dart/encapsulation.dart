@@ -75,7 +75,9 @@ class World {
   String? name;
   int? _planetAge;
   double? distanceFromSun;
-  World
+  World(this._palanetCode,this.name, this._planetAge, this.distanceFromSun);
+
+  
 }
 
 void main() {
