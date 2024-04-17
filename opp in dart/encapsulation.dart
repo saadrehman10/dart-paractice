@@ -73,32 +73,32 @@ class School {
 }
 
 class Planet {
-  String? _palanetCode;
+  String? _planetCode;
   String? name;
   int? _planetAge;
   double? distanceFromSun;
 
   Planet(this.name, this.distanceFromSun);
   Planet.allAtribute(
-      this._palanetCode, this._planetAge, this.distanceFromSun, this.name);
+      this._planetCode, this._planetAge, this.distanceFromSun, this.name);
 
-  set planetCode(String code) => _palanetCode = code;
+  set planetCode(String code) => _planetCode = code;
   set planetAge(int age) => _planetAge = age;
   int get planetAge => _planetAge = _planetAge ?? -1;
   String get planetCode =>
-      _palanetCode = _palanetCode ?? 'You are in unknown planet';
+      _planetCode = _planetCode ?? 'You are in unknown planet';
 
   void checkPlanet() {
-    _planetAge != null && _palanetCode != null
+    _planetAge != null && _planetCode != null
         ? print('You are in unknown planet')
         : print("Welcome to $name");
   }
 
   void PlanetDetails() {
-    _planetAge != null && _palanetCode != null
+    _planetAge != null && _planetCode != null
         ? print('Error no info is available ')
         : print(
-            "Welcome to $name\nThe Planet Code is $_palanetCode\nThe Planet is $_planetAge  years old\nThe planet is $distanceFromSun km faraway");
+            "Welcome to $name\nThe Planet Code is $_planetCode\nThe Planet is $_planetAge  years old\nThe planet is $distanceFromSun km faraway");
   }
 }
 
@@ -129,7 +129,9 @@ void main() {
   // xyzSchool.classes = 20;
   // xyzSchool.name = 'xyz Uni';
   // xyzSchool.dispaly();
-  Planet earth = new Planet('Earth', 4.967 * (pow(10, 9)));
+  Planet earth = Planet('Earth', 4.967 * (pow(10, 9)));
   earth.PlanetDetails();
-  print(earth.p;
+  earth.planetAge = 1233234;
+  earth.planetCode = 'E';
+  earth.PlanetDetails();
 }
