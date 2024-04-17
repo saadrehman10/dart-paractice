@@ -1,4 +1,6 @@
 //Encapsulation
+
+
 class Car {
   String? name;
   int? year;
@@ -92,9 +94,8 @@ void main() {
   abcSchool.classes = 8;
   print(abcSchool.classes);
   abcSchool.dispaly();
-
-
-
-
-  
+  School xyzSchool = new School();
+  xyzSchool.classes = 20;
+  xyzSchool.name = 'xyz Uni';
+  xyzSchool.dispaly();
 }
