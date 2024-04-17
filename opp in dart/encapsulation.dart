@@ -1,3 +1,5 @@
+import 'dart:math';
+
 //Encapsulation
 
 class Car {
@@ -70,30 +72,32 @@ class School {
   }
 }
 
-class World {
+class Planet {
   String? _palanetCode;
   String? name;
   int? _planetAge;
   double? distanceFromSun;
 
-  World(this.name, this.distanceFromSun);
-  World.allAtribute(this._palanetCode,this._planetAge,this.distanceFromSun,this.name);
+  Planet(this.name, this.distanceFromSun);
+  Planet.allAtribute(
+      this._palanetCode, this._planetAge, this.distanceFromSun, this.name);
 
-  int get planetAge => _planetAge!;
+  dynamic get planetAge => _planetAge == null ? 'You are in unknown planet' : _planetAge! ;
   set planetAge(int age) => _planetAge = age;
   String get planetCode => _palanetCode!;
   set planetCode(String code) => _palanetCode = code;
 
   void checkPlanet() {
-    _planetAge != null && _palanetCode != null ?
-      print('You are in unknown planet') : print("Welcome to $name");
-    
+    _planetAge != null && _palanetCode != null
+        ? print('You are in unknown planet')
+        : print("Welcome to $name");
   }
 
   void PlanetDetails() {
-    _planetAge != null && _palanetCode != null ?
-      print('Error no info is available ') : print("Welcome to $name\nThe Planet Code is $_palanetCode\nThe Planet is $_planetAge  years old\nThe planet is $distanceFromSun km faraway");
-    
+    _planetAge != null && _palanetCode != null
+        ? print('Error no info is available ')
+        : print(
+            "Welcome to $name\nThe Planet Code is $_palanetCode\nThe Planet is $_planetAge  years old\nThe planet is $distanceFromSun km faraway");
   }
 }
 
@@ -124,6 +128,7 @@ void main() {
   // xyzSchool.classes = 20;
   // xyzSchool.name = 'xyz Uni';
   // xyzSchool.dispaly();
-  
-
+  Planet earth = new Planet('Earth', 4.967 * (pow(10, 9)));
+  earth.PlanetDetails();
+  earth.
 }
