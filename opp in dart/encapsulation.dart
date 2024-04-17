@@ -75,9 +75,26 @@ class World {
   String? name;
   int? _planetAge;
   double? distanceFromSun;
-  World(this._palanetCode,this.name, this._planetAge, this.distanceFromSun);
 
-  
+  World(this.name, this.distanceFromSun);
+  World.allAtribute(this._palanetCode,this._planetAge,this.distanceFromSun,this.name);
+
+  int get planetAge => _planetAge!;
+  set planetAge(int age) => _planetAge = age;
+  String get planetCode => _palanetCode!;
+  set planetCode(String code) => _palanetCode = code;
+
+  void checkPlanet() {
+    _planetAge != null && _palanetCode != null ?
+      print('You are in unknown planet') : print("Welcome to $name");
+    
+  }
+
+  void PlanetDetails() {
+    _planetAge != null && _palanetCode != null ?
+      print('Error no info is available ') : print("Welcome to $name\nThe Planet Code is $_palanetCode\nThe Planet is $_planetAge  years old\nThe planet is $distanceFromSun km faraway");
+    
+  }
 }
 
 void main() {
@@ -97,14 +114,16 @@ void main() {
   // print(person1.getCast());
   // Student student1 = new Student();
   // print(student1.getSchoolName());
-  School abcSchool = new School();
-  abcSchool.name = 'ABC School';
-  abcSchool.street = '123 ABC St.';
-  abcSchool.classes = 8;
-  print(abcSchool.classes);
-  abcSchool.dispaly();
-  School xyzSchool = new School();
-  xyzSchool.classes = 20;
-  xyzSchool.name = 'xyz Uni';
-  xyzSchool.dispaly();
+  // School abcSchool = new School();
+  // abcSchool.name = 'ABC School';
+  // abcSchool.street = '123 ABC St.';
+  // abcSchool.classes = 8;
+  // print(abcSchool.classes);
+  // abcSchool.dispaly();
+  // School xyzSchool = new School();
+  // xyzSchool.classes = 20;
+  // xyzSchool.name = 'xyz Uni';
+  // xyzSchool.dispaly();
+  
+
 }
