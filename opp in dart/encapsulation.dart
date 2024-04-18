@@ -82,23 +82,29 @@ class Planet {
   Planet.allAtribute(
       this._planetCode, this._planetAge, this.distanceFromSun, this.name);
 
-  set planetCode(String code) => _planetCode = code;
-  set planetAge(int age) => _planetAge = age;
+  set planetCode(String code) {
+    _planetCode = code;
+  }
+
+  set planetAge(int age) {
+    _planetAge = age;
+  }
+
   int get planetAge => _planetAge = _planetAge ?? -1;
   String get planetCode =>
       _planetCode = _planetCode ?? 'You are in unknown planet';
 
   void checkPlanet() {
-    _planetAge != null && _planetCode != null
-        ? print('You are in unknown planet')
+    _planetAge == null || _planetCode == null
+        ? print('You are in an unknown planet')
         : print("Welcome to $name");
   }
 
   void PlanetDetails() {
-    _planetAge != null && _planetCode != null
-        ? print('Error no info is available ')
+    _planetAge == null || _planetCode == null
+        ? print('Error: No info is available')
         : print(
-            "Welcome to $name\nThe Planet Code is $_planetCode\nThe Planet is $_planetAge  years old\nThe planet is $distanceFromSun km faraway");
+            "Welcome to $name\nThe Planet Code is $_planetCode\nThe Planet is $_planetAge years old\nThe planet is $distanceFromSun km far away");
   }
 }
 
@@ -129,13 +135,25 @@ void main() {
   // xyzSchool.classes = 20;
   // xyzSchool.name = 'xyz Uni';
   // xyzSchool.dispaly();
-  Planet earth = new Planet('Earth', 4.967 * (pow(10, 9)));
+  // Planet earth = new Planet('Earth', 4.967 * (pow(10, 9)));
+  // earth.PlanetDetails();
+  // earth.planetAge = 123442;
+  // earth.planetCode = "E";
+  // earth.PlanetDetails();
+
+  // Planet mars = new Planet.allAtribute('M', 1234552, 459999900000.0, "Mars");
+  // mars.checkPlanet();
+  // mars.PlanetDetails();
+  // mars.planetAge = 11244234234;
+  // print(mars.planetAge);
+
+  Planet earth = Planet('Earth', 4.967 * (pow(10, 9)));
   earth.PlanetDetails();
   earth.planetAge = 123442;
   earth.planetCode = "E";
   earth.PlanetDetails();
 
-  Planet mars = new Planet.allAtribute('M', 1234552, 459999900000.0, "Mars");
+  Planet mars = Planet.allAtribute('M', 1234552, 459999900000.0, "Mars");
   mars.checkPlanet();
   mars.PlanetDetails();
   mars.planetAge = 11244234234;
