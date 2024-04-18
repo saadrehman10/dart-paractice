@@ -134,4 +134,10 @@ void main() {
   earth.planetAge = 123442;
   earth.planetCode = "E";
   earth.PlanetDetails();
+
+  Planet mars = new Planet.allAtribute('M', 1234552, 459999900000.0, "Mars");
+  mars.checkPlanet();
+  mars.PlanetDetails();
+  mars.planetAge = 11244234234;
+  print(mars.planetAge);
 }
