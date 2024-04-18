@@ -158,4 +158,13 @@ void main() {
   mars.PlanetDetails();
   mars.planetAge = 11244234234;
   print(mars.planetAge);
+
+  Planet jupiter = Planet("Jupiter", 11432600000000.0);
+  jupiter.checkPlanet();
+  jupiter.PlanetDetails();
+  jupiter.planetAge = 123238987867;
+  jupiter.planetCode = 'J';
+  jupiter.checkPlanet();
+  print(jupiter.planetAge);
+  
 }
