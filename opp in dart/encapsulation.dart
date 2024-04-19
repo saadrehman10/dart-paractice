@@ -77,14 +77,21 @@ class Planet {
   String? name;
   int? _planetAge;
   double? distanceFromSun;
+  int? noOfMoons;
+  int? noOfSuns;
 
   Planet(this.name, this.distanceFromSun);
+  Planet.noOfNSatalites(
+      this.name, this.noOfMoons, this.distanceFromSun, this.noOfSuns);
   Planet.allAtribute(
       this._planetCode, this._planetAge, this.distanceFromSun, this.name);
 
+
+  double get moonToSunRatio => noOfMoons!/noOfSuns!;
+
+
   String get panetageandCode => _planetAge.toString() + _planetCode!;
 
-  
   set planetCode(String code) {
     _planetCode = code;
   }
@@ -169,4 +176,21 @@ void main() {
   jupiter.planetCode = 'J';
   jupiter.checkPlanet();
   print(jupiter.planetAge);
+
+  print('------------');
+  print(jupiter.panetageandCode);
+  print(earth.panetageandCode);
+  print(mars.panetageandCode);
+  print('--------');
+
+  Planet newPlanet001 = Planet.noOfNSatalites('001newEarth', 3, 122232344.0, 2);
+  newPlanet001.planetCode = 'NE';
+  newPlanet001.checkPlanet();
+  newPlanet001.PlanetDetails();
+  newPlanet001._planetAge = 100;
+  newPlanet001.checkPlanet();
+  newPlanet001.PlanetDetails();
+  print('The sun to moon raito is ${newPlanet001.moonToSunRatio}');
+
+
 }
