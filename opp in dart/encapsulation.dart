@@ -245,6 +245,17 @@ void main() {
 // Company company2  = new Company('Apple',1950);
 
 
+Company company1 = new Company('Samsung',1919);
+
+company1.yearlyDebt = 1199.0;
+print(company1.yearlyDebt);
+print(company1._yearlyProfit);
+print(company1.mapedComanyData);
+company1.yearlyProfit = 2000000.0;
+print(company1.mapedComanyData);
+print(company1.companyStatus());
+
+Company company2  = new Company('Apple',1950);
 
   
 
