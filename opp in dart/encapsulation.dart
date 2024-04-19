@@ -127,7 +127,7 @@ class Company {
   
   Company(this.name, this.startingYear,[this._yearlyDebt, this._yearlyProfit]);
 
-  set yearlyProfit(double amount) => _yearlyProfit = amount;
+  set yearlyProfit(double amount) => amount < 0 ? print('invalid amount') : _yearlyProfit = amount;  
   set yearlyDebt(double amount) {
     amount < 0.0 ? print('invalid amount') : _yearlyDebt = amount;
   }
@@ -148,7 +148,13 @@ class Company {
     );
   }
 
+  dynamic companyStatus (){
+    var status = _yearlyProfit! - _yearlyDebt!;
+    return status < 0 ? {'Company is in loss', false} : {'You are in profit', true}; 
+  }
+
 }
+
 
 
 
