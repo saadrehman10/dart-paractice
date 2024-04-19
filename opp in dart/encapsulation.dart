@@ -2,14 +2,14 @@ import 'dart:math';
 
 //Encapsulation
 
-class Car {
-  String? name;
-  int? year;
-  Car(this.name, this.year);
-  void printDetails() {
-    print('$name and the year is $year');
-  }
-}
+// class Car {
+//   String? name;
+//   int? year;
+//   Car(this.name, this.year);
+//   void printDetails() {
+//     print('$name and the year is $year');
+//   }
+// }
 
 class Person {
   String? _name;
@@ -153,6 +153,27 @@ class Company {
     return status < 0 ? {'Company is in loss', false} : {'You are in profit', true}; 
   }
 
+}
+
+class Car {
+  String? name;
+  int? year;
+  bool? sold;
+  String? _carModel;
+  
+  Car(this.name, this.year,this.sold);
+  
+  set carModel(String model) => _carModel = model;
+  
+  String get carModel {
+     if (_carModel == null){
+       return 'The value is not set';
+     } else {return _carModel!;}
+  }
+  
+  void printDetails(){
+   print('$name was relaised in $year');    
+  }
 }
 
 
