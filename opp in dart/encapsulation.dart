@@ -191,52 +191,52 @@ void main() {
   // mars.planetAge = 11244234234;
   // print(mars.planetAge);
 
-  Planet earth = Planet('Earth', 4.967 * (pow(10, 9)));
-  earth.PlanetDetails();
-  earth.planetAge = 123442;
-  earth.planetCode = "E";
-  earth.PlanetDetails();
+//   Planet earth = Planet('Earth', 4.967 * (pow(10, 9)));
+//   earth.PlanetDetails();
+//   earth.planetAge = 123442;
+//   earth.planetCode = "E";
+//   earth.PlanetDetails();
 
-  Planet mars = Planet.allAtribute('M', 1234552, 459999900000.0, "Mars");
-  mars.checkPlanet();
-  mars.PlanetDetails();
-  mars.planetAge = 11244234234;
-  print(mars.planetAge);
+//   Planet mars = Planet.allAtribute('M', 1234552, 459999900000.0, "Mars");
+//   mars.checkPlanet();
+//   mars.PlanetDetails();
+//   mars.planetAge = 11244234234;
+//   print(mars.planetAge);
 
-  Planet jupiter = Planet("Jupiter", 11432600000000.0);
-  jupiter.checkPlanet();
-  jupiter.PlanetDetails();
-  jupiter.planetAge = 123238987867;
-  jupiter.planetCode = 'J';
-  jupiter.checkPlanet();
-  print(jupiter.planetAge);
+//   Planet jupiter = Planet("Jupiter", 11432600000000.0);
+//   jupiter.checkPlanet();
+//   jupiter.PlanetDetails();
+//   jupiter.planetAge = 123238987867;
+//   jupiter.planetCode = 'J';
+//   jupiter.checkPlanet();
+//   print(jupiter.planetAge);
 
-  print('------------');
-  print(jupiter.panetageandCode);
-  print(earth.panetageandCode);
-  print(mars.panetageandCode);
-  print('--------');
+//   print('------------');
+//   print(jupiter.panetageandCode);
+//   print(earth.panetageandCode);
+//   print(mars.panetageandCode);
+//   print('--------');
 
-  Planet newPlanet001 = Planet.noOfNSatalites('001newEarth', 3, 122232344.0, 2);
-  newPlanet001.planetCode = 'NE';
-  newPlanet001.checkPlanet();
-  newPlanet001.PlanetDetails();
-  newPlanet001._planetAge = 100;
-  newPlanet001.checkPlanet();
-  newPlanet001.PlanetDetails();
-  print('The sun to moon raito is ${newPlanet001.moonToSunRatio}');
+//   Planet newPlanet001 = Planet.noOfNSatalites('001newEarth', 3, 122232344.0, 2);
+//   newPlanet001.planetCode = 'NE';
+//   newPlanet001.checkPlanet();
+//   newPlanet001.PlanetDetails();
+//   newPlanet001._planetAge = 100;
+//   newPlanet001.checkPlanet();
+//   newPlanet001.PlanetDetails();
+//   print('The sun to moon raito is ${newPlanet001.moonToSunRatio}');
 
-  Company company1 = new Company('Samsung',1919);
+//   Company company1 = new Company('Samsung',1919);
 
-company1.yearlyDebt = 1199.0;
-print(company1.yearlyDebt);
-print(company1._yearlyProfit);
-print(company1.mapedComanyData);
-company1.yearlyProfit = 2000000.0;
-print(company1.mapedComanyData);
+// company1.yearlyDebt = 1199.0;
+// print(company1.yearlyDebt);
+// print(company1._yearlyProfit);
+// print(company1.mapedComanyData);
+// company1.yearlyProfit = 2000000.0;
+// print(company1.mapedComanyData);
 
 
-Company company2  = new Company('Apple',1950);
+// Company company2  = new Company('Apple',1950);
 
 
 
