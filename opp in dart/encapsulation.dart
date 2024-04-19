@@ -278,11 +278,11 @@ void main() {
 
 // Company company2  = new Company('Apple',1950);
 
-Car car1 = Car('Swift',2012,false);
-  print(car1.carModel);
-  car1.carModel = 'U353EEG';
-  car1.printDetails();
-  print(car1.carModel);
+// Car car1 = Car('Swift',2012,false);
+//   print(car1.carModel);
+//   car1.carModel = 'U353EEG';
+//   car1.printDetails();
+//   print(car1.carModel);
 
 
   
