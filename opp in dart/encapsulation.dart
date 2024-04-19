@@ -118,6 +118,40 @@ class Planet {
   }
 }
 
+
+class Company {
+  String? name;
+  int? startingYear ;
+  double? _yearlyProfit;
+  double? _yearlyDebt;
+  
+  Company(this.name, this.startingYear,[this._yearlyDebt, this._yearlyProfit]);
+
+  set yearlyProfit(double amount) => _yearlyProfit = amount;
+  set yearlyDebt(double amount) {
+    amount < 0.0 ? print('invalid amount') : _yearlyDebt = amount;
+  }
+  double get yearlyDebt {
+    return _yearlyDebt! > 0 ? -1.0 : _yearlyDebt!;
+  }
+  double get yearlyProfit {
+    return _yearlyProfit! > 0 ? -1.0 : _yearlyProfit!;
+  }
+  Map <String,dynamic> get mapedComanyData {
+    return (
+      {
+        'name': name,
+        'Year' : startingYear,
+        'YearlyProfit' : _yearlyProfit,
+        'YearlyDebt' : _yearlyDebt, 
+        }
+    );
+  }
+
+}
+
+
+
 void main() {
   // Person person1 = new Person("John Doe", 30, "Actor");
   // Person person2 = new Person("Jane Smith", 45, null);
@@ -191,6 +225,11 @@ void main() {
   newPlanet001.checkPlanet();
   newPlanet001.PlanetDetails();
   print('The sun to moon raito is ${newPlanet001.moonToSunRatio}');
+
+
+
+
+  
 
 
 }
