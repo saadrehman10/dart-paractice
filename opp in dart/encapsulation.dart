@@ -82,6 +82,9 @@ class Planet {
   Planet.allAtribute(
       this._planetCode, this._planetAge, this.distanceFromSun, this.name);
 
+  String get panetageandCode => _planetAge.toString() + _planetCode!;
+
+  
   set planetCode(String code) {
     _planetCode = code;
   }
@@ -166,5 +169,4 @@ void main() {
   jupiter.planetCode = 'J';
   jupiter.checkPlanet();
   print(jupiter.planetAge);
-  
 }
