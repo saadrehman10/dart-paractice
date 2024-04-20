@@ -27,6 +27,17 @@ class SuperCar extends Car {
   }
 }
 
+class Suv extends Car {
+  bool? isSportsEdition;
+  double? fuleAvg;
+  int? seats;
+
+  void displaySuvDetails() {
+    this.dispalyCar();
+    print(
+        'with fule  average of $fuleAvg and ${isSportsEdition == true ? 'it\'s' : 'it\s not'} a sports edition car with $seats seats');
+  }
+}
 // class Gari extends SuperCar {
 //   Gari();
 // }
@@ -46,6 +57,17 @@ void main() {
   car1.topSpeed = 567;
   car1.yearlyTaxses = 10000;
   car1.displaySuperCarDetails();
-  
+  car1.dispalyCar();
+  car1.ticketsCalulations();
+  print(car1.fine);
 
+  Suv car2 = new Suv();
+  car2.name = 'Hiroof';
+  car2.year = 1900;
+  car2.made = 'Suzuki';
+  car2.licenceNo = 'USA-999';
+  car2.seats = 8;
+  car2.fuleAvg = 22.3;
+  car2.isSportsEdition = false;
+  car2.displaySuvDetails();
 }
