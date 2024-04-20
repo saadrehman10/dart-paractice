@@ -38,6 +38,19 @@ class Suv extends Car {
         'with fule  average of $fuleAvg and ${isSportsEdition == true ? 'it\'s' : 'it\s not'} a sports edition car with $seats seats');
   }
 }
+
+class Features extends Suv {
+  bool? ac;
+  bool? fwd;
+  bool? sunroof;
+  bool? butterflyDoor;
+
+  void displayFeatures() {
+    this.displaySuvDetails();
+    print(
+        '${ac == true ? 'with Ac' : ''} ,${fwd == true ? 'with FWD' : ''} , ${sunroof == true ? 'with Sunroof' : ''} , ${butterflyDoor == true ? 'with Butterfly Doors' : ''}');
+  }
+}
 // class Gari extends SuperCar {
 //   Gari();
 // }
@@ -70,4 +83,19 @@ void main() {
   car2.fuleAvg = 22.3;
   car2.isSportsEdition = false;
   car2.displaySuvDetails();
+
+  Features car3 = new Features();
+
+  car3.name = 'Hiroof';
+  car3.year = 1900;
+  car3.made = 'Suzuki';
+  car3.licenceNo = 'USA-999';
+  car3.seats = 8;
+  car3.fuleAvg = 22.3;
+  car3.isSportsEdition = false;
+  car3.ac = false;
+  car3.butterflyDoor = true;
+  car3.fwd = true;
+  car3.sunroof = false;
+  car3.displayFeatures();
 }
