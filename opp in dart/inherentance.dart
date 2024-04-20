@@ -67,6 +67,24 @@ class FeatuerClass2 extends Features {
   }
 }
 
+// inheritace with constructor
+
+class Person {
+  String? firstName;
+  String? lastName;
+  int? dob;
+  int? _cnicNO;
+
+  Person(this.firstName, this.lastName, this.dob);
+
+  set cincNO(int number) => number.toString().length == 14
+      ? _cnicNO = number
+      : print('The cnic Length is invalid');
+  int get cnicNO => _cnicNO!;
+ 
+
+}
+
 void main() {
   // SuperCar lambo = SuperCar();
   // lambo.dispalyCar();
@@ -127,7 +145,4 @@ void main() {
   // car3.random = 'third inhreantance class property';
   // car3.numramdom = 4834823084238498;
   // car3.diplayFE2();
-
-
-
 }
