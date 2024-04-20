@@ -111,20 +111,23 @@ void main() {
   // car3.sunroof = false;
   // car3.displayFeatures();
 
-  FeatuerClass2 car3 = new FeatuerClass2();
+  // FeatuerClass2 car3 = new FeatuerClass2();
 
-  car3.name = 'Hiroof';
-  car3.year = 1900;
-  car3.made = 'Suzuki';
-  car3.licenceNo = 'USA-999';
-  car3.seats = 8;
-  car3.fuleAvg = 22.3;
-  car3.isSportsEdition = false;
-  car3.ac = false;
-  car3.butterflyDoor = true;
-  car3.fwd = true;
-  car3.sunroof = false;
-  car3.random = 'third inhreantance class property';
-  car3.numramdom = 4834823084238498;
-  car3.diplayFE2();
+  // car3.name = 'Hiroof';
+  // car3.year = 1900;
+  // car3.made = 'Suzuki';
+  // car3.licenceNo = 'USA-999';
+  // car3.seats = 8;
+  // car3.fuleAvg = 22.3;
+  // car3.isSportsEdition = false;
+  // car3.ac = false;
+  // car3.butterflyDoor = true;
+  // car3.fwd = true;
+  // car3.sunroof = false;
+  // car3.random = 'third inhreantance class property';
+  // car3.numramdom = 4834823084238498;
+  // car3.diplayFE2();
+
+
+
 }
