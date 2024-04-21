@@ -91,8 +91,8 @@ class Person {
 
   void showPersonalInfo() {
     print("Name: ${this.fullName}");
-    print("Date of Birth : ${this.calulateAge()}");
-    print('${_cnicNO ?? 'CNIC NO: ${this.cnicNO}'}');
+    print("Age : ${this.calulateAge()}");
+    print('${_cnicNO != null ? 'CNIC NO: ${this.cnicNO}' : ''}');
   }
 }
 
@@ -114,7 +114,7 @@ class Employee extends Person {
     super.showPersonalInfo();
     print("Salary : Rs. ${this.salary}");
     print('Position : ' + this.position!.toUpperCase());
-    print('${_employId ?? 'Employee ID: ${this.employId}'}');
+    print('${_employId != null ? 'Employee ID: ${this.employId}' : ''}');
   }
 }
 
@@ -220,6 +220,16 @@ void main() {
   // car3.random = 'third inhreantance class property';
   // car3.numramdom = 4834823084238498;
   // car3.diplayFE2();
+  Person person1 = Person('John', 'Smith', 1956);
+  person1.cincNO = 42101417051250;
+  person1.showPersonalInfo();
+  print('-------------------tested Person---------------');
 
-  
+  Student person2 = Student('Saad', 'ur rehman', 2001, 'north', 9);
+  person2.showPersonalInfo();
+  print('------------------');
+  person2.showStudentInfo();
+  person2.cincNO = 42101417051250;
+  print('------------------');
+  person2.showStudentInfo();
 }
