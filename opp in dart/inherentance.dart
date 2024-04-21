@@ -136,7 +136,7 @@ class PrimaryStudent extends Student {
       int grade, this.interests)
       : super(firstName, lastName, dob, branch, grade);
 
-  bool overAge = super.calculateAge() < 15 ? true : false;
+  bool overAge = super.calulateAge() < 15 ? true : false;
 }
 
 void main() {
