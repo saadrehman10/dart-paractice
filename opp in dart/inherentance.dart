@@ -67,7 +67,7 @@ class FeatuerClass2 extends Features {
   }
 }
 
-// inheritace with constructor
+// inheritace with constructor---------------------------------
 
 class Person {
   String? firstName;
@@ -104,14 +104,30 @@ class Employee extends Person {
       String firstName, String lastName, int dob, this.salary, this.position)
       : super(firstName, lastName, dob);
 
-  set employId(int id)  =>  _employId.toString().length == 8 ? _employId = id : ;
-  int get employId =>  _employId!;
+  set employId(int id) => _employId.toString().length == 8
+      ? _employId = id
+      : print('Invalid length of Id ');
+  int get employId => _employId!;
 
-  void showEmployeeDetails (){
+  void showEmployeeDetails() {
     this.showPersonalInfo();
     print("Salary : Rs. ${this.salary}");
     print('Position : ' + this.position!.toUpperCase());
     print('${_employId ?? 'Employee ID: ${this.employId}'}');
+  }
+}
+
+class Student extends Person {
+  String? branch;
+  int? grade;
+  Student(String firstName, String lastName, int dob, this.branch, this.grade)
+      : super(firstName, lastName, dob);
+
+  void showStudentInfo() {
+    this.showPersonalInfo();
+    print('Branch: $branch');
+    print('Grade: $grade');
+
   }
 }
 
