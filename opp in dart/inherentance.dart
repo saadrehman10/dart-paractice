@@ -81,8 +81,18 @@ class Person {
       ? _cnicNO = number
       : print('The cnic Length is invalid');
   int get cnicNO => _cnicNO!;
- 
+  String get fullName => '$firstName $lastName';
 
+  int calulateAge() {
+    int age = 2024 - this.dob!;
+    return age;
+  }
+
+  void showPersonalInfo() {
+    print("Name: ${this.fullName}");
+    print("Date of Birth : ${this.calulateAge()}");
+    print('${_cnicNO ?? 'CNIC NO: ${cnicNO}'}');
+  }
 }
 
 void main() {
