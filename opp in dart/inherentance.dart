@@ -232,4 +232,12 @@ void main() {
   person2.cincNO = 42101417051250;
   print('------------------');
   person2.showStudentInfo();
+  print('------------------');
+  PrimaryStudent person3 =
+      PrimaryStudent('Saeed', 'desai', 2010, 'south', 3, 'coloring');
+  person3.showPrimaryStudentInfo();
+  person3.cincNO = 42101417051250;
+  print('------------------');
+  person3.showPrimaryStudentInfo();
+
 }
