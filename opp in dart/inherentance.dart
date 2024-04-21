@@ -33,7 +33,7 @@ class Suv extends Car {
   int? seats;
 
   void displaySuvDetails() {
-    this.dispalyCar();
+    super.dispalyCar();
     print(
         'with fule  average of $fuleAvg and ${isSportsEdition == true ? 'it\'s' : 'it\s not'} a sports edition car with $seats seats');
   }
@@ -46,7 +46,7 @@ class Features extends Suv {
   bool? butterflyDoor;
 
   void displayFeatures() {
-    this.displaySuvDetails();
+    super.displaySuvDetails();
     print(
         '${ac == true ? 'with Ac' : ''} ,${fwd == true ? 'with FWD' : ''} , ${sunroof == true ? 'with Sunroof' : ''} , ${butterflyDoor == true ? 'with Butterfly Doors' : ''}');
   }
@@ -110,7 +110,7 @@ class Employee extends Person {
   int get employId => _employId!;
 
   void showEmployeeDetails() {
-    this.showPersonalInfo();
+    super.showPersonalInfo();
     print("Salary : Rs. ${this.salary}");
     print('Position : ' + this.position!.toUpperCase());
     print('${_employId ?? 'Employee ID: ${this.employId}'}');
@@ -124,11 +124,19 @@ class Student extends Person {
       : super(firstName, lastName, dob);
 
   void showStudentInfo() {
-    this.showPersonalInfo();
+    super.showPersonalInfo();
     print('Branch: $branch');
     print('Grade: $grade');
-
   }
+}
+
+class PrimaryStudent extends Student {
+  String? interests;
+  PrimaryStudent(String firstName, String lastName, int dob, String branch,
+      int grade, this.interests)
+      : super(firstName, lastName, dob, branch, grade);
+
+  bool overAge = super.calulateAge() < 15 ? true : false;
 }
 
 void main() {
