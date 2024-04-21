@@ -124,8 +124,8 @@ class Student extends Person {
   Student(String firstName, String lastName, int dob, this.branch, this.grade)
       : super(firstName, lastName, dob);
 
-  Student.allAttributes(
-      firstName, lastName, dob, cnicNO, this.branch, this.grade)
+  Student.allAttributes(String firstName, String lastName, int dob, int cnicNO,
+      this.branch, this.grade)
       : super.allAttributes(firstName, lastName, dob, cnicNO);
 
   void showStudentInfo() {
@@ -141,8 +141,14 @@ class PrimaryStudent extends Student {
       int grade, this.interests)
       : super(firstName, lastName, dob, branch, grade);
 
-  PrimaryStudent.allAttributes(firstName, lastName, dob, cnicNO)
-      : super.allAttributes(firstName, lastName, dob, cnicNO);
+  PrimaryStudent.allAttributes(
+    String firstName,
+    String lastName,
+    int dob,
+    int cnicNO,
+    String branch,
+    int grade,
+  ) : super.allAttributes(firstName, lastName, dob, cnicNO, branch, grade);
   bool overAge() => super.calulateAge() < 15 ? true : false;
   void showPrimaryStudentInfo() {
     if (overAge()) {
@@ -214,4 +220,6 @@ void main() {
   // car3.random = 'third inhreantance class property';
   // car3.numramdom = 4834823084238498;
   // car3.diplayFE2();
+
+  
 }
