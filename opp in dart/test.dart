@@ -1,4 +1,4 @@
-import './encapsulation.dart';
+// import './encapsulation.dart';
 
 void main() {
   // Car mycar = new Car('Toyota', 2000);
