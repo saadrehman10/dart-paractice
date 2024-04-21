@@ -138,8 +138,13 @@ class PrimaryStudent extends Student {
 
   bool overAge() => super.calulateAge() < 15 ? true : false;
   void showPrimaryStudentInfo() {
-    showStudentInfo();
-    print('Interest : $interests');
+    if (overAge()) {
+      showStudentInfo();
+      print('Interest : $interests');
+    } else {
+      print('over age to be an primary Student');
+    }
+    
   } //
 }
 
