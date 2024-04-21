@@ -76,6 +76,7 @@ class Person {
   int? _cnicNO;
 
   Person(this.firstName, this.lastName, this.dob);
+  Person.allAttributes(this.firstName, this.lastName, this.dob, this._cnicNO);
 
   set cincNO(int number) => number.toString().length == 14
       ? _cnicNO = number
@@ -123,6 +124,10 @@ class Student extends Person {
   Student(String firstName, String lastName, int dob, this.branch, this.grade)
       : super(firstName, lastName, dob);
 
+  Student.allAttributes(
+      firstName, lastName, dob, cnicNO, this.branch, this.grade)
+      : super.allAttributes(firstName, lastName, dob, cnicNO);
+
   void showStudentInfo() {
     super.showPersonalInfo();
     print('Branch: $branch');
@@ -136,6 +141,8 @@ class PrimaryStudent extends Student {
       int grade, this.interests)
       : super(firstName, lastName, dob, branch, grade);
 
+  PrimaryStudent.allAttributes(firstName, lastName, dob, cnicNO)
+      : super.allAttributes(firstName, lastName, dob, cnicNO);
   bool overAge() => super.calulateAge() < 15 ? true : false;
   void showPrimaryStudentInfo() {
     if (overAge()) {
@@ -144,7 +151,6 @@ class PrimaryStudent extends Student {
     } else {
       print('over age to be an primary Student');
     }
-    
   } //
 }
 
