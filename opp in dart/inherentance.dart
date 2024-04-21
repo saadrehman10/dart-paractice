@@ -91,7 +91,7 @@ class Person {
   void showPersonalInfo() {
     print("Name: ${this.fullName}");
     print("Date of Birth : ${this.calulateAge()}");
-    print('${_cnicNO ?? 'CNIC NO: ${cnicNO}'}');
+    print('${_cnicNO ?? 'CNIC NO: ${this.cnicNO}'}');
   }
 }
 
@@ -100,7 +100,19 @@ class Employee extends Person {
   String? position;
   int? _employId;
 
-  Employee(): super();
+  Employee(
+      String firstName, String lastName, int dob, this.salary, this.position)
+      : super(firstName, lastName, dob);
+
+  set employId(int id)  =>  _employId.toString().length == 8 ? _employId = id : ;
+  int get employId =>  _employId!;
+
+  void showEmployeeDetails (){
+    this.showPersonalInfo();
+    print("Salary : Rs. ${this.salary}");
+    print('Position : ' + this.position!.toUpperCase());
+    print('${_employId ?? 'Employee ID: ${this.employId}'}');
+  }
 }
 
 void main() {
