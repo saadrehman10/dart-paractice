@@ -95,6 +95,14 @@ class Person {
   }
 }
 
+class Employee extends Person {
+  double? salary;
+  String? position;
+  int? _employId;
+
+  Employee(): super();
+}
+
 void main() {
   // SuperCar lambo = SuperCar();
   // lambo.dispalyCar();
