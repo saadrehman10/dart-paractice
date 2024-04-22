@@ -3,6 +3,7 @@ class Home {
   String? address;
   double? propertyTax;
   Home(this.address, this.propertyTax);
+  @override
   void displayFeatures(){
     print('$address has yearly property tax of rs.$propertyTax');
 
@@ -41,8 +42,10 @@ class Banglos extends Home {
 //   }
 // }
 
-abstract class Shape {
-  double calculateArea();
+class Shape {
+  double calculateArea(){
+    return  12.4;
+  }
 }
 
 class Circle implements Shape {
