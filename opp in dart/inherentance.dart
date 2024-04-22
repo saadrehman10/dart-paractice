@@ -77,6 +77,7 @@ class Person {
 
   Person(this.firstName, this.lastName, this.dob);
   Person.allAttributes(this.firstName, this.lastName, this.dob, this._cnicNO);
+  Person.cons2({this.firstName, this.lastName});
 
   set cincNO(int number) => number.toString().length == 14
       ? _cnicNO = number
@@ -105,6 +106,8 @@ class Employee extends Person {
       String firstName, String lastName, int dob, this.salary, this.position)
       : super(firstName, lastName, dob);
 
+  Employee.cons1(String firstName, String LastName)
+      : super.cons2(firstName: firstName, lastName: LastName);
   set employId(int id) => _employId.toString().length == 8
       ? _employId = id
       : print('Invalid length of Id ');
@@ -239,5 +242,5 @@ void main() {
   person3.cincNO = 42101417051250;
   print('------------------');
   person3.showPrimaryStudentInfo();
-
+  print('${person3.calulateAge()}');
 }
