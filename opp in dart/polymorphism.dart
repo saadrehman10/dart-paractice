@@ -20,27 +20,53 @@ class Banglos extends Home {
   }
 }
 
-class Circle {
+// class Circle {
+//   double radius;
+
+//   Circle(this.radius);
+
+//   double calculateArea() {
+//     return 3.14 * radius * radius;
+//   }
+// }
+
+// class Rectangle {
+//   double length;
+//   double width;
+
+//   Rectangle(this.length, this.width);
+
+//   double calculateArea() {
+//     return length * width;
+//   }
+// }
+
+abstract class Shape {
+  double calculateArea();
+}
+
+class Circle implements Shape {
   double radius;
 
   Circle(this.radius);
 
+  @override
   double calculateArea() {
     return 3.14 * radius * radius;
   }
 }
 
-class Rectangle {
+class Rectangle implements Shape {
   double length;
   double width;
 
   Rectangle(this.length, this.width);
 
+  @override
   double calculateArea() {
     return length * width;
   }
 }
-
 
 void main (){
 //  Banglos house1 = new Banglos('344', 10000.0, 1000);
