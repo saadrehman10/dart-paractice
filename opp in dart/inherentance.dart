@@ -161,6 +161,38 @@ class PrimaryStudent extends Student {
     }
   } //
 }
+//---------------testing super-----------------
+
+class One {
+  String firstvar = 'one';
+  void displayone() {
+    print(firstvar);
+  }
+}
+
+class Two extends One {
+  String firstvar = 'two';
+  void displaytwo() {
+    print(firstvar);
+    print(super.firstvar);
+  }
+}
+
+class Three extends Two {
+  String firstvar = 'three';
+  void displaythree() {
+    print(firstvar);
+    print(super.firstvar);
+  }
+}
+
+class Four extends Three {
+  String firstvar = 'four';
+  void displayfour() {
+    print(firstvar);
+    print(super.firstvar);
+  }
+}
 
 void main() {
   // SuperCar lambo = SuperCar();
@@ -222,29 +254,66 @@ void main() {
   // car3.random = 'third inhreantance class property';
   // car3.numramdom = 4834823084238498;
   // car3.diplayFE2();
-  Person person1 = Person('John', 'Smith', 1956);
-  person1.cincNO = 42101417051250;
-  person1.showPersonalInfo();
-  print('-------------------tested Person---------------');
+  // Person person1 = Person('John', 'Smith', 1956);
+  // person1.cincNO = 42101417051250;
+  // person1.showPersonalInfo();
+  // print('-------------------tested Person---------------');
 
-  Student person2 = Student('Saad', 'ur rehman', 2001, 'north', 9);
-  person2.showPersonalInfo();
+  // Student person2 = Student('Saad', 'ur rehman', 2001, 'north', 9);
+  // person2.showPersonalInfo();
+  // print('------------------');
+  // person2.showStudentInfo();
+  // person2.cincNO = 42101417051250;
+  // print('------------------');
+  // person2.showStudentInfo();
+  // print('------------------');
+  // PrimaryStudent person3 =
+  //     PrimaryStudent('Saeed', 'desai', 2010, 'south', 3, 'coloring');
+  // person3.showPrimaryStudentInfo();
+  // person3.cincNO = 42101417051250;
+  // print('------------------');
+  // person3.showPrimaryStudentInfo();
+  // print('${person3.calulateAge()}');
+  // print('------------------');
+  // print('------------------');
+  // Employee person4 = Employee.cons1('Ahmed', 'Khan');
+  // person4.showEmployeeDetails();
+  // print('------------------');
+
+  print('--------for one ----------------');
+  One n2 = new One();
   print('------------------');
-  person2.showStudentInfo();
-  person2.cincNO = 42101417051250;
+  n2.displayone();
   print('------------------');
-  person2.showStudentInfo();
+
+  print('--------for two ----------------');
+  Two n3 = new Two();
   print('------------------');
-  PrimaryStudent person3 =
-      PrimaryStudent('Saeed', 'desai', 2010, 'south', 3, 'coloring');
-  person3.showPrimaryStudentInfo();
-  person3.cincNO = 42101417051250;
+  n3.displayone();
   print('------------------');
-  person3.showPrimaryStudentInfo();
-  print('${person3.calulateAge()}');
+  n3.displaytwo();
   print('------------------');
+
+  print('--------for three ----------------');
+  Three n4 = new Three();
   print('------------------');
-  Employee person4 = Employee.cons1('Ahmed', 'Khan');
-  person4.showEmployeeDetails();
+  n4.displayone();
   print('------------------');
+  n4.displaytwo();
+  print('------------------');
+  n4.displaythree();
+  print('------------------');
+
+  print('--------for four----------------');
+  Four n = new Four();
+  print('------------------');
+  n.displayone();
+  print('------------------');
+  n.displaytwo();
+  print('------------------');
+  n.displaythree();
+  print('------------------');
+  n.displayfour();
+  print('------------------');
+  
 }
