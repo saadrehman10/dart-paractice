@@ -77,7 +77,7 @@ class Person {
 
   Person(this.firstName, this.lastName, this.dob);
   Person.allAttributes(this.firstName, this.lastName, this.dob, this._cnicNO);
-  Person.cons2({this.firstName, this.lastName});
+  Person.cons2({this.firstName, this.lastName, this.dob});
 
   set cincNO(int number) => number.toString().length == 14
       ? _cnicNO = number
@@ -115,8 +115,8 @@ class Employee extends Person {
 
   void showEmployeeDetails() {
     super.showPersonalInfo();
-    print("Salary : Rs. ${this.salary}");
-    print('Position : ' + this.position!.toUpperCase());
+    print("Salary : Rs. ${salary == null ? '': this.salary}");
+    print('Position : ${this._employId}');
     print('${_employId != null ? 'Employee ID: ${this.employId}' : ''}');
   }
 }
@@ -243,4 +243,9 @@ void main() {
   print('------------------');
   person3.showPrimaryStudentInfo();
   print('${person3.calulateAge()}');
+  print('------------------');
+  print('------------------');
+  Employee person4 = Employee.cons1('Ahmed', 'Khan');
+  person4.showEmployeeDetails();
+  print('------------------');
 }
