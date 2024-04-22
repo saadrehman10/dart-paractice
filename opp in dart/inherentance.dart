@@ -172,6 +172,7 @@ class One {
 
 class Two extends One {
   String firstvar = 'two';
+  
   void displaytwo() {
     print(firstvar);
     print(super.firstvar);
@@ -180,6 +181,7 @@ class Two extends One {
 
 class Three extends Two {
   String firstvar = 'three';
+  Three(this.firstvar);
   void displaythree() {
     print(firstvar);
     print(super.firstvar);
@@ -188,6 +190,7 @@ class Three extends Two {
 
 class Four extends Three {
   String firstvar = 'four';
+  Four(String firstvar) : super(firstvar);
   void displayfour() {
     print(firstvar);
     print(super.firstvar);
@@ -295,7 +298,7 @@ void main() {
   print('------------------');
 
   print('--------for three ----------------');
-  Three n4 = new Three();
+  Three n4 = new Three('hi');
   print('------------------');
   n4.displayone();
   print('------------------');
@@ -305,7 +308,7 @@ void main() {
   print('------------------');
 
   print('--------for four----------------');
-  Four n = new Four();
+  Four n = new Four('hello');
   print('------------------');
   n.displayone();
   print('------------------');
@@ -315,5 +318,4 @@ void main() {
   print('------------------');
   n.displayfour();
   print('------------------');
-  
 }
