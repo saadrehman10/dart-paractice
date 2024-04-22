@@ -86,8 +86,7 @@ class Person {
   String get fullName => '$firstName $lastName';
 
   int calulateAge() {
-    int age = 2024 - this.dob!;
-    return age;
+    return this.dob != null ? 2024 - this.dob! : -1;
   }
 
   void showPersonalInfo() {
@@ -115,8 +114,8 @@ class Employee extends Person {
 
   void showEmployeeDetails() {
     super.showPersonalInfo();
-    print("Salary : Rs. ${salary == null ? '': this.salary}");
-    print('Position : ${this._employId}');
+    print("Salary : Rs. ${this.salary}");
+    print('Position : ${this.position}');
     print('${_employId != null ? 'Employee ID: ${this.employId}' : ''}');
   }
 }
