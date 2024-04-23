@@ -9,7 +9,6 @@ class Person {
   int count = 0;
   static int count2 = 0;
 
-
   Person.no();
   Person(this.firstName, this.lastName, this.dob);
   Person.allAttributes(this.firstName, this.lastName, this.dob, this._cnicNO);
@@ -46,7 +45,14 @@ class Person {
 
 class Encryption {
   static String encription(String userinput, int key) {
-    return userinput.split('').reversed.join().toLowerCase();
+    var input = userinput.split('');
+    int row = input.length ~/ key;
+    List<List<String>> cipherMatrix = [];
+    for (int i = 1; i >= key; i++) {
+      cipherMatrix.add([]);
+    }
+
+    return '';
   }
 }
 
@@ -103,3 +109,4 @@ void main() {
   Encryption p = new Encryption();
   Person pp = new Person.no();
   print(Encryption.encription('hello world', 8));
+}
