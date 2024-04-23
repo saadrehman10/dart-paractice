@@ -9,6 +9,7 @@ class Person {
   int count = 0;
   static int count2 = 0;
 
+
   Person.no();
   Person(this.firstName, this.lastName, this.dob);
   Person.allAttributes(this.firstName, this.lastName, this.dob, this._cnicNO);
@@ -44,7 +45,7 @@ class Person {
 }
 
 class Encryption {
-  static String encription(String userinput, int key) {    
+  static String encription(String userinput, int key) {
     return userinput.split('').reversed.join().toLowerCase();
   }
 }
@@ -100,6 +101,5 @@ void main() {
   // Encryption p = new Encryption(stdin.readLineSync());
   // p.encription() ;
   Encryption p = new Encryption();
-  print(Encryption.encription('hello world',8));
-   
-}
+  Person pp = new Person.no();
+  print(Encryption.encription('hello world', 8));
