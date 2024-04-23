@@ -107,6 +107,6 @@ void main() {
   // Encryption p = new Encryption(stdin.readLineSync());
   // p.encription() ;
   Encryption p = new Encryption();
-  Person pp = new Person.no();
+
   print(Encryption.encription('hello world', 8));
 }
