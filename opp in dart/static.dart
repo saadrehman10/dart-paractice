@@ -1,8 +1,6 @@
 import 'dart:io';
 import 'dart:math';
 
-import '../todoList.dart';
-
 class Person {
   String? firstName;
   String? lastName;
@@ -46,11 +44,16 @@ class Person {
 }
 
 class Encryption {
-  String? userintput ;
-  Encryption(this.userintput);
-
-  void encription() {
-    print('$userintput');
+  static String encription(String userinput, int key) {
+    List<String> input = userinput.split('');
+    List.
+    
+    
+    
+    
+    
+    
+    return '';
   }
 }
 
