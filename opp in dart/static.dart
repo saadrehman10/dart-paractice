@@ -4,8 +4,9 @@ class Person {
   int? dob;
   int? _cnicNO;
   int count = 0;
-  static int? count2 = 0 ;
+  static int count2 = 0;
 
+  Person.no();
   Person(this.firstName, this.lastName, this.dob);
   Person.allAttributes(this.firstName, this.lastName, this.dob, this._cnicNO);
   Person.cons2({this.firstName, this.lastName, this.dob});
@@ -28,6 +29,10 @@ class Person {
     count2++;
   }
 
+  void dispalyCount() {
+    print('the static count is $count2\nThe non-static count is $count');
+  }
+
   void showPersonalInfo() {
     print("Name: ${this.fullName}");
     print("Age : ${this.calulateAge()}");
@@ -36,7 +41,32 @@ class Person {
 }
 
 void main() {
+  Person p1 = new Person.no();
+  Person p2 = new Person.no();
+  Person p3 = new Person.no();
+  Person p4 = new Person.no();
+  Person p5 = new Person.no();
+
+  p1.countUpdate();
+  p1.countUpdate2();
+  p1.dispalyCount();
+  print('----------------------------');
+  p2.countUpdate();
+  p2.countUpdate2();
+  p2.dispalyCount();
+  print('----------------------------');
+  p3.countUpdate();
+  p3.countUpdate2();
+  p3.dispalyCount();
+  print('----------------------------');
+  p4.countUpdate();
+  p4.countUpdate2();
+  p4.dispalyCount();
+  print('----------------------------');
+  p5.countUpdate();
+  p5.countUpdate2();
+  p5.dispalyCount();
+  print('----------------------------');
 
 
-  
 }
