@@ -1,5 +1,6 @@
 import 'dart:io';
 import 'dart:math';
+import 'dart:collection';
 
 class Person {
   String? firstName;
@@ -46,12 +47,8 @@ class Person {
 class Encryption {
   static String encription(String userinput, int key) {
     var input = userinput.split('');
-    int row = input.length ~/ key;
-    List<List<String>> cipherMatrix = [];
-    for (int i = 1; i >= key; i++) {
-      cipherMatrix.add([]);
-    }
-
+    int row = input.length % key != 0 ? (input.length ~/ key) + 1 : key;
+   ;
     return '';
   }
 }
@@ -106,7 +103,6 @@ void main() {
 
   // Encryption p = new Encryption(stdin.readLineSync());
   // p.encription() ;
-  Encryption p = new Encryption();
 
-  print(Encryption.encription('hello world', 8));
+  print(Encryption.encription('hello world', 3));
 }

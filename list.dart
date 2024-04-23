@@ -102,5 +102,6 @@ void main() {
 // }
 //   // list.remove(7);
 //   print(list);
-  
+  List<int> forSublist = [1, 2, 4, 5, 6, 7, 3, 2, 5, 5, 9, 3, 7, 5, 4, 44];
+  print(forSublist.sublist(0, 5));
 }
