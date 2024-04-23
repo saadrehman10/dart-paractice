@@ -48,8 +48,16 @@ class Encryption {
   static String encription(String userinput, int key) {
     var input = userinput.split('');
     int row = input.length % key != 0 ? (input.length ~/ key) + 1 : key;
-   ;
-    return '';
+    List<List<String>> cipherMatrix = [];
+    int startIndex = 0;
+    int endIndex = (input.length ~/ key);
+    for (int i = 1; i <= row; i++) {
+      cipherMatrix.add(input.sublist(startIndex, endIndex));
+      startIndex = endIndex;
+      endIndex += row;
+    }
+    return cipherMatrix.join();
+
   }
 }
 
@@ -104,5 +112,5 @@ void main() {
   // Encryption p = new Encryption(stdin.readLineSync());
   // p.encription() ;
 
-  print(Encryption.encription('hello world', 3));
+  print(Encryption.encription('hello world', 10));
 }
