@@ -67,6 +67,26 @@ void main() {
   p5.countUpdate2();
   p5.dispalyCount();
   print('----------------------------');
+   p1.countUpdate();
+  p1.countUpdate2();
+  p1.dispalyCount();
+  print('----------------------------');
+  p2.countUpdate();
+  p2.countUpdate2();
+  p2.dispalyCount();
+  print('----------------------------');
+  p3.countUpdate();
+  p3.countUpdate2();
+  p3.dispalyCount();
+  print('----------------------------');
+  p4.countUpdate();
+  p4.countUpdate2();
+  p4.dispalyCount();
+  print('----------------------------');
+  p5.countUpdate();
+  p5.countUpdate2();
+  p5.dispalyCount();
+  print('----------------------------');
 
 
 }
