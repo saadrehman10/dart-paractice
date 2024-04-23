@@ -44,16 +44,8 @@ class Person {
 }
 
 class Encryption {
-  static String encription(String userinput, int key) {
-    List<String> input = userinput.split('');
-    List.
-    
-    
-    
-    
-    
-    
-    return '';
+  static String encription(String userinput, int key) {    
+    return userinput.split('').reversed.join().toLowerCase();
   }
 }
 
@@ -107,4 +99,7 @@ void main() {
 
   // Encryption p = new Encryption(stdin.readLineSync());
   // p.encription() ;
+  Encryption p = new Encryption();
+  print(Encryption.encription('hello world',8));
+   
 }
