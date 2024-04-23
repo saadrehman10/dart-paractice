@@ -1,3 +1,8 @@
+import 'dart:io';
+import 'dart:math';
+
+import '../todoList.dart';
+
 class Person {
   String? firstName;
   String? lastName;
@@ -40,53 +45,63 @@ class Person {
   }
 }
 
+class Encryption {
+  String? userintput ;
+  Encryption(this.userintput);
+
+  void encription() {
+    print('$userintput');
+  }
+}
+
 void main() {
-  Person p1 = new Person.no();
-  Person p2 = new Person.no();
-  Person p3 = new Person.no();
-  Person p4 = new Person.no();
-  Person p5 = new Person.no();
+  // Person p1 = new Person.no();
+  // Person p2 = new Person.no();
+  // Person p3 = new Person.no();
+  // Person p4 = new Person.no();
+  // Person p5 = new Person.no();
 
-  p1.countUpdate();
-  p1.countUpdate2();
-  p1.dispalyCount();
-  print('----------------------------');
-  p2.countUpdate();
-  p2.countUpdate2();
-  p2.dispalyCount();
-  print('----------------------------');
-  p3.countUpdate();
-  p3.countUpdate2();
-  p3.dispalyCount();
-  print('----------------------------');
-  p4.countUpdate();
-  p4.countUpdate2();
-  p4.dispalyCount();
-  print('----------------------------');
-  p5.countUpdate();
-  p5.countUpdate2();
-  p5.dispalyCount();
-  print('----------------------------');
-   p1.countUpdate();
-  p1.countUpdate2();
-  p1.dispalyCount();
-  print('----------------------------');
-  p2.countUpdate();
-  p2.countUpdate2();
-  p2.dispalyCount();
-  print('----------------------------');
-  p3.countUpdate();
-  p3.countUpdate2();
-  p3.dispalyCount();
-  print('----------------------------');
-  p4.countUpdate();
-  p4.countUpdate2();
-  p4.dispalyCount();
-  print('----------------------------');
-  p5.countUpdate();
-  p5.countUpdate2();
-  p5.dispalyCount();
-  print('----------------------------');
+  // p1.countUpdate();
+  // p1.countUpdate2();
+  // p1.dispalyCount();
+  // print('----------------------------');
+  // p2.countUpdate();
+  // p2.countUpdate2();
+  // p2.dispalyCount();
+  // print('----------------------------');
+  // p3.countUpdate();
+  // p3.countUpdate2();
+  // p3.dispalyCount();
+  // print('----------------------------');
+  // p4.countUpdate();
+  // p4.countUpdate2();
+  // p4.dispalyCount();
+  // print('----------------------------');
+  // p5.countUpdate();
+  // p5.countUpdate2();
+  // p5.dispalyCount();
+  // print('----------------------------');
+  //  p1.countUpdate();
+  // p1.countUpdate2();
+  // p1.dispalyCount();
+  // print('----------------------------');
+  // p2.countUpdate();
+  // p2.countUpdate2();
+  // p2.dispalyCount();
+  // print('----------------------------');
+  // p3.countUpdate();
+  // p3.countUpdate2();
+  // p3.dispalyCount();
+  // print('----------------------------');
+  // p4.countUpdate();
+  // p4.countUpdate2();
+  // p4.dispalyCount();
+  // print('----------------------------');
+  // p5.countUpdate();
+  // p5.countUpdate2();
+  // p5.dispalyCount();
+  // print('----------------------------');
 
-
+  // Encryption p = new Encryption(stdin.readLineSync());
+  // p.encription() ;
 }

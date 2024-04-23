@@ -3,7 +3,7 @@ class Home {
   String? address;
   double? propertyTax;
   Home(this.address, this.propertyTax);
-  @override
+
   void displayFeatures(){
     print('$address has yearly property tax of rs.$propertyTax');
 
