@@ -14,7 +14,10 @@ class Week {
 void main() {
   days day = days.Friday;
   print(day);
-   Week randomDay = new Week(11,
+  Week randomDay = new Week(11, days.Friday, 2023);
+  randomDay.printDate();
+  Week firstWeekOfYear = new Week(1, days.Monday, 2023);
+  firstWeekOfYear.printDate();
 
-
+  
 }
