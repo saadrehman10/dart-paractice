@@ -19,5 +19,13 @@ void main() {
   Week firstWeekOfYear = new Week(1, days.Monday, 2023);
   firstWeekOfYear.printDate();
 
+  for (days day in days.values) {
+    if (day == days.Monday) {
+      continue;
+    } else {
+       print("Today is ${day})");
+     }
+    }
+  }
   
-}
+
