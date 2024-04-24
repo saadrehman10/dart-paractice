@@ -1,4 +1,15 @@
+
+
 enum days { Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday }
+
+enum names {
+  saad('saad'),
+  Rabi('Rabi'),
+  Ahmed('Ahmed');
+
+  final String text;
+  const names(this.text);
+}
 
 class Week {
   int? date;
@@ -23,9 +34,10 @@ void main() {
     if (day == days.Monday) {
       continue;
     } else {
-       print("Today is ${day})");
-     }
+      print("Today is ${day})");
     }
   }
-  
-
+  names name1 = names.saad;
+  print(name1.text);
+  print(names.Ahmed.text);
+}
