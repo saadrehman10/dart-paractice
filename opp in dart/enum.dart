@@ -11,12 +11,10 @@ enum names {
   const names(this.text);
 }
 enum Home {
-  home1((){
-    print('house one');
-  }),
+  home1(['address', 8874, 884.09]),
 
   ;
-  final Function home;
+  final List<dynamic> home;
   const Home(this.home);
 }
 
@@ -49,4 +47,6 @@ void main() {
   names name1 = names.saad;
   print(name1.text);
   print(names.Ahmed.text);
+
+  List<dynamic> array = ['hello',(bool props)=> props ? 'hi':'hello' ];
 }
