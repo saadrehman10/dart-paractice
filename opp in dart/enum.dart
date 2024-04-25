@@ -10,6 +10,15 @@ enum names {
   final String text;
   const names(this.text);
 }
+enum Home {
+  home1((){
+    print('house one');
+  }),
+
+  ;
+  final Function home;
+  const Home(this.home);
+}
 
 class Week {
   int? date;
