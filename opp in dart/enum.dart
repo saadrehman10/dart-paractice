@@ -49,4 +49,7 @@ void main() {
   print(names.Ahmed.text);
 
   List<dynamic> array = ['hello',(bool props)=> props ? 'hi':'hello' ];
+  for (var element in array){
+    element is Function ? print(element(true)) : element; 
+  } 
 }
