@@ -84,6 +84,22 @@ void main() {
   db2.code = 00002;
   print('------------------------');
   db1.showNumberofDB('hello');
+  print('------------------------');
   db1.checkdatabase();
+  print('------------------------');
+  db1.dispalyDetail();
+  print('------------------------');
+  var a = DatabaseTypes.checkdbRuns();
+  print('------------------------');
+  print('------------------------');
+  print('------------------------');
+  db2.showNumberofDB(12456);
+  print('------------------------');
+  db2.checkdatabase();
+  print('------------------------');
+  db2.dispalyDetail();
+  print('------------------------');
+  DatabaseTypes.checkdbRuns();
+  print('------------------------');
   print('------------------------');
 }
