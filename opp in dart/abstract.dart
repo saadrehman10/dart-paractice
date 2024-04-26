@@ -23,8 +23,9 @@ abstract class DatabaseTypes {
     noOfdb++;
   }
 
-  set code(int value) =>
-      value > 10 ? _code = value : 'Error the value must be smaller than 10';
+  set code(int value) => value.toString().length > 10
+      ? _code = value
+      : 'Error the value must be smaller than 10';
   int get code => _code!;
 
   void checkdatabase() {
@@ -47,32 +48,42 @@ abstract class DatabaseTypes {
 
   void dispalyDetail() {
     print('$nameOfdb db is ${dbisNonSQl! ? 'NonSQl' : 'SQL'}');
-    print('Description: '+':\n${discription}');
-
+    print('Description: ' + ':\n${discription}');
   }
 }
 
 class MySql extends DatabaseTypes {
-
-  MySql(String? descrption, [int? code])
+  double? dbSize;
+  MySql(String? descrption, this.dbSize, [int? code])
       : super(descrption!, dbnames.MsSQL.names, true, code);
 
   @override
   void dispalyDetail() {
     super.dispalyDetail();
+    if (dbSize != null) print('Size of DB: ${dbSize!.toString()} GB');
   }
 }
 
 class Mongooes extends DatabaseTypes {
-  Mongooes(String? descrption, [int? code])
+  double? dbSize;
+  Mongooes(String? descrption, this.dbSize, [int? code])
       : super(descrption!, dbnames.Mangooes.names, false, code);
 
   @override
   void dispalyDetail() {
     super.dispalyDetail();
+    if (dbSize != null) print('Size of DB: ${dbSize!.toString()} GB');
   }
 }
 
 void main() {
-  MySql db1 = new MySql('Data base for an export and import Company');
+  MySql db1 =
+      new MySql('Data base for an export and import Company', 88.83, 0001);
+  Mongooes db2 = new Mongooes(
+      'Data Base for an webside to just store a user data ', 30.883);
+  db2.code = 00002;
+  print('------------------------');
+  db1.showNumberofDB('hello');
+  db1.checkdatabase();
+  print('------------------------');
 }
