@@ -1,3 +1,12 @@
+enum dbnames {
+  Mangooes('Mangooes'),
+  MsSQL('MsSQL'),
+  SQl('SQl');
+  
+ final String names;
+ const dbnames(this.names);
+}
+
 abstract class DatabaseTypes {
   bool? dbisSQl;
   bool? dbisNonSQl;
@@ -5,11 +14,13 @@ abstract class DatabaseTypes {
   String? nameOfdb;
   int? _code;
   static int checkdbRuns = 0;
+  static int noOfdb = 0;
 
-  DatabaseTypes(this.discription, this.nameOfdb, bool? type) {
+  DatabaseTypes(this.discription, this.nameOfdb, bool? type, [this._code]) {
     type == true
         ? (this.dbisSQl = true, this.dbisNonSQl = false)
         : (this.dbisSQl = false, this.dbisNonSQl = true);
+    noOfdb++;
   }
 
   set code(int value) =>
@@ -23,10 +34,20 @@ abstract class DatabaseTypes {
         : print('Your data base is not SQL');
   }
 
-  static void dbCheckinintotal() {
+  static int dbCheckinintotal() {
     print(checkdbRuns);
+    return checkdbRuns;
   }
-  
+
+  int showNumberofDB(props) {
+    print(noOfdb);
+    print(props);
+    return noOfdb;
+  }
+
+  void dispalyDetail() {
+    print('$nameOfdb db is ${dbisNonSQl! ? 'NonSQl' : 'SQL'}');
+  }
 }
 
 void main() {}
