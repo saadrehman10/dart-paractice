@@ -1,10 +1,9 @@
-void main () {
-  print('abs');
+abstract class DatabaseTypes {
+  bool? dbisSQl;
+  bool? dbisNonSQl;
 
+}
 
-
-
-
-
-  print ('hlelo');
+void main() {
+ 
 }
