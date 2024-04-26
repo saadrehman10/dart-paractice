@@ -35,7 +35,7 @@ abstract class DatabaseTypes {
   //   }
   // }
 
-  dynamic getcode() => _code != null ? _code : "Not Set Yet";
+  int get code => _code!;
 
   void checkdatabase() {
     checkdbRuns++;
