@@ -23,9 +23,18 @@ abstract class DatabaseTypes {
     noOfdb++;
   }
 
-  set code(int value) => value.toString().length > 10
-      ? _code = value
-      : 'Error the value must be smaller than 10';
+  // set code(int? value) => value != null && value.toString().length > 10
+  //     ? _code = value
+  //     : 'Error the value must be smaller than 10';
+
+  set code(int? value) {
+    if (value != null && value.toString().length > 10) {
+      _code = value;
+    } else {
+      print('Error: The value must be smaller than 10');
+    }
+  }
+
   int get code => _code!;
 
   void checkdatabase() {
@@ -142,5 +151,4 @@ void main() {
   print(db1.code);
   print(db2.code);
   print(db3.code);
-
 }
