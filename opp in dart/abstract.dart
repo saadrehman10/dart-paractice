@@ -2,9 +2,9 @@ enum dbnames {
   Mangooes('Mangooes'),
   MsSQL('MsSQL'),
   SQl('SQl');
-  
- final String names;
- const dbnames(this.names);
+
+  final String names;
+  const dbnames(this.names);
 }
 
 abstract class DatabaseTypes {
@@ -47,7 +47,32 @@ abstract class DatabaseTypes {
 
   void dispalyDetail() {
     print('$nameOfdb db is ${dbisNonSQl! ? 'NonSQl' : 'SQL'}');
+    print('Description: '+':\n${discription}');
+
   }
 }
 
-void main() {}
+class MySql extends DatabaseTypes {
+
+  MySql(String? descrption, [int? code])
+      : super(descrption!, dbnames.MsSQL.names, true, code);
+
+  @override
+  void dispalyDetail() {
+    super.dispalyDetail();
+  }
+}
+
+class Mongooes extends DatabaseTypes {
+  Mongooes(String? descrption, [int? code])
+      : super(descrption!, dbnames.Mangooes.names, false, code);
+
+  @override
+  void dispalyDetail() {
+    super.dispalyDetail();
+  }
+}
+
+void main() {
+  MySql db1 = new MySql('Data base for an export and import Company');
+}
