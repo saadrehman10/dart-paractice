@@ -56,7 +56,10 @@ class MySql extends DatabaseTypes {
   double? dbSize;
   MySql(String? descrption, this.dbSize, [int? code])
       : super(descrption!, dbnames.MsSQL.names, true, code);
-
+ 
+  static int dbCheckinintotal() {
+    return DatabaseTypes.dbCheckinintotal();
+  }
   @override
   void dispalyDetail() {
     super.dispalyDetail();
@@ -68,7 +71,10 @@ class Mongooes extends DatabaseTypes {
   double? dbSize;
   Mongooes(String? descrption, this.dbSize, [int? code])
       : super(descrption!, dbnames.Mangooes.names, false, code);
-
+   
+   static int dbCheckinintotal() {
+    return DatabaseTypes.dbCheckinintotal();
+  }
   @override
   void dispalyDetail() {
     super.dispalyDetail();
@@ -89,7 +95,7 @@ void main() {
   print('------------------------');
   db1.dispalyDetail();
   print('------------------------');
-  var a = DatabaseTypes.checkdbRuns();
+  MySql.dbCheckinintotal();
   print('------------------------');
   print('------------------------');
   print('------------------------');
@@ -99,7 +105,7 @@ void main() {
   print('------------------------');
   db2.dispalyDetail();
   print('------------------------');
-  DatabaseTypes.checkdbRuns();
+  Mongooes.dbCheckinintotal();
   print('------------------------');
   print('------------------------');
 }
