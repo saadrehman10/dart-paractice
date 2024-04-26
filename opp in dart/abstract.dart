@@ -106,8 +106,9 @@ void main() {
   Mongooes db2 = new Mongooes(
       'Data Base for an webside to just store a user data ', 30.883);
   Sql db3 =
-      new Sql('Data Base for an webside to just store a user data ', 30.883);
-  db2.code = 00002;
+      new Sql('Data Base for an supermarket to store inventory ', 1903.339);
+  db2.code = 2;
+  db3.code = 3;
   print('------------------------');
   db1.showNumberofDB('hello');
   print('------------------------');
@@ -129,7 +130,7 @@ void main() {
   print('------------------------');
   print('------------------------');
   print('------------------------');
-  db3.showNumberofDB(12456);
+  db3.showNumberofDB('their db');
   print('------------------------');
   db3.checkdatabase();
   print('------------------------');
@@ -138,4 +139,8 @@ void main() {
   Sql.dbCheckinintotal();
   print('------------------------');
   print('------------------------');
+  print(db1.code);
+  print(db2.code);
+  print(db3.code);
+
 }
