@@ -56,10 +56,11 @@ class MySql extends DatabaseTypes {
   double? dbSize;
   MySql(String? descrption, this.dbSize, [int? code])
       : super(descrption!, dbnames.MsSQL.names, true, code);
- 
+
   static int dbCheckinintotal() {
     return DatabaseTypes.dbCheckinintotal();
   }
+
   @override
   void dispalyDetail() {
     super.dispalyDetail();
@@ -71,37 +72,41 @@ class Mongooes extends DatabaseTypes {
   double? dbSize;
   Mongooes(String? descrption, this.dbSize, [int? code])
       : super(descrption!, dbnames.Mangooes.names, false, code);
-   
-   static int dbCheckinintotal() {
+
+  static int dbCheckinintotal() {
     return DatabaseTypes.dbCheckinintotal();
   }
+
   @override
   void dispalyDetail() {
     super.dispalyDetail();
     if (dbSize != null) print('Size of DB: ${dbSize!.toString()} GB');
   }
-  }
+}
 
- class Sql extends DatabaseTypes {
+class Sql extends DatabaseTypes {
   double? dbSize;
   Sql(String? descrption, this.dbSize, [int? code])
       : super(descrption!, dbnames.SQl.names, true, code);
-   
-   static int dbCheckinintotal() {
+
+  static int dbCheckinintotal() {
     return DatabaseTypes.dbCheckinintotal();
   }
+
   @override
   void dispalyDetail() {
     super.dispalyDetail();
     if (dbSize != null) print('Size of DB: ${dbSize!.toString()} GB');
   }
-} 
+}
 
 void main() {
   MySql db1 =
       new MySql('Data base for an export and import Company', 88.83, 0001);
   Mongooes db2 = new Mongooes(
       'Data Base for an webside to just store a user data ', 30.883);
+  Sql db3 =
+      new Sql('Data Base for an webside to just store a user data ', 30.883);
   db2.code = 00002;
   print('------------------------');
   db1.showNumberofDB('hello');
@@ -121,6 +126,16 @@ void main() {
   db2.dispalyDetail();
   print('------------------------');
   Mongooes.dbCheckinintotal();
+  print('------------------------');
+  print('------------------------');
+  print('------------------------');
+  db3.showNumberofDB(12456);
+  print('------------------------');
+  db3.checkdatabase();
+  print('------------------------');
+  db3.dispalyDetail();
+  print('------------------------');
+  Sql.dbCheckinintotal();
   print('------------------------');
   print('------------------------');
 }
