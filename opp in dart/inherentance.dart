@@ -198,12 +198,12 @@ class Four extends Three {
 }
 
 void main() {
-  // SuperCar lambo = SuperCar();
-  // lambo.dispalyCar();
-  // Car cultus = Car('cultus', 2004, 'ATS-1 92', 'suzuki');
-  // cultus.dispalyCar();
-  // Gari civic = Gari();
-  // civic.dispalyCar();
+  // // SuperCar lambo = SuperCar();
+  // // lambo.dispalyCar();
+  // // Car cultus = Car('cultus', 2004, 'ATS-1 92', 'suzuki');
+  // // cultus.dispalyCar();
+  // // Gari civic = Gari();
+  // // civic.dispalyCar();
   // SuperCar car1 = new SuperCar();
   // car1.name = 'supra';
   // car1.year = 2018;
@@ -241,7 +241,7 @@ void main() {
   // car3.sunroof = false;
   // car3.displayFeatures();
 
-  // FeatuerClass2 car3 = new FeatuerClass2();
+  // // FeatuerClass2 car3 = new FeatuerClass2();
 
   // car3.name = 'Hiroof';
   // car3.year = 1900;
@@ -254,34 +254,34 @@ void main() {
   // car3.butterflyDoor = true;
   // car3.fwd = true;
   // car3.sunroof = false;
-  // car3.random = 'third inhreantance class property';
-  // car3.numramdom = 4834823084238498;
-  // car3.diplayFE2();
-  // Person person1 = Person('John', 'Smith', 1956);
-  // person1.cincNO = 42101417051250;
-  // person1.showPersonalInfo();
-  // print('-------------------tested Person---------------');
+  // // car3.random = 'third inhreantance class property';
+  // // car3.numramdom = 4834823084238498;
+  // // car3.diplayFE2();
+  Person person1 = Person('John', 'Smith', 1956);
+  person1.cincNO = 42101417051250;
+  person1.showPersonalInfo();
+  print('-------------------tested Person---------------');
 
-  // Student person2 = Student('Saad', 'ur rehman', 2001, 'north', 9);
-  // person2.showPersonalInfo();
-  // print('------------------');
-  // person2.showStudentInfo();
-  // person2.cincNO = 42101417051250;
-  // print('------------------');
-  // person2.showStudentInfo();
-  // print('------------------');
-  // PrimaryStudent person3 =
-  //     PrimaryStudent('Saeed', 'desai', 2010, 'south', 3, 'coloring');
-  // person3.showPrimaryStudentInfo();
-  // person3.cincNO = 42101417051250;
-  // print('------------------');
-  // person3.showPrimaryStudentInfo();
-  // print('${person3.calulateAge()}');
-  // print('------------------');
-  // print('------------------');
-  // Employee person4 = Employee.cons1('Ahmed', 'Khan');
-  // person4.showEmployeeDetails();
-  // print('------------------');
+  Student person2 = Student('Saad', 'ur rehman', 2001, 'north', 9);
+  person2.showPersonalInfo();
+  print('------------------');
+  person2.showStudentInfo();
+  person2.cincNO = 42101417051250;
+  print('------------------');
+  person2.showStudentInfo();
+  print('------------------');
+  PrimaryStudent person3 =
+      PrimaryStudent('Saeed', 'desai', 2010, 'south', 3, 'coloring');
+  person3.showPrimaryStudentInfo();
+  person3.cincNO = 42101417051250;
+  print('------------------');
+  person3.showPrimaryStudentInfo();
+  print('${person3.calulateAge()}');
+  print('------------------');
+  print('------------------');
+  Employee person4 = Employee.cons1('Ahmed', 'Khan');
+  person4.showEmployeeDetails();
+  print('------------------');
 
   print('--------for one ----------------');
   One n2 = new One();

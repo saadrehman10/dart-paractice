@@ -23,7 +23,7 @@ abstract class DatabaseTypes {
     noOfdb++;
   }
 
-  set code(int? value) => value != null && value.toString().length > 10
+  set code(int value) =>  value.toString().length > 10
       ? _code = value
       : 'Error the value must be smaller than 10';
 
@@ -116,7 +116,7 @@ void main() {
       'Data Base for an webside to just store a user data ', 30.883);
   Sql db3 =
       new Sql('Data Base for an supermarket to store inventory ', 1903.339);
-  db2.code = 2;
+  db2.code = 200333;
   db3.code = 3;
   print('------------------------');
   db1.showNumberofDB('hello');
