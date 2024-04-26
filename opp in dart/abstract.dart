@@ -23,9 +23,9 @@ abstract class DatabaseTypes {
     noOfdb++;
   }
 
-  set code(int value) =>  value.toString().length > 10
+  set code(int value) => value.toString().length < 10
       ? _code = value
-      : 'Error the value must be smaller than 10';
+      : print('Error the value must be smaller than 10');
 
   // set code(int? value) {
   //   if (value != null && value.toString().length > 10) {
@@ -35,7 +35,7 @@ abstract class DatabaseTypes {
   //   }
   // }
 
-  int get code => _code!;
+  dynamic getcode() => _code != null ? _code : "Not Set Yet";
 
   void checkdatabase() {
     checkdbRuns++;
@@ -116,7 +116,7 @@ void main() {
       'Data Base for an webside to just store a user data ', 30.883);
   Sql db3 =
       new Sql('Data Base for an supermarket to store inventory ', 1903.339);
-  db2.code = 200333;
+  db2.code = 2;
   db3.code = 3;
   print('------------------------');
   db1.showNumberofDB('hello');
@@ -148,7 +148,7 @@ void main() {
   Sql.dbCheckinintotal();
   print('------------------------');
   print('------------------------');
-  print(db1.code);
-  print(db2.code);
-  print(db3.code);
+  print(db1.getcode());
+  print(db2.getcode());
+  print(db3.getcode());
 }
