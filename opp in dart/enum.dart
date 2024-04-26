@@ -1,5 +1,3 @@
-
-
 enum days { Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday }
 
 enum names {
@@ -10,12 +8,21 @@ enum names {
   final String text;
   const names(this.text);
 }
+
 enum Home {
   home1(['address', 8874, 884.09]),
+  home2(['saad', 9923383, 99.334]),
+  home4([]);
 
-  ;
   final List<dynamic> home;
   const Home(this.home);
+}
+
+enum Wepon {
+  swords,
+  Bow,
+  Cannon,
+  Dager,
 }
 
 class Week {
@@ -48,8 +55,10 @@ void main() {
   print(name1.text);
   print(names.Ahmed.text);
 
-  List<dynamic> array = ['hello',(bool props)=> props ? 'hi':'hello' ];
-  for (var element in array){
-    element is Function ? print(element(true)) : element; 
-  } 
+  List<dynamic> array = ['hello', (bool props) => props ? 'hi' : 'hello'];
+  array.forEach((element) {
+    print(element);
+  });
+
+  
 }
