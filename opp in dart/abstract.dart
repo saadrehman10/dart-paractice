@@ -80,7 +80,22 @@ class Mongooes extends DatabaseTypes {
     super.dispalyDetail();
     if (dbSize != null) print('Size of DB: ${dbSize!.toString()} GB');
   }
-}
+  }
+
+ class Sql extends DatabaseTypes {
+  double? dbSize;
+  Sql(String? descrption, this.dbSize, [int? code])
+      : super(descrption!, dbnames.SQl.names, true, code);
+   
+   static int dbCheckinintotal() {
+    return DatabaseTypes.dbCheckinintotal();
+  }
+  @override
+  void dispalyDetail() {
+    super.dispalyDetail();
+    if (dbSize != null) print('Size of DB: ${dbSize!.toString()} GB');
+  }
+} 
 
 void main() {
   MySql db1 =
