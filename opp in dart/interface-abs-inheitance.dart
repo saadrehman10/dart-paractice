@@ -109,13 +109,11 @@ void main() {
   shapesList.addAll([hexagon, cylinder, ellipse]);
 
   // Display details for each shape
-  for (var shape in shapesList) {
-    shape.displayShapeDetails();
-    shape.formulaArea();
-    print('Is 3D: ${shape.threeD}');
-    print('Number of Shapes: ${Shapes.noOfSapes}');
-    print('---------------------------');
-  }
+  // for (var shape in shapesList) {
+    
+  //   print('Number of Shapes: ${Shapes.noOfSapes}');
+  //   print('---------------------------');
+  // }
 
   // Specific method for Reactangel
   reactangel1.thirdfun();
