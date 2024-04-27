@@ -148,7 +148,7 @@ void main() {
   Sql.dbCheckinintotal();
   print('------------------------');
   print('------------------------');
-  print(db1.getcode());
-  print(db2.getcode());
-  print(db3.getcode());
+  print(db1.code);
+  print(db2.code);
+  print(db3.code);
 }
