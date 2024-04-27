@@ -1,10 +1,16 @@
 class Shapes {
   String? shapeName;
   String? areaFromula;
-  Shapes(this.shapeName, this.areaFromula);
-  
-  v
-  
+  double area = 0;
+  static int noOfSapes = 0;
+
+  Shapes(this.shapeName, this.areaFromula) {
+    noOfSapes++;
   }
+  void calculateArea() {
+    List<String> fromula = areaFromula!.split('');
+    
+  }
+}
 
 void main() {}
