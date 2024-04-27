@@ -18,7 +18,11 @@ class Shapes {
       if (char.contains(formula[i])) {
         switch (formula[i]) {
           case '*':
-            if (){}
+            if (isNum(formula[i-1]) && isNum(formula[i+1]) ){
+              area += double.parse(int.parse(formula[i-1]) * int.parse(formula[i+1]));
+            } else {
+              area *= double.parse(formula[i - 1]);
+            }
           case '/':
             area /= area;
           case '+':
@@ -32,7 +36,7 @@ class Shapes {
           case '(' || ')':
             area *= area;
           default:
-            print('invalid input');
+            continue;
         }
       }
     }
