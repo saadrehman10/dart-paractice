@@ -28,10 +28,50 @@ class ThreeDshape implements Shapes {
   void formulaArea() {
     print(areaformula);
   }
+
   @override
   void displayShapeDetails() {
     print('Shape name : $shapeName');
   }
+
+  void thirdfun() {}
+}
+
+class TwoD {
+  String? shapeName;
+  String? areaformula;
+  double area = 0;
+  bool? threeD;
+  TwoD(String? name, String? areaFormula);
+
+  void formulaArea() {
+    print(areaformula);
+  }
+
+  void displayShapeDetails() {
+    print('Shape name : $shapeName');
+  }
+
+  void thirdfun() {}
+}
+
+class Reactangel implements Shapes, TwoD {
+  String? shapeName;
+  String? areaformula;
+  double area = 0;
+  bool? threeD;
+  Reactangel(String? name, String? areaFormula);
+  @override
+  void formulaArea() {
+    print(areaformula);
+  }
+
+  @override
+  void displayShapeDetails() {
+    print('Shape name : $shapeName');
+  }
+   @override
+  void thirdfun() {}
 }
 
 void main() {}
