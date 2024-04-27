@@ -10,12 +10,15 @@ class Shapes {
   void calculateArea() {
     List<String> formula = areaformula!.split('');
     List<String> char = '*/+-=(){}[]'.split('');
+    List<String> nums = '01234567890'.split('');
     double area = 0.0;
+    bool isNum (String no) => nums.contains(no) ;
+
     for (int i = 0; i <= formula.length; i++) {
       if (char.contains(formula[i])) {
         switch (formula[i]) {
           case '*':
-            area *= area;
+            if (){}
           case '/':
             area /= area;
           case '+':
@@ -29,11 +32,8 @@ class Shapes {
           case '(' || ')':
             area *= area;
           default:
-            print('invalid input ');
+            print('invalid input');
         }
-      } else if (formula[i] == '12345678890'.split('')) {
-        var num = int.parse(formula[i]);
-        
       }
     }
   }
