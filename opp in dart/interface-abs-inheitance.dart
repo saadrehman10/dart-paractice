@@ -48,7 +48,7 @@ class TwoD {
   String? areaformula;
   double area = 0;
   bool? threeD;
-  TwoD(String? name, String? areaFormula);
+  TwoD(this.shapeName, this.areaformula);
 
   void formulaArea() {
     print(areaformula);
@@ -66,7 +66,7 @@ class Reactangel implements Shapes, TwoD {
   String? areaformula;
   double area = 0;
   bool? threeD;
-  Reactangel(String? name, String? areaFormula);
+  Reactangel(this.shapeName, this.areaformula);
   @override
   void formulaArea() {
     print(areaformula);
@@ -76,8 +76,11 @@ class Reactangel implements Shapes, TwoD {
   void displayShapeDetails() {
     print('Shape name : $shapeName');
   }
-   @override
-  void thirdfun() {}
+
+  @override
+  void thirdfun() {
+    print('the third fun run');
+  }
 }
 
 void main() {
@@ -110,7 +113,7 @@ void main() {
 
   // // Display details for each shape
   // // for (var shape in shapesList) {
-    
+
   // //   print('Number of Shapes: ${Shapes.noOfSapes}');
   // //   print('---------------------------');
   // // }
@@ -126,8 +129,19 @@ void main() {
   // // Specific method for TwoD
   // triangle.thirdfun();
   // rectangle.thirdfun();
-  
- 
 
-
+  Shapes circle = new Shapes('circle', 'formula', false);
+  Reactangel rect = new Reactangel('rectangle', 'formula');
+  TwoD shape2 = new TwoD('random Shape', 'formula');
+  ThreeDshape sphare = new ThreeDshape('sphare', 'formula');
+  print('--------------------');
+  circle.displayShapeDetails();
+  print('--------------------');
+  rect.displayShapeDetails();
+  print('--------------------');
+  shape2.displayShapeDetails();
+  print('--------------------');
+  sphare.displayShapeDetails();
+  print('--------------------');
+  rect.thirdfun();
 }
