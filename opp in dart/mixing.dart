@@ -50,9 +50,7 @@ mixin mx on Random3 {
   }
 }
 
-class Random4 extends Random3 with mx {
-
-}
+class Random4 extends Random3 with mx {}
 
 void main() {
   // Random random = Random();
@@ -65,9 +63,9 @@ void main() {
   // random2.dispay1();
   // random2.dispay2();
   // random2.random2funciton();
-  // Random3 ran = Random3();
-  // ran.random3funciton();
-  // ran.random3function2();
-  
-
+  Random3 ran1 = Random3();
+  ran1.random3funciton();
+  ran1.random3function2();
+  Random4 ran = new Random4();
+  ran.random3funciton();
 }
