@@ -22,16 +22,23 @@ class Shopes {
   }
 
   int get sellerCode => _sellerCode!;
-  set sellerCode(int value) {
-    _sellerCode = value;
-  }
+  set sellerCode(int value) => _sellerCode = value;
 
   void displayShopInfo() {
     print("Name: $name");
     print("Product: $product");
     print("Address: $address");
-    print('${_sellerCode != null ? 'Seller Code : ${_sellerCode}' : '\n'}');
+    print('${_sellerCode != null ? 'Seller Code : ${_sellerCode}\n' : '\n'}');
   }
+}
+
+abstract class AbstractFactory {
+  String? name;
+  bool? isConnected;
+  double? yearlyProfit;
+  double? netSales;
+
+  factory AbstractFactory._internal();
 }
 
 void main() {
