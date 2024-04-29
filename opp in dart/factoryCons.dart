@@ -5,9 +5,12 @@ class Shopes {
   int? _sellerCode;
 
   factory Shopes(String name, String product, String area) {
-    this.name = name;
-    this.product = product;
+    name = name;
+    product = product;
+    
   }
 }
 
-void main() {}
+void main() {
+  Shopes shop1 = new Shopes('shpeA', 'shoes', '234');
+}
