@@ -1,4 +1,3 @@
-
 mixin mixing1 {
   static int? a;
   int? b;
@@ -30,7 +29,7 @@ class Ranodm2 extends Random {
   }
 }
 
- class Random3 {
+class Random3 {
   void random3funciton() {
     print('random3');
   }
@@ -51,19 +50,24 @@ mixin mx on Random3 {
   }
 }
 
+class Random4 extends Random3 with mx {
+
+}
+
 void main() {
   // Random random = Random();
   // random.a = 500;
   // random.dispay1();
   // random.dispay2();
   // random.randmomfunction();
-  Ranodm2 random2 = Ranodm2();
-  random2.b = 100;
-  random2.dispay1();
-  random2.dispay2();
-  random2.random2funciton();
-  Random3 ran = Random3();
-  ran.random3funciton();
-  ran.random3function2();
- 
+  // Ranodm2 random2 = Ranodm2();
+  // random2.b = 100;
+  // random2.dispay1();
+  // random2.dispay2();
+  // random2.random2funciton();
+  // Random3 ran = Random3();
+  // ran.random3funciton();
+  // ran.random3function2();
+  
+
 }
