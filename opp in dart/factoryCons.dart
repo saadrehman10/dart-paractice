@@ -1,10 +1,13 @@
 abstract class Shopes {
-  String? name;
-  String? product;
-  String? address;
-  int? _sellerCoad;
+  final String name;
+  final String product;
+  final String address;
+  final int _sellerCode; 
   
-
 }
 
-void main() {}
+void main() {
+
+
+
+}
