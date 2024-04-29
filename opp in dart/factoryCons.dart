@@ -1,13 +1,13 @@
-abstract class Shopes {
-  final String name;
-  final String product;
-  final String address;
-  final int _sellerCode; 
-  
+class Shopes {
+  String? name;
+  String? product;
+  String? address;
+  int? _sellerCode;
+
+  factory Shopes(String name, String product, String area) {
+    this.name = name;
+    this.product = product;
+  }
 }
 
-void main() {
-
-
-
-}
+void main() {}
