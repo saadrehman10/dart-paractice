@@ -31,14 +31,42 @@ class Shopes {
     print('${_sellerCode != null ? 'Seller Code : ${_sellerCode}\n' : '\n'}');
   }
 }
-
-abstract class AbstractFactory {
+ class AbstractFactory {
   String? name;
   bool? isConnected;
   double? yearlyProfit;
   double? netSales;
+  double? yaerlyTaxes;
+  AbstractFactory._internal(
+      this.name, this.isConnected, this.yearlyProfit, this.netSales)
+      : yaerlyTaxes = (yearlyProfit! / netSales!) * 100;
+  factory AbstractFactory(
+      String name, bool isConnected, double yearlyProfit, double netSales) {
+    if (yearlyProfit <= 0 || netSales <= 0) {
+      print('the yearly profit cant be less than zero ');
+      return AbstractFactory._internal(null, null, null, null);
+    } else {
+      return AbstractFactory._internal(name, isConnected, yearlyProfit, netSales);
+    }
+  }
+}
 
-  factory AbstractFactory._internal();
+class Area {
+  final int length;
+  final int breadth;
+  final int area;
+
+  // private constructor
+  const Area._internal(this.length, this.breadth) : area = length * breadth;
+
+  // Factory constructor
+  factory Area(int length, int breadth) {
+    if (length < 0 || breadth < 0) {
+      throw Exception("Length and breadth must be positive");
+    }
+    // redirect to private constructor
+    return Area._internal(length, breadth);
+  }
 }
 
 void main() {
