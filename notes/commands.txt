@@ -1,0 +1,28 @@
+slmgr /xpr
+wmic path SoftwareLicensingService get OA3xOriginalProductKey
+powercfg /batteryreport
+
+chkdsk (driver letter ):
+chkdsk (driver letter ): /r
+
+
+winsat disk -drive (drive letter): 
+
+git commands 
+git add .
+git commt -m 'commit'
+
+---------------------
+git stash (remove the changes from the local repo)
+-------------
+git reset HEAD~1
+git push --force
+
+
+--------------
+set up constum alias / commands
+git conifg --global --edit 
+select e for edit 
+now add the [alias] tag
+and then the the custom commandd name you want like 
+pushall = here set the command like !git add . (use (&&) to exicute muliple command ) && git commit -m 'update' && git push
