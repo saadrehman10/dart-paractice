@@ -148,5 +148,9 @@ void main() {
   print("Person1 name is : ${person1.name} with hashcode ${person1.hashCode}");
   print("Person2 name is : ${person2.name} with hashcode ${person2.hashCode}");
   print("Person3 name is : ${person3.name} with hashcode ${person3.hashCode}");
+  Shape shape = Shape(ShapeType.circle);
+  Shape shape2 = Shape(ShapeType.rectangle);
+  shape.draw();
+  shape2.draw();
   
 }
