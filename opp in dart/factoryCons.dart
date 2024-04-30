@@ -146,25 +146,33 @@ void main() {
   // Shopes shop3 = new Shopes('shp3B', 'cloths');
   // shop3.displayShopInfo();
 
- ConcreteFactory factory = new ConcreteFactory("ABC Factory", true, 100000, 500000);
-  print('Factory name: ${factory.name}');
-  print('Yearly profit: ${factory.yearlyProfit}');
-  print('Yearly taxes: ${factory.yaerlyTaxes}');
-  Singleton obj1 = Singleton();
- Singleton obj2 = Singleton();
- print(obj1.hashCode);
- print(obj2.hashCode);
-  final person1 = Person('John');
-  final person2 = Person('Harry');
-  final person3 = Person('John');
+//  ConcreteFactory factory = new ConcreteFactory("ABC Factory", true, 100000, 500000);
+//   print('Factory name: ${factory.name}');
+//   print('Yearly profit: ${factory.yearlyProfit}');
+//   print('Yearly taxes: ${factory.yaerlyTaxes}');
+//   Singleton obj1 = Singleton();
+//  Singleton obj2 = Singleton();
+//  print(obj1.hashCode);
+//  print(obj2.hashCode);
+//   final person1 = Person('John');
+//   final person2 = Person('Harry');
+//   final person3 = Person('John');
 
-  // hashcode of person1 and person3 are same
-  print("Person1 name is : ${person1.name} with hashcode ${person1.hashCode}");
-  print("Person2 name is : ${person2.name} with hashcode ${person2.hashCode}");
-  print("Person3 name is : ${person3.name} with hashcode ${person3.hashCode}");
+//   // hashcode of person1 and person3 are same
+//   print("Person1 name is : ${person1.name} with hashcode ${person1.hashCode}");
+//   print("Person2 name is : ${person2.name} with hashcode ${person2.hashCode}");
+//   print("Person3 name is : ${person3.name} with hashcode ${person3.hashCode}");
   Shape shape = Shape(ShapeType.circle);
   Shape shape2 = Shape(ShapeType.rectangle);
   shape.draw();
   shape2.draw();
-  
+    // create a person object
+  final person = Person('John', 'Doe');
+
+  // create a person object from map
+  final person2 = Person.fromMap({'firstName': 'Harry', 'lastName': 'Potter'});
+
+  // print first and last name
+  print("From normal constructor: ${person.firstName} ${person.lastName}");
+  print("From factory constructor: ${person2.firstName} ${person2.lastName}");
 }
