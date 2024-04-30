@@ -27,5 +27,9 @@ class DoubleData {
 
 void main(){
   Someone s = new Someone('John','1990/01/01');
- 
+   IntData intData = IntData(10);
+  DoubleData doubleData = DoubleData(10.5);
+  // Print the data
+  print("IntData: ${intData.data}");
+  print("DoubleData: ${doubleData.data}");
 }
