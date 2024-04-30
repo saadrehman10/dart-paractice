@@ -56,23 +56,7 @@ class ConcreteFactory extends AbstractFactory {
       : super._internal(name, isConnected, yearlyProfit, netSales);
 }
 
-class Area {
-  final int length;
-  final int breadth;
-  final int area;
 
-  // private constructor
-  const Area._internal(this.length, this.breadth) : area = length * breadth;
-
-  // Factory constructor
-  factory Area(int length, int breadth) {
-    if (length < 0 || breadth < 0) {
-      throw Exception("Length and breadth must be positive");
-    }
-    // redirect to private constructor
-    return Area._internal(length, breadth);
-  }
-}
 
 void main() {
   // Shopes shop1 = new Shopes('shpeA', 'shoes', 'north');
