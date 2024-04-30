@@ -8,7 +8,7 @@ class Someone {
    List<String> year = dob!.split('/');
    int? newDob;
    for(int i = 1; i =< year.length ; i++){
-     year[i].length == 4 ? newDob = year[i] : null;
+     year[i].length == 4 ? newDob = int.parse(year[i]) : null;
    }
    return new Someone._internal(name, dob , age);
  }
