@@ -123,6 +123,20 @@ class Rectangle implements Shape {
     print('Drawing rectangle');
   }
 }
+class Person {
+  String firstName;
+  String lastName;
+
+  // constructor
+  Person(this.firstName, this.lastName);
+
+  // factory constructor Person.fromMap
+  factory Person.fromMap(Map<String, Object> map) {
+    final firstName = map['firstName'] as String;
+    final lastName = map['lastName'] as String;
+    return Person(firstName, lastName);
+  }
+}
 void main() {
   // Shopes shop1 = new Shopes('shpeA', 'shoes', 'north');
   // shop1.sellerCode = 987654;
