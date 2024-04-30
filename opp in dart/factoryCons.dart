@@ -31,7 +31,7 @@ class Shopes {
     print('${_sellerCode != null ? 'Seller Code : ${_sellerCode}\n' : '\n'}');
   }
 }
- class AbstractFactory {
+class AbstractFactory {
   String? name;
   bool? isConnected;
   double? yearlyProfit;
@@ -49,6 +49,11 @@ class Shopes {
       return AbstractFactory._internal(name, isConnected, yearlyProfit, netSales);
     }
   }
+}
+
+class ConcreteFactory extends AbstractFactory {
+  ConcreteFactory(String name, bool isConnected, double yearlyProfit, double netSales)
+      : super._internal(name, isConnected, yearlyProfit, netSales);
 }
 
 class Area {
@@ -70,11 +75,17 @@ class Area {
 }
 
 void main() {
-  Shopes shop1 = new Shopes('shpeA', 'shoes', 'north');
-  shop1.sellerCode = 987654;
-  shop1.displayShopInfo();
-  Shopes shop2 = new Shopes('shpeB', 'bags');
-  shop2.displayShopInfo();
-  Shopes shop3 = new Shopes('shp3B', 'cloths');
-  shop3.displayShopInfo();
+  // Shopes shop1 = new Shopes('shpeA', 'shoes', 'north');
+  // shop1.sellerCode = 987654;
+  // shop1.displayShopInfo();
+  // Shopes shop2 = new Shopes('shpeB', 'bags');
+  // shop2.displayShopInfo();
+  // Shopes shop3 = new Shopes('shp3B', 'cloths');
+  // shop3.displayShopInfo();
+
+ ConcreteFactory factory = new ConcreteFactory("ABC Factory", true, 100000, 500000);
+  print('Factory name: ${factory.name}');
+  print('Yearly profit: ${factory.yearlyProfit}');
+  print('Yearly taxes: ${factory.yaerlyTaxes}');
+  
 }
