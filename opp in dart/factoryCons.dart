@@ -67,27 +67,27 @@ class Singleton {
  // private constructor 
  Singleton._internal();
 }
-class Person {
-  // final fields
-  final String name;
+// class Person {
+//   // final fields
+//   final String name;
 
-  // private constructor
-  Person._internal(this.name);
+//   // private constructor
+//   Person._internal(this.name);
 
-  // static _cache field
-  static final Map<String, Person> _cache = <String, Person>{};
+//   // static _cache field
+//   static final Map<String, Person> _cache = <String, Person>{};
 
-  // factory constructor
-  factory Person(String name) {
-    if (_cache.containsKey(name)) {
-      return _cache[name]!;
-    } else {
-      final person = Person._internal(name);
-      _cache[name] = person;
-      return person;
-    }
-  }
-}
+//   // factory constructor
+//   factory Person(String name) {
+//     if (_cache.containsKey(name)) {
+//       return _cache[name]!;
+//     } else {
+//       final person = Person._internal(name);
+//       _cache[name] = person;
+//       return person;
+//     }
+//   }
+// }
 // enum ShapeType
 enum ShapeType { circle, rectangle }
 
