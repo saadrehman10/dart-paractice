@@ -27,14 +27,17 @@ mixin mx1 on Someone {
 }
 
 class AnotherOne extends Someone with mx1 {
+  @override
   String? gender;
   AnotherOne._internal(String? name, String? dob, this.gender)
       : super._internal(name, dob);
-  factory AnotherOne(String? name, String? dob, String? gender) {
-    if (gender == 'Male' || gender == 'Female')
-      throw Exception('no gender exist');
-    else {
+  factory  AnotherOne(String? name, String? dob, String? gender) {
+    if (gender == 'Male' || gender == 'Female') {
+      
       return AnotherOne._internal(name, dob, gender);
+    } else {
+      print('this gender is  not valid');
+      throw Exception('gendre is null or invalid');
     }
   }
 }
@@ -42,6 +45,10 @@ class AnotherOne extends Someone with mx1 {
 void main() {
   Someone s = new Someone('John', '1990/01/01');
   print(s.age);
-  AnotherOne perosn = new AnotherOne('smith', '01/01/1992','Male');
-  perosn.displaySomeone();
+  AnotherOne person2 = new AnotherOne('smantha', '01/01/2000', 'Female');
+  AnotherOne person = new AnotherOne('smith', '01/01/1992', 'Male');
+
+  person.displaySomeone();
+  print('---------------');
+  person2.displaySomeone();
 }
