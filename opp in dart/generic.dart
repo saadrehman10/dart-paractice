@@ -26,6 +26,14 @@ mixin mx1 on Someone {
   }
 }
 
+
+enum Days {
+  first, second, Third, fourth , fifth, six,  seven, eight, ninth, ten
+}
+
+
+
+
 class AnotherOne extends Someone with mx1 {
   @override
   String? gender;
