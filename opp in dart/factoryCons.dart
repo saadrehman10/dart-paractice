@@ -191,17 +191,14 @@ void main() {
 //   print("Person1 name is : ${person1.name} with hashcode ${person1.hashCode}");
 //   print("Person2 name is : ${person2.name} with hashcode ${person2.hashCode}");
 //   print("Person3 name is : ${person3.name} with hashcode ${person3.hashCode}");
-  Shape shape = Shape(ShapeType.circle);
-  Shape shape2 = Shape(ShapeType.rectangle);
-  shape.draw();
-  shape2.draw();
+ 
     // create a person object
-  final person = Person('John', 'Doe');
+  // final person = Person('John', 'Doe');
 
-  // create a person object from map
-  final person2 = Person.fromMap({'firstName': 'Harry', 'lastName': 'Potter'});
+  // // create a person object from map
+  // final person2 = Person.fromMap({'firstName': 'Harry', 'lastName': 'Potter'});
 
-  // print first and last name
-  print("From normal constructor: ${person.firstName} ${person.lastName}");
-  print("From factory constructor: ${person2.firstName} ${person2.lastName}");
+  // // print first and last name
+  // print("From normal constructor: ${person.firstName} ${person.lastName}");
+  // print("From factory constructor: ${person2.firstName} ${person2.lastName}");
 }
