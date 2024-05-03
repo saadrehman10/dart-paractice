@@ -26,4 +26,9 @@ class Patient {
   }
 }
 
+class IcuPT extends Patient {
+  IcuPT(String? name,String? diagnostic) : super(name,diagnostic); 
+}
+
+class CuPt extends Patient implements Icpt  {}
 void main() {}
