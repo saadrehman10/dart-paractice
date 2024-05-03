@@ -2,7 +2,7 @@ class Patient {
   String? name;
   String? diagnostic;
   int? _ptCode;
-  Map<String, dynamic>? ptHistory;
+  Map<String, dynamic>? ptInfo;
 
   Patient(this.name, this.diagnostic);
   Patient._named(this.name, this.diagnostic);
@@ -20,7 +20,9 @@ class Patient {
 
   int get ptCode => _ptCode!;
   set setptHistory(List<dynamic> history) {
-    ptHistory['name'] = this.name;
+    ptInfo!['name'] = this.name;
+    ptInfo!['age'] = history[0];
+    ptInfo![''] = history[1];
   }
 }
 
