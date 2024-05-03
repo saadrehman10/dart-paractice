@@ -2,6 +2,7 @@ class Patient {
   String? name;
   String? diagnostic;
   int? _ptCode;
+  List<String>? ptHistory;
 
   Patient(this.name, this.diagnostic);
   Patient._named(this.name, this.diagnostic);
@@ -18,6 +19,9 @@ class Patient {
       : print('worng lenght should be 10');
 
   int get ptCode => _ptCode!;
+  
+  
+
 
 }
 
