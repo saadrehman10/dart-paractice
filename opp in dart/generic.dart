@@ -1,4 +1,5 @@
-
-void main() {
+class Data<i> {
   
 }
+
+void main() {}
