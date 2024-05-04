@@ -20,7 +20,7 @@ class Patient {
 
   int get ptCode => _ptCode!;
 
-  set setptHistory(List<dynamic> history) {
+  set setptInfo(List<dynamic> history) {
     ptInfo!['name'] = this.name;
     ptInfo!['age'] = history[0].runtimeType == int ? history[0] : null;
     ptInfo!['gender'] = history[1].runtimeType == bool ? history[1] : null;
@@ -84,9 +84,31 @@ class PtNotes<E> {
 
 void main() {
   var patient1 = Patient('Alice', 'Flu');
+  var patient2 = Patient('Bob', 'Cold');
+  var patient3 = Patient('Charlie', 'Fever');
+  var patient4 = Patient('Diana', 'Injury');
+  var patient5 = Patient('Ethan', 'Allergy');
+
   var icuPatient1 = IcuPT('Fiona', 'Severe Flu');
+  var icuPatient2 = IcuPT('George', 'Severe Cold');
+  var icuPatient3 = IcuPT('Hannah', 'Severe Fever');
+  var icuPatient4 = IcuPT('Ian', 'Severe Injury');
+  var icuPatient5 = IcuPT('Jane', 'Severe Allergy');
+
+
   var cuPatient1 = CuPt('Kyle', 'Critical Flu');
+  var cuPatient2 = CuPt('Liam', 'Critical Cold');
+  var cuPatient3 = CuPt('Mia', 'Critical Fever');
+  var cuPatient4 = CuPt('Noah', 'Critical Injury');
+  var cuPatient5 = CuPt('Olivia', 'Critical Allergy');
+
+
   var generalPatient1 = GeneralPt('Peter', 'Mild Flu');
+  var generalPatient2 = GeneralPt('Quinn', 'Mild Cold');
+  var generalPatient3 = GeneralPt('Rachel', 'Mild Fever');
+  var generalPatient4 = GeneralPt('Steve', 'Mild Injury');
+  var generalPatient5 = GeneralPt('Tina', 'Mild Allergy');
+
   var notes1 = PtNotes<String>('Note 1 for Patient');
   var notes2 = PtNotes<int>(12345);
   var notes3 = PtNotes<bool>(true);
