@@ -75,7 +75,7 @@ class GeneralPt extends Patient implements IcuPT {
 
 class PtNotes<E> {
   E? notes1;
-  PtNotes([this.notes1, this.notes2, this.notes3]);
+  PtNotes([this.notes1]);
 
   E dispalynoteset() {
       return this.notes1!;
