@@ -65,4 +65,15 @@ T genericMethod<T>(T value) {
   return value;
 }
 
+class MagicBox<T> {
+  T treasure;
+
+  MagicBox(this.treasure);
+
+  T openBox() {
+    return treasure;
+  }
+}
+
+
 void main() {}
