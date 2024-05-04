@@ -44,6 +44,7 @@ class Patient {
   }
 }
 
+// here is repetation of code so we use generic classes
 class IcuPT extends Patient {
   IcuPT(String? name, String? diagnostic) : super(name, diagnostic);
   void checkpt() {
@@ -71,6 +72,12 @@ class generalPt extends Patient implements IcuPT {
   void checkpt() {
     print('This Patient is in general class');
   }
+}
+
+// using generic by tag <E> == elemnt
+
+class Pt<E> extends Patient {
+   Pt(String? name, String? diagnostic) : super(name, diagnostic);
 }
 
 void main() {}
