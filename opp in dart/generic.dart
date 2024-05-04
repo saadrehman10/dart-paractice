@@ -66,18 +66,23 @@ class CuPt extends Patient implements IcuPT {
   }
 }
 
-class generalPt extends Patient implements IcuPT {
-  generalPt(String? name, String? diagnostic) : super(name, diagnostic);
+class GeneralPt extends Patient implements IcuPT {
+  GeneralPt(String? name, String? diagnostic) : super(name, diagnostic);
   @override
   void checkpt() {
     print('This Patient is in general class');
   }
 }
 
-// using generic by tag <E> == elemnt
-
+// using generic by tag <E> == element
+enum Ptstatus{Icupt, CuPt, generalPt }
 class Pt<E> extends Patient {
-   Pt(String? name, String? diagnostic) : super(name, diagnostic);
+  Pt(String? name, String? diagnostic) : super(name, diagnostic);
+  void checkpt() {
+    if (E == Ptstatus.Icupt) {
+     print('This Patient is in general class');
+    }
+  }
 }
 
 void main() {}
