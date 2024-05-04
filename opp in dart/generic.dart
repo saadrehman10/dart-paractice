@@ -35,6 +35,7 @@ class IcuPT extends Patient {
 
 class CuPt extends Patient implements IcuPT {
   CuPt(String? name, String? diagnostic) : super(name, diagnostic);
+  
   @override
   void display() {
     print('hello');
