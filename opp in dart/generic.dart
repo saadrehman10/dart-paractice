@@ -23,18 +23,24 @@ class Patient {
   set setptHistory(List<dynamic> history) {
     ptInfo!['name'] = this.name;
     ptInfo!['age'] = history[0].runtimeType == int ? history[0] : null;
-    ptInfo!['heart disease'] =
-        history[1].runtimeType == bool ? history[1] : null;
-    ptInfo!['Diseases histroy'] =
-        history[2].runtimeType == List ? history[2] : null;
+    ptInfo!['gender'] = history[1].runtimeType == bool ? history[1] : null;
+    ptInfo!['heart_disease'] =
+        history[2].runtimeType == bool ? history[2] : null;
+
+    ptInfo!['Diseases_histroy'] =
+        history[3].runtimeType == List ? history[3] : null;
   }
 
   String displayPTinfo() {
     if (this.ptInfo != null) {
-      return '${this.name} is ${this.ptInfo[age]} ';
+      return '${this.name} is ${this.ptInfo!['age']} years old ${this.ptInfo!['heart_disease'] ? '${this.ptInfo!['gender'] == 'male' ? 'he' : 'she'}' : ''}';
     } else {
       return 'ptifo is null';
     }
+  }
+
+  List<String> pthisoty() {
+    return this.ptInfo!['Diseases_histroy'];
   }
 }
 
