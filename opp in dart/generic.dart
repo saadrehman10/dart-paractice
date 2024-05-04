@@ -95,13 +95,11 @@ void main() {
   var icuPatient4 = IcuPT('Ian', 'Severe Injury');
   var icuPatient5 = IcuPT('Jane', 'Severe Allergy');
 
-
   var cuPatient1 = CuPt('Kyle', 'Critical Flu');
   var cuPatient2 = CuPt('Liam', 'Critical Cold');
   var cuPatient3 = CuPt('Mia', 'Critical Fever');
   var cuPatient4 = CuPt('Noah', 'Critical Injury');
   var cuPatient5 = CuPt('Olivia', 'Critical Allergy');
-
 
   var generalPatient1 = GeneralPt('Peter', 'Mild Flu');
   var generalPatient2 = GeneralPt('Quinn', 'Mild Cold');
@@ -109,20 +107,29 @@ void main() {
   var generalPatient4 = GeneralPt('Steve', 'Mild Injury');
   var generalPatient5 = GeneralPt('Tina', 'Mild Allergy');
 
-  var notes1 = PtNotes<String>('Note 1 for Patient');
-  var notes2 = PtNotes<int>(12345);
-  var notes3 = PtNotes<bool>(true);
-  var notes4 = PtNotes<List<String>>(['Diabetes', 'Hypertension']);
+  // Set patient information
+  patient1.setptInfo = [30, true, false, ['Flu']];
+  icuPatient1.setptInfo = [45, false, true, ['Severe Flu']];
+  cuPatient1.setptInfo = [50, true, false, ['Critical Flu']];
+  generalPatient1.setptInfo = [28, false, false, ['Mild Flu']];
 
+  // Print patient information
   print(patient1.displayPTinfo());
   print(icuPatient1.displayPTinfo());
   icuPatient1.checkpt();
   print(cuPatient1.displayPTinfo());
   cuPatient1.checkpt();
   print(generalPatient1.displayPTinfo());
-  generalPatient1.checkpt();
+
+  // Print notes
+  var notes1 = PtNotes<String>('Note 1 for Patient');
+  var notes2 = PtNotes<int>(12345);
+  var notes3 = PtNotes<bool>(true);
+  var notes4 = PtNotes<List<String>>(['Diabetes', 'Hypertension']);
+
   print(notes1.dispalynoteset());
   print(notes2.dispalynoteset());
   print(notes3.dispalynoteset());
   print(notes4.dispalynoteset());
 }
+
