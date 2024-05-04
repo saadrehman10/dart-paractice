@@ -22,23 +22,31 @@ class Patient {
   set setptHistory(List<dynamic> history) {
     ptInfo!['name'] = this.name;
     ptInfo!['age'] = history[0];
-    ptInfo![''] = history[1];
+    ptInfo!['heart disease'] = history[1];
   }
 }
 
 class IcuPT extends Patient {
   IcuPT(String? name, String? diagnostic) : super(name, diagnostic);
   void display() {
-    print('hello');
+      print('This Pt is in Intensive care class');
   }
 }
 
 class CuPt extends Patient implements IcuPT {
   CuPt(String? name, String? diagnostic) : super(name, diagnostic);
-  
+
   @override
   void display() {
-    print('hello');
+        print('This Pt is in Critical care class');
+  }
+}
+
+class generalPt extends Patient implements IcuPT {
+  generalPt(String? name, String? diagnostic) : super(name, diagnostic);
+  @override
+  void display() {
+    print('This Pt is in general class');
   }
 }
 
