@@ -52,28 +52,7 @@ class generalPt extends Patient implements IcuPT {
   }
 }
 
-class Data<T> {
-  T data;
-  Data(this.data);
-}
 
-abstract class Map<K, V> {
-  // code
-  external factory Map();
-}
-T genericMethod<T>(T value) {
-  return value;
-}
-
-class MagicBox<T> {
-  T treasure;
-
-  MagicBox(this.treasure);
-
-  T openBox() {
-    return treasure;
-  }
-}
 
 
 void main() {}
