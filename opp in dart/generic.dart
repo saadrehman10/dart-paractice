@@ -47,7 +47,7 @@ class Patient {
 class IcuPT extends Patient {
   IcuPT(String? name, String? diagnostic) : super(name, diagnostic);
   void checkpt() {
-    print('This Pt is in Intensive care class');
+    print('This Patient is in Intensive care class');
   }
 
   @override
@@ -61,7 +61,7 @@ class CuPt extends Patient implements IcuPT {
 
   @override
   void checkpt() {
-    print('This Pt is in Critical care class');
+    print('This Patient is in Critical care class');
   }
 }
 
@@ -69,7 +69,7 @@ class generalPt extends Patient implements IcuPT {
   generalPt(String? name, String? diagnostic) : super(name, diagnostic);
   @override
   void checkpt() {
-    print('This Pt is in general class');
+    print('This Patient is in general class');
   }
 }
 
