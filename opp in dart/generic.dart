@@ -23,7 +23,7 @@ class Patient {
     ptInfo!['name'] = this.name;
     ptInfo!['age'] = history[0].runtimeType == int ? history[0] : null ;
     ptInfo!['heart disease'] = history[1].runtimeType == bool ? history[1] : null;
-    ptInfo!['Diseases'] = history[2].runtimeType == List ? history[2] : null;
+    ptInfo!['Diseases histroy'] = history[2].runtimeType == List ? history[2] : null;
 
   }
 }
@@ -50,6 +50,11 @@ class generalPt extends Patient implements IcuPT {
   void display() {
     print('This Pt is in general class');
   }
+}
+
+class Data<T> {
+  T data;
+  Data(this.data);
 }
 
 void main() {}
