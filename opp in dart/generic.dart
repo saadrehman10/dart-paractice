@@ -27,10 +27,18 @@ class Patient {
 }
 
 class IcuPT extends Patient {
-  IcuPT(String? name,String? diagnostic) : super(name,diagnostic); 
+  IcuPT(String? name, String? diagnostic) : super(name, diagnostic);
+  void display() {
+    print('hello');
+  }
 }
 
-class CuPt extends Patient implements Icpt  {
-  CuPt(String? name,String? diagnostic) : super(name,diagnostic); 
+class CuPt extends Patient implements IcuPT {
+  CuPt(String? name, String? diagnostic) : super(name, diagnostic);
+  @override
+  void display() {
+    print('hello');
+  }
 }
+
 void main() {}
