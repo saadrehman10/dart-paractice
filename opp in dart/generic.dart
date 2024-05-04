@@ -61,5 +61,8 @@ abstract class Map<K, V> {
   // code
   external factory Map();
 }
+T genericMethod<T>(T value) {
+  return value;
+}
 
 void main() {}
