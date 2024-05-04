@@ -46,8 +46,13 @@ class Patient {
 
 class IcuPT extends Patient {
   IcuPT(String? name, String? diagnostic) : super(name, diagnostic);
-  void display() {
+  void checkpt() {
     print('This Pt is in Intensive care class');
+  }
+
+  @override
+  String displayPTinfo() {
+    return (super.displayPTinfo() + '& Patient is in Intensive care');
   }
 }
 
@@ -55,7 +60,7 @@ class CuPt extends Patient implements IcuPT {
   CuPt(String? name, String? diagnostic) : super(name, diagnostic);
 
   @override
-  void display() {
+  void checkpt() {
     print('This Pt is in Critical care class');
   }
 }
@@ -63,7 +68,7 @@ class CuPt extends Patient implements IcuPT {
 class generalPt extends Patient implements IcuPT {
   generalPt(String? name, String? diagnostic) : super(name, diagnostic);
   @override
-  void display() {
+  void checkpt() {
     print('This Pt is in general class');
   }
 }
