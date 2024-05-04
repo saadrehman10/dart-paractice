@@ -57,4 +57,9 @@ class Data<T> {
   Data(this.data);
 }
 
+abstract class Map<K, V> {
+  // code
+  external factory Map();
+}
+
 void main() {}
