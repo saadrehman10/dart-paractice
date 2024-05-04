@@ -21,8 +21,10 @@ class Patient {
   int get ptCode => _ptCode!;
   set setptHistory(List<dynamic> history) {
     ptInfo!['name'] = this.name;
-    ptInfo!['age'] = history[0];
-    ptInfo!['heart disease'] = history[1];
+    ptInfo!['age'] = history[0].runtimeType == int ? history[0] : null ;
+    ptInfo!['heart disease'] = history[1].runtimeType == bool ? history[1] : null;
+    ptInfo!['Diseases'] = history[2].runtimeType == List ? history[2] : null;
+
   }
 }
 
