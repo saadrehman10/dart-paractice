@@ -19,19 +19,29 @@ class Patient {
       : print('worng lenght should be 10');
 
   int get ptCode => _ptCode!;
+
   set setptHistory(List<dynamic> history) {
     ptInfo!['name'] = this.name;
-    ptInfo!['age'] = history[0].runtimeType == int ? history[0] : null ;
-    ptInfo!['heart disease'] = history[1].runtimeType == bool ? history[1] : null;
-    ptInfo!['Diseases histroy'] = history[2].runtimeType == List ? history[2] : null;
+    ptInfo!['age'] = history[0].runtimeType == int ? history[0] : null;
+    ptInfo!['heart disease'] =
+        history[1].runtimeType == bool ? history[1] : null;
+    ptInfo!['Diseases histroy'] =
+        history[2].runtimeType == List ? history[2] : null;
+  }
 
+  String displayPTinfo() {
+    if (this.ptInfo != null) {
+      return '${this.name} is ${this.ptInfo[age]} ';
+    } else {
+      return 'ptifo is null';
+    }
   }
 }
 
 class IcuPT extends Patient {
   IcuPT(String? name, String? diagnostic) : super(name, diagnostic);
   void display() {
-      print('This Pt is in Intensive care class');
+    print('This Pt is in Intensive care class');
   }
 }
 
@@ -40,7 +50,7 @@ class CuPt extends Patient implements IcuPT {
 
   @override
   void display() {
-        print('This Pt is in Critical care class');
+    print('This Pt is in Critical care class');
   }
 }
 
@@ -51,8 +61,5 @@ class generalPt extends Patient implements IcuPT {
     print('This Pt is in general class');
   }
 }
-
-
-
 
 void main() {}
