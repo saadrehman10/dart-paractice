@@ -82,4 +82,25 @@ class PtNotes<E> {
   }
 }
 
-void main() {}
+void main() {
+  var patient1 = Patient('Alice', 'Flu');
+  var icuPatient1 = IcuPT('Fiona', 'Severe Flu');
+  var cuPatient1 = CuPt('Kyle', 'Critical Flu');
+  var generalPatient1 = GeneralPt('Peter', 'Mild Flu');
+  var notes1 = PtNotes<String>('Note 1 for Patient');
+  var notes2 = PtNotes<int>(12345);
+  var notes3 = PtNotes<bool>(true);
+  var notes4 = PtNotes<List<String>>(['Diabetes', 'Hypertension']);
+
+  print(patient1.displayPTinfo());
+  print(icuPatient1.displayPTinfo());
+  icuPatient1.checkpt();
+  print(cuPatient1.displayPTinfo());
+  cuPatient1.checkpt();
+  print(generalPatient1.displayPTinfo());
+  generalPatient1.checkpt();
+  print(notes1.dispalynoteset());
+  print(notes2.dispalynoteset());
+  print(notes3.dispalynoteset());
+  print(notes4.dispalynoteset());
+}
