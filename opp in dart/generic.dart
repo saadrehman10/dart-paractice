@@ -73,11 +73,13 @@ class GeneralPt extends Patient implements IcuPT {
   }
 }
 
+class PtNotes<E> {
+  E? notes1;
+  PtNotes([this.notes1, this.notes2, this.notes3]);
 
-enum Ptstatus{Icupt, CuPt, generalPt }
-class Pt<E> extends Patient {
-  Pt( String? name, String? diagnostic) : super(name, diagnostic);
-  
+  E dispalynoteset() {
+      return this.notes1!;
+  }
 }
 
 void main() {}
