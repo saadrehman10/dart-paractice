@@ -91,10 +91,10 @@ abstract class Indentify {
 }
 
 class random<E> extends Indentify {
-  @override
   random(E name) : super(name);
+  @override
   void display() {
-    print(super.name);
+    super.display();
   }
 }
 
@@ -167,4 +167,16 @@ void main() {
   // print(notes2.dispalynoteset());
   // print(notes3.dispalynoteset());
   // print(notes4.dispalynoteset());
+
+  random obj1 = new random('name');
+  obj1.display();
+  random obj2 = new random(1223);
+  obj2.display();
+  random obj3 = new random(339.00);
+  obj3.display();
+  random obj4 = new random(['']);
+  obj4.display();
+
+
+
 }
