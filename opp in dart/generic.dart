@@ -82,8 +82,8 @@ class PtNotes<E> {
   }
 }
 
-abstract class Indentify<E> {
-  E? name;
+abstract class Indentify {
+  var name;
   Indentify(this.name);
   void display() {
     print(this.name.runtimeType);
