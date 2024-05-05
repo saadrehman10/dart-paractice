@@ -182,4 +182,7 @@ void main() {
   obj6.display();
   random obj7 = new random({'name': 'Saaas'});
   obj7.display();
-}
+  random obj8 = new random({'name', 'Saaas',190298.2,223});
+  obj8.display();
+  random obj9 = new random({'saad', 'amed','delo'});
+  obj9.display();}
