@@ -185,4 +185,6 @@ void main() {
   random obj8 = new random({'name', 'Saaas',190298.2,223});
   obj8.display();
   random obj9 = new random({'saad', 'amed','delo'});
-  obj9.display();}
+  obj9.display();
+  
+  }
