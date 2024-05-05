@@ -90,6 +90,14 @@ abstract class Indentify<E> {
   }
 }
 
+class random extends Indentify {
+  @override
+  random(name) : super(name);
+  void display() {
+    print(super.name);
+  }
+}
+
 void main() {
   // var patient1 = Patient('Alice', 'Flu');
   // var patient2 = Patient('Bob', 'Cold');
@@ -159,10 +167,4 @@ void main() {
   // print(notes2.dispalynoteset());
   // print(notes3.dispalynoteset());
   // print(notes4.dispalynoteset());
-
-  
-  
-
-
-
 }
