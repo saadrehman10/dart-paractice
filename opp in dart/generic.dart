@@ -90,9 +90,9 @@ abstract class Indentify {
   }
 }
 
-class random extends Indentify {
+class random<E> extends Indentify {
   @override
-  random(name) : super(name);
+  random(E name) : super(name);
   void display() {
     print(super.name);
   }
