@@ -176,7 +176,10 @@ void main() {
   obj3.display();
   random obj4 = new random(['']);
   obj4.display();
-
-
-
+  random obj5 = new random({});
+  obj5.display();
+  random obj6 = new random([]);
+  obj6.display();
+  random obj7 = new random({'name': 'Saaas'});
+  obj7.display();
 }
