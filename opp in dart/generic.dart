@@ -78,7 +78,15 @@ class PtNotes<E> {
   PtNotes([this.notes1]);
 
   E dispalynoteset() {
-      return this.notes1!;
+    return this.notes1!;
+  }
+}
+
+abstract class Indentify<E> {
+  E? name;
+  Indentify(this.name);
+  void display() {
+    print(this.name.runtimeType);
   }
 }
 
@@ -108,10 +116,30 @@ void main() {
   var generalPatient5 = GeneralPt('Tina', 'Mild Allergy');
 
   // Set patient information
-  patient1.setptInfo = [30, true, false, ['Flu']];
-  icuPatient1.setptInfo = [45, false, true, ['Severe Flu']];
-  cuPatient1.setptInfo = [50, true, false, ['Critical Flu']];
-  generalPatient1.setptInfo = [28, false, false, ['Mild Flu']];
+  patient1.setptInfo = [
+    30,
+    true,
+    false,
+    ['Flu']
+  ];
+  icuPatient1.setptInfo = [
+    45,
+    false,
+    true,
+    ['Severe Flu']
+  ];
+  cuPatient1.setptInfo = [
+    50,
+    true,
+    false,
+    ['Critical Flu']
+  ];
+  generalPatient1.setptInfo = [
+    28,
+    false,
+    false,
+    ['Mild Flu']
+  ];
 
   // Print patient information
   print(patient1.displayPTinfo());
@@ -132,4 +160,3 @@ void main() {
   print(notes3.dispalynoteset());
   print(notes4.dispalynoteset());
 }
-
