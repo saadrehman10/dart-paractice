@@ -112,14 +112,17 @@ class Camera {
 // Q6.Create an interfce call Bottle and add a methoed to it called open(); create a class called CokeBottle and implement the Bottle and print the message 'Coke bottle is opened' . Add a factory constructor to Bottle and return the object of cokeBottle instantiate CokeBottle using the factory constructor and call teh open () on the object .
 
 abstract class Bottle {
+  factory Bottle(hello) => CokeBottle(hello);
   void open() {}
-  factory Bottle() => CokeBottle();
 }
 
 class CokeBottle implements Bottle {
+  String? hello;
+  CokeBottle(this.hello);
+
   @override
   void open() {
-    print('Coke bottle is opened');
+    print('${this.hello}Coke bottle is opened');
   }
 }
 
@@ -152,6 +155,6 @@ void main() {
   // cam1.brandprice = ['canon', 70000.0];
   // cam1.dispay();
 
-  Bottle bottle = Bottle();
+  Bottle bottle = Bottle('helo');
   bottle.open();
 }
