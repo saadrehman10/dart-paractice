@@ -18,13 +18,14 @@ class House {
   int? id;
   String? name;
   double? price;
-  static List<List<dynamic>>? instances;
+  static List<dynamic> instances = [];
 
   House(this.id, this.name, this.price) {
-    instances = [[this.id, this.name, this.price]];
+    instances.add([this.id, this.name, this.price]);
   }
-
+  void a() {}
   static void housesDetaisl() {
+    print(instances);
     for (var house in instances!) {
       for (var element in house) {
         print('$element for house');
@@ -41,9 +42,12 @@ void main() {
   // laptop3.dispaly();
   // laptop2.dispaly();
   // laptop1.dispaly();
-  House house1 = House(1, 'Abc house', 224442.2);
-  House house2 = House(2, 'xyz house', 33234.2);
-  House house3 = House(3, 'zmx house', 224.2);
+  House house1 = new House(1, 'Abc house', 224442.2);
+  house1.a();
+  House house2 = new House(2, 'xyz house', 33234.2);
+  house2.a;
+  House house3 = new House(3, 'zmx house', 224.2);
+  house3.a;
 
   House.housesDetaisl();
 }
