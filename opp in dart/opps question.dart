@@ -26,7 +26,7 @@ class House {
 
   static void housesDetaisl() {
     print(instances);
-    for (var house in instances!) {
+    for (var house in instances) {
       for (var element in house) {
         print('$element for house');
       }
@@ -36,7 +36,7 @@ class House {
 
   void housesDetaisl2() {
     print(instances);
-    for (var house in instances!) {
+    for (var house in instances) {
       for (var element in house) {
         print('$element for house');
       }
@@ -52,14 +52,16 @@ void main() {
   // laptop3.dispaly();
   // laptop2.dispaly();
   // laptop1.dispaly();
-  House house1 = new House(1, 'Abc house', 224442.2);
-  House house2 = new House(2, 'xyz house', 33234.2);
-  House house3 = new House(3, 'zmx house', 224.2);
-
-  House.housesDetaisl();
-  print('!!!!!!!!!!!!!!!!');
-  house2.housesDetaisl2();
-  print('!!!!!!!!!!!!!!!!');
-  house3.housesDetaisl2();
+  // House house1 = new House(1, 'Abc house', 224442.2);
+  // House house2 = new House(2, 'xyz house', 33234.2);
+  // print('!!!!!!!!!!!!!!!!');
+  // house2.housesDetaisl2();
+  // House house3 = new House(3, 'zmx house', 224.2);
+  // print('!!!!!!!!!!!!!!!!');
+ 
+  // House.housesDetaisl();
+ 
+  // print('!!!!!!!!!!!!!!!!');
+  // house3.housesDetaisl2();
   
 }
