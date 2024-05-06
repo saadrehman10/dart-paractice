@@ -63,7 +63,16 @@ class Animal {
   }
 }
 
-class Cat extends Animal {
+mixin catanimal on Animal {
+  @override
+   void dislayAnimal() {
+    print('the cat name is ${this.name}');
+    print('the cat color is ${this.color}');
+    print('the cat id is ${this.id}');
+  }
+}
+
+class Cat extends Animal with catanimal {
   String? sound;
   Cat(String? name, String? color, int? id, this.sound)
       : super(id, name, color);
