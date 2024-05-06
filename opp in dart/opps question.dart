@@ -60,11 +60,20 @@ class Animal {
     print('the animal name is ${this.name}');
     print('the animal color is ${this.color}');
     print('the animal id is ${this.id}');
-
   }
 }
 
-class 
+class Cat extends Animal {
+  String? sound;
+  Cat(String? name, String? color, int? id, this.sound)
+      : super(id, name, color);
+
+  @override
+  void dislayAnimal() {
+    super.dislayAnimal();
+    print('the cat sound like $sound');
+  }
+}
 
 void main() {
   // Laptop laptop1 = Laptop(1123, 'samsung cromebook', 8.00);
@@ -85,5 +94,8 @@ void main() {
   // print('!!!!!!!!!!!!!!!!');
   // house3.housesDetaisl2();
 
-  print(gender.values);
+  // print(gender.values);
+
+  Cat cat1 = new Cat('mars', 'brown', 33, 'meow');
+  cat1.dislayAnimal();
 }
