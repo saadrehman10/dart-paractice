@@ -109,6 +109,19 @@ class Camera {
         'The id for this camera is ${this._id} in ${this._color} color in only ${this._price} of ${this._brand} manifactor');
   }
 }
+// Q6.Create an interfce call Bottle and add a methoed to it called open(); create a class called CokeBottle and implement the Bottle and print the message 'Coke bottle is opened' . Add a factory constructor to Bottle and return the object of cokeBottle instantiate CokeBottle using the factory constructor and call teh open () on the object .
+
+abstract class Bottle {
+  void open() {}
+  factory Bottle() => CokeBottle();
+}
+
+class CokeBottle implements Bottle {
+  @override
+  void open() {
+    print('Coke bottle is opened');
+  }
+}
 
 void main() {
   // Laptop laptop1 = Laptop(1123, 'samsung cromebook', 8.00);
@@ -133,9 +146,12 @@ void main() {
 
   // Cat cat1 = new Cat('mars', 'brown', 33, 'meow');
   // cat1.dislayAnimal();
-  Camera cam1 = new Camera();
-  cam1.id = 2233222;
-  cam1.color = 'black';
-  cam1.brandprice = ['canon', 70000.0];
-  cam1.dispay();
+  // Camera cam1 = new Camera();
+  // cam1.id = 2233222;
+  // cam1.color = 'black';
+  // cam1.brandprice = ['canon', 70000.0];
+  // cam1.dispay();
+
+  Bottle bottle = Bottle();
+  bottle.open();
 }
