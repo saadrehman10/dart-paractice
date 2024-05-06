@@ -9,7 +9,28 @@ class Laptop {
   void dispaly() {
     print('Laptop id : ${this.id}');
     print('Laptop name : ${this.name}');
-    print('Laptop ram : ${this.ram }GB');
+    print('Laptop ram : ${this.ram}GB');
+  }
+}
+
+// write a programme to create class House with properties [id, name, price]. Create a constructor of it and create 3 objects of it add them to the list and print details.
+class House {
+  int? id;
+  String? name;
+  double? price;
+  static List<dynamic>? instances;
+
+  House(this.id, this.name, this.price) {
+    instances = [this.id, this.name, this.price];
+  }
+
+  void housesDetaisl() {
+    for (List<dynamic> house in instances!) {
+      for (var element in house) {
+        print('$element for house');
+      }
+      print('--------');
+    }
   }
 }
 
