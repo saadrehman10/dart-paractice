@@ -48,6 +48,24 @@ class House {
 //Q3. Write a dart program to create an enum class for gender [male, female, others] and print all the values;
 enum gender { Male, Female, Others }
 
+//Q4. wirte a dart program to create class Animal with properties [id, name, color] . Create another class call cat and extends it form Animal. Add new properties sound in String,Create object of Cat and print all details
+class Animal {
+  int? id;
+  String? name;
+  String? color;
+
+  Animal(this.id, this.name, this.color);
+
+  void dislayAnimal() {
+    print('the animal name is ${this.name}');
+    print('the animal color is ${this.color}');
+    print('the animal id is ${this.id}');
+
+  }
+}
+
+class 
+
 void main() {
   // Laptop laptop1 = Laptop(1123, 'samsung cromebook', 8.00);
   // Laptop laptop2 = Laptop(2233, 'Apple mackbook', 4.00);
