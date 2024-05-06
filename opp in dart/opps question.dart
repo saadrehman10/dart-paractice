@@ -97,7 +97,7 @@ class Camera {
   set color(String value) => _color = value;
   set brandprice(List<dynamic> list) {
     _brand = list[0];
-    _price = list[0];
+    _price = list[1];
   }
 
   int get id => this._id!;
@@ -131,6 +131,11 @@ void main() {
 
   // print(gender.values);
 
-  Cat cat1 = new Cat('mars', 'brown', 33, 'meow');
-  cat1.dislayAnimal();
+  // Cat cat1 = new Cat('mars', 'brown', 33, 'meow');
+  // cat1.dislayAnimal();
+  Camera cam1 = new Camera();
+  cam1.id = 2233222;
+  cam1.color = 'black';
+  cam1.brandprice = ['canon', 70000.0];
+  cam1.dispay();
 }
