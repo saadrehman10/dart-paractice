@@ -65,7 +65,7 @@ class Animal {
 
 mixin catanimal on Animal {
   @override
-   void dislayAnimal() {
+  void dislayAnimal() {
     print('the cat name is ${this.name}');
     print('the cat color is ${this.color}');
     print('the cat id is ${this.id}');
@@ -81,6 +81,32 @@ class Cat extends Animal with catanimal {
   void dislayAnimal() {
     super.dislayAnimal();
     print('the cat sound like $sound');
+  }
+}
+//Q5. Write a dart program to create a  class Camera with private properties [id, brand, color, price] . Create getter and setter and set all values. Also,create 3 objects if it and print all details.
+
+class Camera {
+  int? _id;
+  String? _brand;
+  String? _color;
+  double? _price;
+
+  set id(int value) => value.toString().length == 7
+      ? _id = value
+      : throw Exception('he value lengthis not 7');
+  set color(String value) => _color = value;
+  set brandprice(List<dynamic> list) {
+    _brand = list[0];
+    _price = list[0];
+  }
+
+  int get id => this._id!;
+  String get color => this._color!;
+  List<dynamic> get brandprice => [this._brand, this._price];
+
+  void dispay() {
+    print(
+        'The id for this camera is ${this._id} in ${this._color} color in only ${this._price} of ${this._brand} manifactor');
   }
 }
 
