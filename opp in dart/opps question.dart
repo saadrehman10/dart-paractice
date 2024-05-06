@@ -45,6 +45,9 @@ class House {
   }
 }
 
+//Q3. Write a dart program to create an enum class for gender [male, female, others] and print all the values;
+enum gender { Male, Female, Others }
+
 void main() {
   // Laptop laptop1 = Laptop(1123, 'samsung cromebook', 8.00);
   // Laptop laptop2 = Laptop(2233, 'Apple mackbook', 4.00);
@@ -58,10 +61,11 @@ void main() {
   // house2.housesDetaisl2();
   // House house3 = new House(3, 'zmx house', 224.2);
   // print('!!!!!!!!!!!!!!!!');
- 
+
   // House.housesDetaisl();
- 
+
   // print('!!!!!!!!!!!!!!!!');
   // house3.housesDetaisl2();
-  
+
+  print(gender.values);
 }
