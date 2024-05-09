@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'dart:math';
 
 class nullValeus {
   String? hello;
@@ -15,10 +16,9 @@ void main() {
   // List<int?> items = [1, 2, null, 4];
   // print(items);
   // obj1.printAddress(null);
-   
-  var obj = null;
-  var obj1 = 1;
-  print(obj ?? 'its null');
-  print(obj1 ?? 'its null');
+  Random ram = Random();
+  var obj = [1, null];
+  var a = ram.nextInt(2);
 
+  print(obj[a-1] ?? 'its null');
 }
