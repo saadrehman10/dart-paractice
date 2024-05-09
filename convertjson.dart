@@ -7,7 +7,7 @@ class nullValeus {
 
 void main() {
   nullValeus obj1 = new nullValeus();
-  obj1.newword = obj1.hello ?? [1,234,null,null, 32];
+  obj1.newword = obj1.newword ?? [1,234,null,null, 32];
 
 
 }
