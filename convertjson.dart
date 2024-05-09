@@ -3,6 +3,11 @@ import 'dart:convert';
 class nullValeus {
   String? hello;
   List<int?>? newword;
+
+  void printAddress(String address) {
+  print(address);
+}
+
 }
 
 void main() {
