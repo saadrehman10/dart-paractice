@@ -16,9 +16,12 @@ void main() {
   // List<int?> items = [1, 2, null, 4];
   // print(items);
   // obj1.printAddress(null);
+ 
+  while (true) {
   Random ram = Random();
-  var obj = [1, null];
+  var obj = [0, 1, null];
   var a = ram.nextInt(2);
-
-  print(obj[a-1] ?? 'its null');
+    print(obj[a + 1] ?? 'its null');
+  }
+  
 }
