@@ -25,11 +25,13 @@ void main() {
   //   print(obj[a + 1] ?? 'its null');
   // }
 
-  Object name = "Pratik";
-// print(name.length) will not work because Dart doesn't know that name is a String
+//   Object name = "Pratik";
+// // print(name.length) will not work because Dart doesn't know that name is a String
 
-if(name is String) {
-// name promoted from Object to String
-  print("The length of name is ${name.length}");
+// if(name is String) {
+// // name promoted from Object to String
+//   print("The length of name is ${name.length}");
+
+ 
 }
-}
+
