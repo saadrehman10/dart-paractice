@@ -32,9 +32,9 @@ void main() {
 // // name promoted from Object to String
 //   print("The length of name is ${name.length}");
 
-  Object? intis ;
-  print(intis.runtimeType);
-  intis is int;
+  Object? intis = [1,2,34,] ;
+   intis  is List ? print(intis.length): null;
+  
   print(intis.runtimeType);
   
 }
