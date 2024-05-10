@@ -66,4 +66,6 @@ void main() {
   val.nullcheker();
   nullValeus val2 = new nullValeus();
   val2.nullcheker();
+
+   DataProvider().myMethod();
 }
