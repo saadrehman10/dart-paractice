@@ -11,8 +11,8 @@ class nullValeus {
 }
 
 void main() {
-  nullValeus obj1 = new nullValeus(null);
-  print(obj1.hello);
+  // nullValeus obj1 = new nullValeus(null);
+  // print(obj1.hello);
   // obj1.newword = obj1.newword ?? [1, 234, null, null, 32];
   // List<int?> items = [1, 2, null, 4];
   // print(items);
@@ -32,6 +32,9 @@ void main() {
 // // name promoted from Object to String
 //   print("The length of name is ${name.length}");
 
- 
+  Object intis = 1;
+  print(intis.runtimeType);
+  intis is int;
+  print(intis.runtimeType);
+  
 }
-
