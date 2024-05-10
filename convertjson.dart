@@ -64,8 +64,7 @@ void main() {
   // print(intis.runtimeType);
   nullValeus val = new nullValeus(hello: 'hello world');
   val.nullcheker();
-  nullValeus val2 = new nullValeus();
-  val2.nullcheker();
+ 
 
    DataProvider().myMethod();
 }
