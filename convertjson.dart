@@ -4,9 +4,13 @@ import 'dart:math';
 class nullValeus {
   String? hello;
   List<int?>? newword;
-  nullValeus(this.hello);
+  nullValeus({this.hello});
   void printAddress(String? address) {
     print(address);
+  }
+
+  void nullcheker() {
+    hello != null ? print('hello') : throw Exception('hello is null');
   }
 }
 
@@ -32,9 +36,16 @@ void main() {
 // // name promoted from Object to String
 //   print("The length of name is ${name.length}");
 
-  Object? intis = [1,2,34,] ;
-   intis  is List ? print(intis.length): null;
-  
-  print(intis.runtimeType);
-  
+  // Object? intis = [
+  //   1,
+  //   2,
+  //   34,
+  // ];
+  // intis is List ? print(intis.length) : null;
+
+  // print(intis.runtimeType);
+  nullValeus val = new nullValeus(hello: 'hello world');
+  val.nullcheker();
+  nullValeus val2 = new nullValeus();
+  val2.nullcheker();
 }
