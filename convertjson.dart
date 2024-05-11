@@ -116,19 +116,28 @@ void main() {
   // int result = returnNullButSometimesNot()!.abs();
   // print(result);
 
-  int? length = findLength(null);
-  print("The length of the string is $length");
+  // int? length = findLength(null);
+  // print("The length of the string is $length");
+
+  // String? name;
+  // name = null;
+  // String name1 = name ?? 'null';
+  // print(name1);
+
+  Object name = "Mark";
+  var nametemp = name as String;
+  print("The length of name is ${nametemp.length}");
 }
 
-int? returnNullButSometimesNot() {
-  return -5;
-}
+// int? returnNullButSometimesNot() {
+//   return -5;
+// }
 
-int? findLength(String? name) {
-  // add null assertion operator here
-  try {
-    return name!.length;
-  } catch (e) {
-    return null;
-  }
-}
+// int? findLength(String? name) {
+//   // add null assertion operator here
+//   try {
+//     return name!.length;
+//   } catch (e) {
+//     return null;
+//   }
+// }
