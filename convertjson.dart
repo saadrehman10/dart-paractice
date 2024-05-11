@@ -77,20 +77,46 @@ void main() {
   // late var name;
   // name = 'hello world';
   // print(name);
-  late  String? name;
-  late var temp = lateword.fun1();
-  print(lateword.count);
-  var temp2 = lateword.fun1();
-  print(lateword.count);
-  print(temp);
-  try {
-    final name = null;
-    print(name);
-  } catch (e) {
-    print(e.toString());
-  }
+  // late  String? name;
+  // late var temp = lateword.fun1();
+  // print(lateword.count);
+  // var temp2 = lateword.fun1();
+  // print(lateword.count);
+  // print(temp);
+  // try {
+  //   final name = null;
+  //   print(name);
+  // } catch (e) {
+  //   print(e.toString());
+  // }
 
-  name = 'hello';
-  print(lateword.count);
-  print(name);
+  // name = 'hello';
+  // print(lateword.count);
+  // print(name);
+
+  // Exercies 
+  int? age;
+  age = null;
+  print("Age is $age");
+  
+  List<int?> items = [1, 2, null, 4];
+  print(items);
+
+  String? name;
+  name = null;
+  String name1 = name!;
+  print(name1);
+
+  List<int?> items1 = [1, 2, null, 4];
+ 
+  int firstItem = items1.first!;
+  
+  print(firstItem);
+
+  int result = returnNullButSometimesNot()!.abs();
+ print(result);
+ 
+}
+int? returnNullButSometimesNot() {
+  return -5;
 }
