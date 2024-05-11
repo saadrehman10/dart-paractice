@@ -62,9 +62,12 @@ void main() {
   // intis is List ? print(intis.length) : null;
 
   // print(intis.runtimeType);
-  nullValeus val = new nullValeus(hello: 'hello world');
-  val.nullcheker();
+  // nullValeus val = new nullValeus(hello: 'hello world');
+  // val.nullcheker();
  
 
-   DataProvider().myMethod();
+  //  DataProvider().myMethod();
+
+
+
 }
