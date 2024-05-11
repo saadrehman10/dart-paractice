@@ -129,6 +129,9 @@ void main() {
   // print("The length of name is ${nametemp.length}");
 
    DataProvider1().myMethod();
+   Person person = Person();
+    person.setName("Mark");
+    print(person.name);
 }
 
 // int? returnNullButSometimesNot() {
@@ -148,10 +151,19 @@ class DataProvider1{
 
     void myMethod(){
         if(stringorNull is String){
-            print("The length of value is ${stringorNull.length}");
+            print("The length of value is ${stringorNull!.length}");
         }else{
             print("The value is not string.");
         }
 
     }
+}
+class Person{
+    late String _name;
+
+    void setName(String name){
+        _name = name;
+    }
+
+    String get name => _name;
 }
