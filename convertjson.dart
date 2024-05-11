@@ -30,6 +30,15 @@ class DataProvider {
   }
 }
 
+class lateword {
+  static int count = 0;
+  static dynamic fun1() {
+    count++;
+    print('This funcis called');
+    return 'hello';
+  }
+}
+
 void main() {
   // nullValeus obj1 = new nullValeus(null);
   // print(obj1.hello);
@@ -65,10 +74,14 @@ void main() {
 
   //  DataProvider().myMethod();
 
-  
-  late var name;
-  name = 'hello world';
-  print(name);
+  // late var name;
+  // name = 'hello world';
+  // print(name);
 
-
+  late var temp = lateword.fun1();
+  print(lateword.count);
+  print(lateword.fun1());
+  print(lateword.count);
+  print(temp);
+ 
 }
