@@ -94,38 +94,41 @@ void main() {
   // print(lateword.count);
   // print(name);
 
-  // Exercies 
-  int? age;
-  age = null;
-  print("Age is $age");
-  
-  List<int?> items = [1, 2, null, 4];
-  print(items);
+  // Exercies
+  // int? age;
+  // age = null;
+  // print("Age is $age");
 
-  String? name;
-  name = null;
-  String name1 = name!;
-  print(name1);
+  // List<int?> items = [1, 2, null, 4];
+  // print(items);
 
-  List<int?> items1 = [1, 2, null, 4];
- 
-  int firstItem = items1.first!;
-  
-  print(firstItem);
+  // String? name;
+  // name = null;
+  // String name1 = name!;
+  // print(name1);
 
-  int result = returnNullButSometimesNot()!.abs();
- print(result);
+  // List<int?> items1 = [1, 2, null, 4];
 
+  // int firstItem = items1.first!;
 
+  // print(firstItem);
 
+  // int result = returnNullButSometimesNot()!.abs();
+  // print(result);
 
-  int? length = findLength("Hello");
+  int? length = findLength(null);
   print("The length of the string is $length");
 }
+
 int? returnNullButSometimesNot() {
   return -5;
 }
-int findLength(String? name) {
-    // add null assertion operator here
-  return name.length;
+
+int? findLength(String? name) {
+  // add null assertion operator here
+  try {
+    return name!.length;
+  } catch (e) {
+    return null;
+  }
 }
