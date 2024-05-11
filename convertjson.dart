@@ -14,22 +14,20 @@ class nullValeus {
   }
 }
 
+class DataProvider {
+  // creating a method stringorNull
+  String? get stringorNull => Random().nextBool() ? "Hello" : null;
 
-class DataProvider{
-    // creating a method stringorNull
-    String? get stringorNull => Random().nextBool() ? "Hello" : null;
-
-    // creating a method myMethod
-    void myMethod(){
-        String? value = stringorNull;
-        // checking if value String or not
-        if(value is String){
-            print("The length of value is ${value.length}");
-        }else{
-            print("The value is not string.");
-        }
-
+  // creating a method myMethod
+  void myMethod() {
+    String? value = stringorNull;
+    // checking if value String or not
+    if (value is String) {
+      print("The length of value is ${value.length}");
+    } else {
+      print("The value is not string.");
     }
+  }
 }
 
 void main() {
@@ -64,10 +62,13 @@ void main() {
   // print(intis.runtimeType);
   // nullValeus val = new nullValeus(hello: 'hello world');
   // val.nullcheker();
- 
 
   //  DataProvider().myMethod();
 
+  
+  late var name;
+  name = 'hello world';
+  print(name);
 
 
 }
