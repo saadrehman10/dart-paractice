@@ -124,9 +124,11 @@ void main() {
   // String name1 = name ?? 'null';
   // print(name1);
 
-  Object name = "Mark";
-  var nametemp = name as String;
-  print("The length of name is ${nametemp.length}");
+  // Object name = "Mark";
+  // var nametemp = name as String;
+  // print("The length of name is ${nametemp.length}");
+
+   DataProvider1().myMethod();
 }
 
 // int? returnNullButSometimesNot() {
@@ -141,3 +143,15 @@ void main() {
 //     return null;
 //   }
 // }
+class DataProvider1{
+    String? get stringorNull => Random().nextBool() ? "Hello" : null;
+
+    void myMethod(){
+        if(stringorNull is String){
+            print("The length of value is ${stringorNull.length}");
+        }else{
+            print("The value is not string.");
+        }
+
+    }
+}
