@@ -115,8 +115,17 @@ void main() {
 
   int result = returnNullButSometimesNot()!.abs();
  print(result);
- 
+
+
+
+
+  int? length = findLength("Hello");
+  print("The length of the string is $length");
 }
 int? returnNullButSometimesNot() {
   return -5;
+}
+int findLength(String? name) {
+    // add null assertion operator here
+  return name.length;
 }
