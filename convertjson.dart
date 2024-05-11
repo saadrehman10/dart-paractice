@@ -77,17 +77,17 @@ void main() {
   // late var name;
   // name = 'hello world';
   // print(name);
-  late final String name;
+  late  String? name;
   late var temp = lateword.fun1();
   print(lateword.count);
   var temp2 = lateword.fun1();
   print(lateword.count);
   print(temp);
   try {
+    final name = null;
     print(name);
   } catch (e) {
-    print('the name is not yet declare');
-    
+    print(e.toString());
   }
 
   name = 'hello';
