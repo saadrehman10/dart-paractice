@@ -80,8 +80,9 @@ void main() {
 
   late var temp = lateword.fun1();
   print(lateword.count);
-  print(lateword.fun1());
+  var temp2 = lateword.fun1();
   print(lateword.count);
   print(temp);
- 
+  print(lateword.count);
+  
 }
