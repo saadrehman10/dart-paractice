@@ -9,6 +9,16 @@ int? randomGenrator() {
   int? value = Random().nextBool() ? 100 : null;
   return value;
 }
+class Person{
+    String _name;
+
+    void setName(String name){
+        _name = name;
+    }
+
+    String get name => _name;
+}
+
 
 void main() {
   late String? address;
