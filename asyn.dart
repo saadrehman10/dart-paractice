@@ -10,5 +10,8 @@ void main() async {
 
   // print('future befoe');
   // Future.delayed(Duration(seconds: 3), () => print('hello world'));
-  print(getname());
+  getname().then((value) {
+    print(value[0]);
+  });
+  
 }
