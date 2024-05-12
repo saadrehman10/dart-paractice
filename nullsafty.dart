@@ -9,6 +9,7 @@ int? randomGenrator() {
   int? value = Random().nextBool() ? 100 : null;
   return value;
 }
+
 class Person{
     late String _name;
 
