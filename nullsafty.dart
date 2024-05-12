@@ -10,16 +10,15 @@ int? randomGenrator() {
   return value;
 }
 
-class Person{
-    late String _name;
+class Person {
+  late String _name;
 
-    set setName(String name){
-        _name = name;
-    }
+  set setName(String name) {
+    _name = name;
+  }
 
-    String get name => _name;
+  String get name => _name;
 }
-
 
 void main() {
 //   late String? address;
@@ -36,6 +35,6 @@ void main() {
   //  Person person = Person();
   //   person.setName("Mark");
   //   print(person.name);
-
-
+  int status = randomGenrator() ?? 0;
+  print(status);
 }
