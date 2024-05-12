@@ -10,9 +10,9 @@ int? randomGenrator() {
   return value;
 }
 class Person{
-    String _name;
+    late String _name;
 
-    void setName(String name){
+    set setName(String name){
         _name = name;
     }
 
