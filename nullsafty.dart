@@ -35,6 +35,8 @@ void main() {
   //  Person person = Person();
   //   person.setName("Mark");
   //   print(person.name);
-  int status = randomGenrator() ?? 0;
-  print(status);
+  while (true) {
+    int status = randomGenrator() ?? 0;
+    print(status);
+  }
 }
