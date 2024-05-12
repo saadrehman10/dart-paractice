@@ -33,7 +33,9 @@ void main() {
 //   print(nullchecker(null));
 //   print(nullchecker(33));
 
-   Person person = Person();
-    person.setName("Mark");
-    print(person.name);
+  //  Person person = Person();
+  //   person.setName("Mark");
+  //   print(person.name);
+
+
 }
