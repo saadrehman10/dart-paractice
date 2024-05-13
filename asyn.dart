@@ -1,7 +1,7 @@
 import 'dart:isolate';
 
 Future<List<String>> getname() {
-  return Future.delayed(Duration(milliseconds: 500), () => ['saad']);
+  return Future.delayed(Duration(seconds: 2), () => ['saad']);
 }
 
 void main() async {
@@ -12,10 +12,11 @@ void main() async {
   // Future.delayed(Duration(seconds: 3), () => print('hello world'));
 
   print(getname());
-  while (true) {
+  bool temp = true;
+  while (temp) {
     getname().then((value) {
-    print(value[0]);
-  });  
+      print(value[0]);
+      temp = false;
+    });
   }
-  
 }
