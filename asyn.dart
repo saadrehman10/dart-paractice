@@ -4,12 +4,12 @@ Future<List<String>> getname() {
   return Future.delayed(Duration(seconds: 2), () => ['saad']);
 }
 void getData() {
-  String data =  middleFunction.then((value) => value);
+  var data = middleFunction();
   print(data);
 }
 
 Future<String> middleFunction(){
-  return Future.delayed(Duration(seconds:2), ()=> "Hello");
+  return Future.delayed(Duration(seconds:5), ()=> "Hello");
 }
 void main()  {
   // Future.delayed(Duration(seconds: 3), () => print('hello world'));
