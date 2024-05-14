@@ -13,10 +13,9 @@ void main() async {
 
   print(getname());
   bool temp = true;
-  while (temp) {
-    getname().then((value) {
+
+  getname().then((value) {
       print(value[0]);
       temp = false;
     });
-  }
 }
