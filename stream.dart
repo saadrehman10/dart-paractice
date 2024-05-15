@@ -6,7 +6,14 @@ class Steamsong {
     yield 'John';
     await Future.delayed(Duration(seconds: 1));
     yield 'Smith';
-    
+  }
+
+  Stream<String?> getUserId() {
+    return Stream.fromIterable({'helo', 'saad', 'ahmed', null});
+  }
+
+  Future<String> getUserId2() {
+    return Future.value('saad');
   }
 }
 
