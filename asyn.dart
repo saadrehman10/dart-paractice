@@ -19,7 +19,7 @@ void getData3() async {
 }
 
 Future<String> middleFunction() {
-  return Future.delayed(Duration(milliseconds: 100), () => "Hello");
+  return Future.delayed(Duration(seconds: 3), () => "Hello");
 }
 
 class Syncronization {
@@ -34,7 +34,7 @@ class Syncronization {
   }
 }
 
-void main() async{
+void main() {
   // Future.delayed(Duration(seconds: 3), () => print('hello world'));
   // Future.delayed(Duration(seconds: 4), () => print('hello world'));
 
@@ -65,8 +65,8 @@ void main() async{
   Syncronization obj = new Syncronization();
   obj.getname();
   int i = 0;
-  while (i <= 20) {
-    await Future.delayed(Duration(milliseconds: 100),() => print('.'));
+  while (i <= 30) {
+     Future.delayed(Duration(milliseconds: 300),() => print('.'));
     i++;
   }
 }
