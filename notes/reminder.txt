@@ -3,8 +3,6 @@
 2. rember to check all three types of arrays in every situation related to arrays  (List, Map and Set)
 2. remember to check the list defalult functons and how they work like Iterate , genreate , Itrateable , buffer and etc check the bing - chat dated 04/03/24 time 6:40;
 3. remember to visit the Example 4 and 5: How to create & Hanle Exception via Implements after OOps i dart .
-4. gettnig erros checks the logical conditions usually mistake with > and <
-5. if getting errors in List , map or array check the contion for the loops mistake with < , > or the total index of the length  
 
 list functions
 indexOf("list element");
