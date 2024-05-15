@@ -5,18 +5,18 @@ Future<List<String>> getname() {
 }
 
 void getData() {
-  var data = middleFunction().then((value) => value);
-  print(data);
+   middleFunction().then((value) => print('0'+value));
+  
 }
 
 void getData2() {
   var data = middleFunction();
-  print(data);
+  print('2'+ data.toString());
 }
 
 void getData3() async {
   var data = await middleFunction();
-  print(data);
+  print('3' + data.toString());
 }
 
 Future<String> middleFunction() {
@@ -34,7 +34,7 @@ void main() {
 
 //   getname().then((value) {
 //       print(value[0]);
-//       temp = false;
+//      
 //     });
   print('----');
   print("Start");
@@ -51,4 +51,6 @@ void main() {
   getData3();
   print("End");
   print('----');
+
+
 }
