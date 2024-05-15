@@ -62,4 +62,7 @@ void main() {
   // print('----');
   Syncronization obj = new Syncronization();
   obj.getname();
+  while (true) {
+    print('.');
+  }
 }
