@@ -5,13 +5,12 @@ Future<List<String>> getname() {
 }
 
 void getData() {
-   middleFunction().then((value) => print('0'+value));
-  
+  middleFunction().then((value) => print('0' + value));
 }
 
 void getData2() {
   var data = middleFunction();
-  print('2'+ data.toString());
+  print('2' + data.toString());
 }
 
 void getData3() async {
@@ -21,6 +20,16 @@ void getData3() async {
 
 Future<String> middleFunction() {
   return Future.delayed(Duration(seconds: 3), () => "Hello");
+}
+
+class Syncronization {
+  Syncronization();
+  void getname() async {
+    try {
+      String name = await middleFunction();
+      print(name);
+    } catch (e) {}
+  }
 }
 
 void main() {
@@ -34,23 +43,23 @@ void main() {
 
 //   getname().then((value) {
 //       print(value[0]);
-//      
+//
 //     });
-  print('----');
-  print("Start");
-  getData();
-  print("End");
-  print('----');
-  print('----');
-  print("Start");
-  getData2();
-  print("End");
-  print('----');
-  print('----');
-  print("Start");
-  getData3();
-  print("End");
-  print('----');
-
-
+  // print('----');
+  // print("Start");
+  // getData();
+  // print("End");
+  // print('----');
+  // print('----');
+  // print("Start");
+  // getData2();
+  // print("End");
+  // print('----');
+  // print('----');
+  // print("Start");
+  // getData3();
+  // print("End");
+  // print('----');
+  Syncronization obj = new Syncronization();
+  obj.getname();
 }
