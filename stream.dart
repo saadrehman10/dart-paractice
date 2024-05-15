@@ -17,7 +17,12 @@ class Steamsong {
   }
 }
 
-void main() {
+void main() async {
   Steamsong obj = Steamsong();
-  print(obj.getUserName());
+  await for (String name in obj.getUserName()) {
+    print(name);
+  }
+  
+  print(obj.getUserId2());
+  print(obj.getUserId());
 }
