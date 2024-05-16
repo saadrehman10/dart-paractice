@@ -26,9 +26,13 @@ class Steamsong {
     String emo = this.emoje! * 10;
     yield emo;
     print('=====');
-     Future.delayed(Duration(seconds: 1), () async*{
-      yield 'emo';
-    });
+    //  Future.delayed(Duration(seconds: 1), () async*{
+    //   yield 'emo';
+    // });
+    String value = await Future.delayed(
+        Duration(seconds: 1), () => 'Future awaited value');
+
+    yield value;
   }
 
   Stream<String?> getUserId() {
