@@ -5,7 +5,7 @@ class Steamsong {
   Steamsong(this.emoje);
   set name(value) => _name = value;
   String? get name => _name;
-  Stream<dynamic> getUserName() async* {
+  static Stream<dynamic> getUserName() async* {
     await Future.delayed(
       Duration(seconds: 2),
     );
@@ -50,13 +50,23 @@ void main() async {
   //   print(name);
   // }
   // print('-----');
-  await obj.secondfunc(null, null).forEach((value) {
-    print('-----');
-    if (value is Future) {
-      value.then((variable) => print(variable));
-    } else if (value is! Future) {
-      print(value);
-    }
+  // await obj.secondfunc(null, null).forEach((value) {
+  //   print('-----');
+  //   if (value is Future) {
+  //     value.then((variable) => print(variable));
+  //   } else if (value is! Future) {
+  //     print(value);
+  //   }
+  // });
+
+  print('------');
+  await Steamsong.getUserName().forEach((element) {
+    print(element);
+  });
+  print('------');
+
+  await Steamsong.getUserName().forEach((element) {
+    print(element);
   });
   // print(obj.getUserId2());
   // print(obj.getUserId());
