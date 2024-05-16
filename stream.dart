@@ -1,6 +1,6 @@
 class Steamsong {
   Stream<dynamic> getUserName() async* {
-    await Future.delayed(Duration(seconds: 2), () => 'hello');
+    await Future.delayed(Duration(seconds: 2),);
     yield 'helloe';
     await Future.delayed(Duration(seconds: 1));
     yield 'John';
@@ -21,9 +21,10 @@ class Steamsong {
 
 void main() async {
   Steamsong obj = Steamsong();
-  await for (String name in obj.getUserName()) {
+  await for (var name in obj.getUserName()) {
     print(name);
   }
+  obj.getUserId().then((value) => print(value));
 
   print(obj.getUserId2());
   print(obj.getUserId());

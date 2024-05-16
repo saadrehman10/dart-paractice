@@ -43,10 +43,10 @@ void main() {
 //   print(getname());
 //   bool temp = true;
 
-//   getname().then((value) {
-//       print(value[0]);
-//
-//     });
+  getname().then((value) {
+      print(value[0]);
+
+    });
   // print('----');
   // print("Start");
   // getData();
