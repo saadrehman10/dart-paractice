@@ -23,6 +23,8 @@ class Steamsong {
     yield value1 != null && value2 != null
         ? value2 + value2
         : Future.delayed(Duration(milliseconds: 300), () => 'it was null');
+    String emo = this.emoje! * 10;
+    yield emo;
   }
 
   Stream<String?> getUserId() {
@@ -39,8 +41,14 @@ void main() async {
   await for (var name in obj.getUserName()) {
     print(name);
   }
-   
-
-  print(obj.getUserId2());
-  print(obj.getUserId());
+  print('-----');
+  await obj.secondfunc(null, null).forEach((value) {
+    if (value.runtimeType != Future) {
+      print(value);
+    } else {
+      value.then((variable)=> print(variable));
+    }
+  });
+  // print(obj.getUserId2());
+  // print(obj.getUserId());
 }
