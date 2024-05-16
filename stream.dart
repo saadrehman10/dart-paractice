@@ -38,15 +38,18 @@ class Steamsong {
 
 void main() async {
   Steamsong obj = Steamsong('🔥');
-  await for (var name in obj.getUserName()) {
-    print(name);
-  }
+  // await for (var name in obj.getUserName()) {
+  //   print(name);
+  // }
   print('-----');
   await obj.secondfunc(null, null).forEach((value) {
-    if (value.runtimeType != Future) {
-      print(value);
+    print(value.runtimeType);
+    print('-----');
+    if (value.runtimeType == Future) {
+      value.then((variable) => print(variable));
+      
     } else {
-      value.then((variable)=> print(variable));
+       print(value);
     }
   });
   // print(obj.getUserId2());
