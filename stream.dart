@@ -25,6 +25,10 @@ class Steamsong {
         : Future.delayed(Duration(milliseconds: 300), () => 'it was null');
     String emo = this.emoje! * 10;
     yield emo;
+    print('=====');
+     Future.delayed(Duration(seconds: 1), () async*{
+      yield 'emo';
+    });
   }
 
   Stream<String?> getUserId() {
@@ -36,7 +40,7 @@ class Steamsong {
   }
 }
 
- void main() async {
+void main() async {
   Steamsong obj = Steamsong('🔥');
   // await for (var name in obj.getUserName()) {
   //   print(name);
@@ -44,11 +48,10 @@ class Steamsong {
   // print('-----');
   await obj.secondfunc(null, null).forEach((value) {
     print('-----');
-    if (value is  Future) {
+    if (value is Future) {
       value.then((variable) => print(variable));
-      
-    } else if (value  is !Future){
-       print(value);
+    } else if (value is! Future) {
+      print(value);
     }
   });
   // print(obj.getUserId2());
