@@ -54,7 +54,7 @@ class SingleAndMultiSubscriptionStream {
 }
 
 void main() async {
-  Steamsong obj = Steamsong('🔥');
+  // Steamsong obj = Steamsong('🔥');
   // await for (var name in obj.getUserName()) {
   //   print(name);
   // }
@@ -81,7 +81,7 @@ void main() async {
   // print(obj.getUserId());
   SingleAndMultiSubscriptionStream obj1 = SingleAndMultiSubscriptionStream();
   obj1.streamfunction().listen((value){
-    print('value');
+    print('hello world');
   });
   
 
