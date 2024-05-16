@@ -1,6 +1,14 @@
 class Steamsong {
+  String? _name;
+  String? emoje;
+
+  Steamsong(this.emoje);
+  set name(value) => _name = value;
+  String? get name => _name;
   Stream<dynamic> getUserName() async* {
-    await Future.delayed(Duration(seconds: 2),);
+    await Future.delayed(
+      Duration(seconds: 2),
+    );
     yield 'helloe';
     await Future.delayed(Duration(seconds: 1));
     yield 'John';
@@ -8,6 +16,13 @@ class Steamsong {
     yield 'Smith';
     yield 'Ahmed';
     yield 9339;
+  }
+
+  Stream<dynamic> secondfunc(int? value1, int? value2) async* {
+    yield 'hello';
+    yield value1 != null && value2 != null
+        ? value2 + value2
+        : Future.delayed(Duration(milliseconds: 300), () => 'it was null');
   }
 
   Stream<String?> getUserId() {
@@ -20,11 +35,11 @@ class Steamsong {
 }
 
 void main() async {
-  Steamsong obj = Steamsong();
+  Steamsong obj = Steamsong('🔥');
   await for (var name in obj.getUserName()) {
     print(name);
   }
-  obj.getUserId().then((value) => print(value));
+   
 
   print(obj.getUserId2());
   print(obj.getUserId());
