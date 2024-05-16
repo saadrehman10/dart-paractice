@@ -1,3 +1,5 @@
+import 'dart:async';
+
 class Steamsong {
   String? _name;
   String? emoje;
@@ -43,6 +45,13 @@ class Steamsong {
     return Future.value('saad');
   }
 }
+class SingleAndMultiSubscriptionStream {
+  dynamic streamfunction(){
+   StreamController<dynamic> controller = StreamController<dynamic>.broadcast();
+   Stream stream = controller.stream;
+    return stream;
+  }
+}
 
 void main() async {
   Steamsong obj = Steamsong('🔥');
@@ -59,15 +68,25 @@ void main() async {
   //   }
   // });
 
-  print('------');
-  await Steamsong.getUserName().forEach((element) {
-    print(element);
-  });
-  print('------');
+  // print('------');
+  // await Steamsong.getUserName().forEach((element) {
+  //   print(element);
+  // });
+  // print('------');
 
-  await Steamsong.getUserName().forEach((element) {
-    print(element);
-  });
+  // await Steamsong.getUserName().forEach((element) {
+  //   print(element);
+  // });
   // print(obj.getUserId2());
   // print(obj.getUserId());
+  SingleAndMultiSubscriptionStream obj1 = SingleAndMultiSubscriptionStream();
+  obj1.streamfunction().listen((value){
+    print('value');
+  });
+  
+
+
+
+
+
 }

@@ -26,3 +26,4 @@ select e for edit
 now add the [alias] tag
 and then the the custom commandd name you want like 
 pushall = here set the command like !git add . (use (&&) to exicute muliple command ) && git commit -m 'update' && git push
+press escape and :wq
