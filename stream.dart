@@ -30,7 +30,7 @@ class Steamsong {
     print('=====');
     //  Future.delayed(Duration(seconds: 1), () async*{
     //   yield 'emo';
-    // });
+    // });// wrong way doset access teh yeild in the future funciton 
     String value = await Future.delayed(
         Duration(seconds: 1), () => 'Future awaited value');
 
