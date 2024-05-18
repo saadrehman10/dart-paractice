@@ -1,5 +1,6 @@
 // async programming helps in performing multipule task like fetch data form the internet & etc
 //Future in dart help to delya any tak that you want to executer in future for some reason and helps in asyncroinsation in your code
+
 import 'dart:io';
 
 class Filereader {
@@ -55,6 +56,16 @@ class Questoin8 {
   }
 }
 
+class Question9 {
+  Future<List<int>> func(List<int> array) async {
+    List<int> temp = [];
+    for (int elements in array) {
+      await Future.delayed(Duration(milliseconds: 1000), () => temp.add(elements * 2));
+    }
+    return temp;
+  }
+}
+
 void main() async {
   // var value = Future.delayed(Duration(seconds: 2), () => 'hello wrold');
   // value.then((value) => print(value));
@@ -68,7 +79,18 @@ void main() async {
   // int a = await obj.func(1, 2);
   // print(a);
   // print(await obj.func2(2, 2));
-  Questoin8 obj = Questoin8();
+  // Questoin8 obj = Questoin8();
 
-  print(await obj.func1(['Saad', 'Saeed', 'Ahmed', 'Wadood']));
+  // print(await obj.func1(['Saad', 'Saeed', 'Ahmed', 'Wadood']));
+  Question9 obj = Question9();
+  List<int> temp = await obj.func([
+    2,
+    3,
+    4,
+    12,
+    5,
+    3,
+    2,
+  ]);
+  print(temp);
 }
