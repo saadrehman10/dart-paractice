@@ -48,6 +48,13 @@ class Queston6 {
   }
 }
 
+class Questoin8 {
+  Future<List<String>> func1(List<String> array) async {
+    array.sort();
+    return await Future.delayed(Duration(seconds: 2), () => array);
+  }
+}
+
 void main() async {
   // var value = Future.delayed(Duration(seconds: 2), () => 'hello wrold');
   // value.then((value) => print(value));
@@ -57,8 +64,11 @@ void main() async {
   // Question5 obj1 = Question5();
   // var a = await obj1.func1();
   // print(a.join());
-  Queston6 obj = Queston6();
-  int a = await obj.func(1, 2);
-  print(a);
-  print(await obj.func2(2, 2));
+  // Queston6 obj = Queston6();
+  // int a = await obj.func(1, 2);
+  // print(a);
+  // print(await obj.func2(2, 2));
+  Questoin8 obj = Questoin8();
+
+  print(await obj.func1(['Saad', 'Saeed', 'Ahmed', 'Wadood']));
 }
