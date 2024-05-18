@@ -16,5 +16,6 @@
 
 
  improvement sectors
+ logic building;
  do more unique projects and studey  the ehub project 
  it support & date entry back-fires 
