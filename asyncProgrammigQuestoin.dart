@@ -7,27 +7,43 @@ class Filereader {
   String fileName;
   Filereader(this.fileName);
 
-  void readfile()  {
+  void readfile() {
     try {
       File file = File(this.fileName);
-      contant =  file.readAsStringSync();
+      contant = file.readAsStringSync();
     } catch (e) {
       print(e);
     }
   }
 
   String? get getContant => contant;
-
-
 }
 
+class Question5 {
+  Future<dynamic> func1() async {
+    var array;
+    await Future.delayed(Duration(seconds: 2), () {
+      array.add('hello');
+    });
+    await Future.delayed(Duration(seconds: 2), () {
+      array.add('wrold');
+    });
+    await Future.delayed(Duration(seconds: 2), () {
+      array.add('hi');
+    });
+    await Future.delayed(Duration(seconds: 2), () {
+      array.add('i am here');
+    });
+    return array;
+  }
+}
 
-class 
-
-void main()  {
+void main() {
   // var value = Future.delayed(Duration(seconds: 2), () => 'hello wrold');
   // value.then((value) => print(value));
-  Filereader file1 = Filereader('./test.csv');
-  file1.readfile();
-  print(file1.getContant);
+  // Filereader file1 = Filereader('./test.csv');
+  // file1.readfile();
+  // print(file1.getContant);
+  Question5 obj1 = Question5();
+  print(obj1.func1());
 }
