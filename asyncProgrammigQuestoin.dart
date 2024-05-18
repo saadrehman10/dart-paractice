@@ -38,13 +38,22 @@ class Question5 {
   }
 }
 
+class Queston6 {
+  Future<int> func(int a, int b) async {
+    return await a + b;
+  }
+}
+
 void main() async {
   // var value = Future.delayed(Duration(seconds: 2), () => 'hello wrold');
   // value.then((value) => print(value));
   // Filereader file1 = Filereader('./test.csv');
   // file1.readfile();
   // print(file1.getContant);
-  Question5 obj1 = Question5();
-  var a = await obj1.func1();
-  print(a.join());
+  // Question5 obj1 = Question5();
+  // var a = await obj1.func1();
+  // print(a.join());
+  Queston6 obj = Queston6();
+  int a = await obj.func(1, 2);
+  print(a);
 }
