@@ -60,9 +60,23 @@ class Question9 {
   Future<List<int>> func(List<int> array) async {
     List<int> temp = [];
     for (int elements in array) {
-      await Future.delayed(Duration(milliseconds: 1000), () => temp.add(elements * 2));
+      await Future.delayed(
+          Duration(milliseconds: 1000), () => temp.add(elements * 2));
     }
     return temp;
+  }
+
+  Stream<int> func2(List<int> array) async* {
+    for (int element in array) {
+      await Future.delayed(Duration(seconds: 1));
+      yield await element * 2;
+    }
+  }
+}
+
+class Question10 {
+  Future<String> func(String value) async {
+    return await Future.value(value.split('').reversed.join());
   }
 }
 
@@ -82,15 +96,21 @@ void main() async {
   // Questoin8 obj = Questoin8();
 
   // print(await obj.func1(['Saad', 'Saeed', 'Ahmed', 'Wadood']));
-  Question9 obj = Question9();
-  List<int> temp = await obj.func([
-    2,
-    3,
-    4,
-    12,
-    5,
-    3,
-    2,
-  ]);
-  print(temp);
+  // Question9 obj1 = Question9();
+  // List<int> temp = await obj.func([
+  //   2,
+  //   3,
+  //   4,
+  //   12,
+  //   5,
+  //   3,
+  //   2,
+  // ]);
+  // print(temp);
+  // await obj1.func2([22, 422, 3, 452, 22, 4]).forEach((element) {
+  //   print(element);
+  // });
+  Question10 obj = Question10();
+
+  print(await obj.func('hello world'));
 }
