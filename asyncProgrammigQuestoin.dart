@@ -21,7 +21,7 @@ class Filereader {
 
 class Question5 {
   Future<dynamic> func1() async {
-    var array;
+    var array = [];
     await Future.delayed(Duration(seconds: 2), () {
       array.add('hello');
     });
@@ -38,12 +38,13 @@ class Question5 {
   }
 }
 
-void main() {
+void main() async {
   // var value = Future.delayed(Duration(seconds: 2), () => 'hello wrold');
   // value.then((value) => print(value));
   // Filereader file1 = Filereader('./test.csv');
   // file1.readfile();
   // print(file1.getContant);
   Question5 obj1 = Question5();
-  print(obj1.func1());
+  var a = await obj1.func1();
+  print(a.join());
 }
