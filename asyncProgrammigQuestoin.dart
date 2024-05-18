@@ -17,7 +17,12 @@ class Filereader {
   }
 
   String? get getContant => contant;
+
+
 }
+
+
+class 
 
 void main()  {
   // var value = Future.delayed(Duration(seconds: 2), () => 'hello wrold');
