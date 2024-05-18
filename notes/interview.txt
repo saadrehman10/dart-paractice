@@ -1,0 +1,20 @@
+ q1 whay develpers prefer flutter over other develpment farame words
+ q2 what is flutter how flutter wroks 
+ q3. 
+
+
+
+
+
+
+ LOGIC QUESTON;
+ simple facorial quesiton ;
+ add the even nos
+ if no is a palandrom so the function returns true
+ array = [12,2,24,5,4,32,3,26];  target  = [25] with a threshhold of +-4 output must be [24,26] nearest no 
+
+
+
+ improvement sectors
+ do more unique projects and studey  the ehub project 
+ it support & date entry back-fires 
