@@ -42,6 +42,10 @@ class Queston6 {
   Future<int> func(int a, int b) async {
     return await a + b;
   }
+
+  Future<int> func2(int a, int b) async {
+    return await Future.delayed(Duration(seconds: 5), () => a + b);
+  }
 }
 
 void main() async {
@@ -56,4 +60,5 @@ void main() async {
   Queston6 obj = Queston6();
   int a = await obj.func(1, 2);
   print(a);
+  print(await obj.func2(2, 2));
 }
