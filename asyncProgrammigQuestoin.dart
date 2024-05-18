@@ -7,10 +7,10 @@ class Filereader {
   String fileName;
   Filereader(this.fileName);
 
-  void readfile() async {
+  void readfile()  {
     try {
       File file = File(this.fileName);
-      contant = await file.readAsStringSync();
+      contant =  file.readAsStringSync();
     } catch (e) {
       print(e);
     }
@@ -19,7 +19,7 @@ class Filereader {
   String? get getContant => contant;
 }
 
-void main() {
+void main()  {
   // var value = Future.delayed(Duration(seconds: 2), () => 'hello wrold');
   // value.then((value) => print(value));
   Filereader file1 = Filereader('./test.csv');
