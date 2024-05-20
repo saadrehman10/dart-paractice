@@ -11,9 +11,9 @@ class Person {
 
 void main() {
   final date = DateTime.now();
-  print(date.runtimeType);
+  print(date);
   var date2 = DateTime.now();
-  print(date.runtimeType);
+  print(date2.runtimeType);
   Person obj = new Person('Saad');
   print(obj.getvalue);
 
