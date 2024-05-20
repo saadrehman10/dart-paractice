@@ -17,10 +17,15 @@ void main() {
   Person obj = new Person('Saad');
   print(obj.getvalue);
 
-
   String myDateInString = "2022-05-01";
   DateTime myConvertedDate = DateTime.parse(myDateInString);
   print("Year is " + myConvertedDate.year.toString());
   print("Month is " + myConvertedDate.month.toString());
   print("Day is " + myConvertedDate.day.toString());
+  print('=======');
+  DateTime myBirthday = DateTime.parse("1997-05-14");
+  myBirthday = myBirthday.add(Duration(days: 1));
+  print("Year is " + myBirthday.year.toString());
+  print("Month is " + myBirthday.month.toString());
+  print("Day is " + myBirthday.day.toString());
 }
