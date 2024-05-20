@@ -6,7 +6,7 @@ class Person {
   Person(
     this.name,
   );
-  set setvaue(props) {value = props}
+  int? get getvalue => value;
 }
 
 void main() {
@@ -14,4 +14,6 @@ void main() {
   print(date.runtimeType);
   var date2 = DateTime.now();
   print(date.runtimeType);
+  Person obj = new Person('Saad');
+  print(obj.getvalue);
 }
