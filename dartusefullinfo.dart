@@ -56,7 +56,12 @@ void main() {
   // print(date);
   // String datetime = DateTime.now().toString();
   // print(datetime);
-  DateTime date = DateTime.now();
-  date.add(Duration(days: 7));
-  print('Your pakage will arrive $date');
+  // DateTime date = DateTime.now();
+  // date = date.add(Duration(days: 7));
+  // print('Your pakage will arrive $date');
+  // DateTime dob = DateTime.parse('2003-12-11');
+  // print('Yor are ${date.difference(dob).inDays.toInt()~/365} years old');
+  
+  
+
 }
