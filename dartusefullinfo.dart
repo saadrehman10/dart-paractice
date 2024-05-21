@@ -40,16 +40,17 @@ void main() {
   // print("Difference in milliseconds: " + diff.inMilliseconds.toString());
   // print("Difference in microseconds: " + diff.inMicroseconds.toString());
 
-  var date = DateTime.now();
-  print(date.year);
-  print(date.second);
-  print(date.microsecond);
-  print(date.day);
-  print(date.hour);
-  print(date.minute);
-  print(date.timeZoneName);
-  print(date.weekday);
-  print(date.timeZoneOffset);
+  // var date = DateTime.now();
+  // print(date.year);
+  // print(date.second);
+  // print(date.microsecond);
+  // print(date.day);
+  // print(date.hour);
+  // print(date.minute);
+  // print(date.timeZoneName);
+  // print(date.weekday);
+  // print(date.timeZoneOffset);
+
 
 
 }
