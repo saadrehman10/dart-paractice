@@ -51,7 +51,12 @@ void main() {
   // print(date.weekday);
   // print(date.timeZoneOffset);
 
-  DateTime date = DateTime.parse('2450-04-22');
-  print(date.runtimeType);
-  print(date.year);
+  // var date = DateTime.parse('24502-04-99 10:33:19');
+  // print(date.runtimeType);
+  // print(date);
+  // String datetime = DateTime.now().toString();
+  // print(datetime);
+  DateTime date = DateTime.now();
+  date.add(Duration(days: 7));
+  print('Your pakage will arrive $date');
 }
