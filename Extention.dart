@@ -1,10 +1,10 @@
 void main() {
-  List<int> array = [1, 25, 2, 1, 5, 3, 5, 2, 34];
-  print(array.sum(3));
+  List<int> array = List<int>.generate(20, (index) => 1);
+  print(array.sum(5));
 }
 
 extension on List<int> {
-  int sum(int value) {
-    return fold(value, (a, b) => a + b);
+  int sum(int? value) {
+    return fold(value ?? 0, (a, b) => a + b);
   }
 }
