@@ -1,4 +1,4 @@
-import 'dart:isolate';
+// import 'dart:isolate';
 
 Future<List<String>> getname() {
   return Future.delayed(Duration(seconds: 2), () => ['saad']);
