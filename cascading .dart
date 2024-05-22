@@ -1,3 +1,21 @@
+class Random<T> {
+  T? value;
+
+  Random(this.value);
+
+  void dispalyRandom() {
+    print(this.value);
+  }
+
+  T returnjust(T value) {
+    return value;
+  }
+}
+
+extension on Random<int> {
+  int sum1(int vaue) => vaue++;
+}
+
 void main() {
   List<int> array = [1, 2, 54, 3];
   print(array);
