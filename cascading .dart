@@ -1,3 +1,7 @@
+import 'dart:io';
+
+
+
 class Random<T> {
   T? value;
 
@@ -13,7 +17,7 @@ class Random<T> {
 }
 
 extension on Random<int> {
-  int sum1(int vaue) => vaue++;
+  int sum1(value) => value++;
 }
 
 void main() {
@@ -33,4 +37,7 @@ void main() {
       print(element);
     })
     ..asMap();
+
+  Random<int> obj = Random<int>(22);
+  print(obj.sum1(22));
 }
