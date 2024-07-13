@@ -298,7 +298,8 @@ void main() {
   // print(isEven(num3));
   // print(createUser("Saad", 20));
   // print(createUser("Saad", 20, false));
-  print(returnchheckfun());
+  dynamic variablle = returnchheckfun();
+  print(variablle.runtimeType);
 }
 
 Map createUser(String name, int age, [bool? isActive = true]) {
@@ -334,6 +335,6 @@ num sum(a, b) {
   return a + b;
 }
 
-({int a, String b}) returnchheckfun() {
-  return (a: 2, b: 'ss');
+(int a, String b) returnchheckfun() {
+  return (2, 'ss');
 }
