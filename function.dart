@@ -296,8 +296,9 @@ void main() {
 
   // print(maximum3(num1, num2, num3));
   // print(isEven(num3));
-  print(createUser("Saad", 20));
-   print(createUser("Saad", 20,false));
+  // print(createUser("Saad", 20));
+  // print(createUser("Saad", 20, false));
+  print(returnchheckfun());
 }
 
 Map createUser(String name, int age, [bool? isActive = true]) {
@@ -331,4 +332,8 @@ num maximum(num1, num2) {
 
 num sum(a, b) {
   return a + b;
+}
+
+({int a, String b}) returnchheckfun() {
+  return (a: 2, b: 'ss');
 }

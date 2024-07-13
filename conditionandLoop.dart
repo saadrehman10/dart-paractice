@@ -24,20 +24,20 @@ void main() {
   // }
   // print('with switch cases');
 
-  // switch (a) {
-  //   case 1:
-  //     print("a is equal to $a");
-  //     break;
-  //   case 2:
-  //     print("a is equal to $a");
-  //     break;
-  //   case 3:
-  //     print("a is equal to $a");
-  //   case 4:
-  //     print("a is equal to $a");
-  //   default:
-  //     print("a is bigger than 5");
-  // }
+  switch (a) {
+    case 1:
+      print("a is equal to $a");
+      break;
+    case 2 :
+      print("a is equal to $a");
+      break;
+    case 3:
+      print("a is equal to $a");
+    case 4:
+      print("a is equal to $a");
+    default:
+      print("a is bigger than 5");
+  }
 
   // print('the bool values: ');
 
