@@ -308,28 +308,34 @@ Map createUser(String name, int age, [bool? isActive = true]) {
     'age': age,
     'Active': isActive,
   };
-  return user;
-}
+//   return user;
+// }
 
-bool isEven(int number) {
-  return number % 2 == 0 ? true : false;
-}
+// bool isEven(int number) {
+//   return number % 2 == 0 ? true : false;
+// }
 
-num maximum3(num1, num2, num3) {
-  if (num1 >= num2 && num1 >= num3) {
-    return num1;
-  } else if (num2 >= num1 && num2 >= num3) {
-    return num2;
-  } else if (num3 >= num1 && num3 >= num2) {
-    return num3;
-  } else {
-    return 0;
-  }
-}
+// num maximum3(num1, num2, num3) {
+//   if (num1 >= num2 && num1 >= num3) {
+//     return num1;
+//   } else if (num2 >= num1 && num2 >= num3) {
+//     return num2;
+//   } else if (num3 >= num1 && num3 >= num2) {
+//     return num3;
+//   } else {
+//     return 0;
+//   }
+// }
 
-num maximum(num1, num2) {
-  return num1 > num2 ? num1 : num2;
-}
+// num maximum(num1, num2) {
+//   return num1 > num2 ? num1 : num2;
+// }
+
+
+
+
+
+
 
 num sum(a, b) {
   return a + b;
