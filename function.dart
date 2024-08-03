@@ -295,19 +295,19 @@ void main() {
   // int num3 = int.parse(stdin.readLineSync()!);
 
   // print(maximum3(num1, num2, num3));
-  // print(isEven(num3));
-  // print(createUser("Saad", 20));
-  // print(createUser("Saad", 20, false));
-  dynamic variablle = returnchheckfun();
-  print(variablle.runtimeType);
-}
+//   // print(isEven(num3));
+//   // print(createUser("Saad", 20));
+//   // print(createUser("Saad", 20, false));
+//   dynamic variablle = returnchheckfun();
+//   print(variablle.runtimeType);
+// }
 
-Map createUser(String name, int age, [bool? isActive = true]) {
-  var user = {
-    'name': "$name",
-    'age': age,
-    'Active': isActive,
-  };
+// Map createUser(String name, int age, [bool? isActive = true]) {
+//   var user = {
+//     'name': "$name",
+//     'age': age,
+//     'Active': isActive,
+//   };
 //   return user;
 // }
 
