@@ -315,17 +315,17 @@ void main() {
 //   return number % 2 == 0 ? true : false;
 // }
 
-// num maximum3(num1, num2, num3) {
-//   if (num1 >= num2 && num1 >= num3) {
-//     return num1;
-//   } else if (num2 >= num1 && num2 >= num3) {
-//     return num2;
-//   } else if (num3 >= num1 && num3 >= num2) {
-//     return num3;
-//   } else {
-//     return 0;
-//   }
-// }
+num maximum3(num1, num2, num3) {
+  if (num1 >= num2 && num1 >= num3) {
+    return num1;
+  } else if (num2 >= num1 && num2 >= num3) {
+    return num2;
+  } else if (num3 >= num1 && num3 >= num2) {
+    return num3;
+  } else {
+    return 0;
+  }
+}
 
 // num maximum(num1, num2) {
 //   return num1 > num2 ? num1 : num2;
